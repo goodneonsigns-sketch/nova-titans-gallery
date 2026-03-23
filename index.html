@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA TITANS Baseball - Spring 2026 Photo Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --green: #006633;
+            --gold: #FFD700;
+            --dark-bg: #0a0f0a;
+            --darker-bg: #080c08;
+            --light-bg: #111;
+            --text: #f0f0f0;
+            --text-muted: #aaa;
+            --border: #1a1a1a;
+            --card-bg: #151a15;
+            --win: #2ecc71;
+            --loss: #e74c3c;
+            --upcoming: #95a5a6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(10, 15, 10, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--green);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            color: var(--gold);
+            font-size: 24px;
+        }
+
+        .logo-text {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--green), var(--gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--green), var(--gold));
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(135deg, rgba(10, 15, 10, 0.9), rgba(0, 102, 51, 0.2));
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="%23006633" opacity="0.1"/></svg>');
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, var(--green), var(--gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .hero-record {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--green), var(--gold));
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0, 102, 51, 0.3);
+        }
+
+        .hero-photo-placeholder {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(0, 102, 51, 0.2), rgba(255, 215, 0, 0.1));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--green);
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+        /* Team Info */
+        .team-info {
+            padding: 80px 0;
+            background-color: var(--darker-bg);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--text);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--green), var(--gold));
+            border-radius: 2px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .stat-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--green);
+            box-shadow: 0 10px 25px rgba(0, 102, 51, 0.2);
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .stat-value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Roster */
+        .roster {
+            padding: 80px 0;
+            background-color: var(--dark-bg);
+        }
+
+        .year-group {
+            margin-bottom: 50px;
+        }
+
+        .year-title {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--green);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .year-title i {
+            color: var(--green);
+        }
+
+        .roster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .player-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .player-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.1);
+        }
+
+        .player-number {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: linear-gradient(135deg, var(--green), var(--gold));
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+
+        .player-content {
+            padding: 80px 20px 20px;
+            position: relative;
+        }
+
+        .player-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .player-details {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .player-details span {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .photos-coming {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 102, 51, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .player-card:hover .photos-coming {
+            opacity: 1;
+        }
+
+        .photos-coming-text {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Schedule */
+        .schedule {
+            padding: 80px 0;
+            background-color: var(--darker-bg);
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .schedule-table th {
+            background: linear-gradient(90deg, var(--green), var(--gold));
+            color: white;
+            text-align: left;
+            padding: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .schedule-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .schedule-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .schedule-table tr:hover {
+            background-color: rgba(0, 102, 51, 0.05);
+        }
+
+        .result-win {
+            color: var(--win);
+            font-weight: 700;
+        }
+
+        .result-loss {
+            color: var(--loss);
+            font-weight: 700;
+        }
+
+        .result-upcoming {
+            color: var(--upcoming);
+            font-weight: 700;
+        }
+
+        .next-game {
+            background-color: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid var(--gold);
+        }
+
+        .game-type {
+            display: inline-block;
+            padding: 5px 12px;
+            background-color: rgba(0, 102, 51, 0.2);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Game Galleries */
+        .game-galleries {
+            padding: 80px 0;
+            background-color: var(--dark-bg);
+        }
+
+        .galleries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .game-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--green);
+            box-shadow: 0 10px 25px rgba(0, 102, 51, 0.2);
+        }
+
+        .game-header {
+            padding: 20px;
+            background: linear-gradient(90deg, var(--green), rgba(0, 102, 51, 0.8));
+            color: white;
+        }
+
+        .game-date {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .game-opponent {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .game-result {
+            padding: 15px 20px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .game-photos-placeholder {
+            height: 200px;
+            background: linear-gradient(135deg, rgba(0, 102, 51, 0.1), rgba(255, 215, 0, 0.05));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Team History */
+        .team-history {
+            padding: 80px 0;
+            background-color: var(--darker-bg);
+        }
+
+        .history-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .history-item {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .history-header {
+            padding: 20px;
+            background-color: rgba(0, 102, 51, 0.1);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .history-header:hover {
+            background-color: rgba(0, 102, 51, 0.2);
+        }
+
+        .history-year {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .history-title {
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
+        .history-toggle {
+            color: var(--gold);
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .history-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .history-content.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        .championship-highlight {
+            background: linear-gradient(135deg, var(--green), var(--gold));
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 102, 51, 0.3);
+        }
+
+        .championship-year {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .championship-text {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        /* Print Pricing Banner */
+        .print-banner {
+            background: linear-gradient(90deg, var(--green), var(--gold));
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 40px 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 102, 51, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--darker-bg);
+            padding: 60px 0 30px;
+            border-top: 2px solid var(--green);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--green), var(--gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .footer-credits {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .footer-credits a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-credits a:hover {
+            color: var(--green);
+            text-decoration: underline;
+        }
+
+        .footer-built {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        .footer-built i {
+            color: var(--gold);
+            margin: 0 5px;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            border: 2px solid var(--green);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-header {
+            padding: 20px;
+            background: linear-gradient(90deg, var(--green), rgba(0, 102, 51, 0.8));
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: var(--gold);
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--darker-bg);
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                border-top: 1px solid var(--border);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .hero-record {
+                font-size: 1.3rem;
+                padding: 8px 20px;
+            }
+            
+            .hero-photo-placeholder {
+                height: 250px;
+            }
+            
+            .schedule-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .schedule-table th,
+            .schedule-table td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .roster-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .galleries-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .player-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            
+            .player-content {
+                padding: 70px 15px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">⚾</div>
+                <div class="logo-text">NOVA TITANS</div>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#roster">Roster</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#galleries">Games</a></li>
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">NOVA TITANS</h1>
+            <div class="hero-subtitle">Spring 2026 Baseball</div>
+            <div class="hero-record">Record: 4-8</div>
+            <div class="hero-photo-placeholder">
+                <div>
+                    <i class="fas fa-baseball-ball" style="font-size: 3rem; margin-bottom: 15px; color: var(--gold);"></i>
+                    <div>Team Hero Photo Coming Soon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Info -->
+    <section class="team-info">
+        <div class="container">
+            <h2 class="section-title">Team Information</h2>
+            <div class="stats-grid">
+                <div class="stat-card fade-in">
+                    <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="stat-value">4-8</div>
+                    <div class="stat-label">Overall Record</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="stat-value">6A District 15</div>
+                    <div class="stat-label">District</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon"><i class="fas fa-user-tie"></i></div>
+                    <div class="stat-value">Brian Luebkert</div>
+                    <div class="stat-label">Head Coach</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon"><i class="fas fa-user-friends"></i></div>
+                    <div class="stat-value">Kyle Tabora</div>
+                    <div class="stat-label">Assistant Coach</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roster -->
+    <section class="roster" id="roster">
+        <div class="container">
+            <h2 class="section-title">Team Roster</h2>
+            
+            <!-- Seniors 2026 -->
+            <div class="year-group fade-in">
+                <h3 class="year-title"><i class="fas fa-graduation-cap"></i> Seniors 2026</h3>
+                <div class="roster-grid">
+                    <div class="player-card" data-player="6">
+                        <div class="player-number">6</div>
+                        <div class="player-content">
+                            <h4 class="player-name">Musa Adeoye</h4>
+                            <div class="player-details">
+                                <span><strong>Position:</strong> SS, 3B</span>
+                                <span><strong>Height/Weight:</strong> 5'8" / 143 lbs</span>
+                            </div>
+                        </div>
+                        <div class="photos-coming">
+                            <div class="photos-coming-text">Photos Coming Soon</div>
+                        </div>
+                    </div>
+                    <div class="player-card" data-player="11">
+                        <div class="player-number">11</div>
+                        <div class="player-content">
+                            <h4 class="player-name">Joseph Cohen-Rodriquez</h4>
+                            <div class="player-details">
+                                <span><strong>Position:</strong> P, OF</span>
+                                <span><strong>Height/Weight:</strong> 6'0" / 174 lbs</span>
+                            </div>
+                        </div>
+                        <div class="photos-coming">
+                            <div class="photos-coming-text">Photos Coming Soon</div>
+                        </div>
+                    </div>
+                    <div class="player-card" data-player="15">
+                        <div class="player-number">15</div>
+                        <div class="player-content">
+                            <h4 class="player-name">Brock Burns</h4>
+                            <div class="player-details">
+                                <span><strong>Position:</strong> 1B, P</span>
+                                <span><strong>Height/Weight:</strong> 6'0" / 170 lbs</span>
+                            </div>
+                        </div>
+                        <div class="photos-coming">
+                            <div class="photos-coming-text">Photos Coming Soon</div>
+                        </div>
+                    </div>
+                    <div class="player-card" data-player="25">
+                        <div class="player-number">25</div>
+                        <div class="player-content">
+                            <h4 class="player-name">Ricky Relyea</h4>
+                            <div class="player-details">
+                                <span><strong>Position:</strong> C, 1B</span>
+                                <span><strong>Height/Weight:</strong> 6'1" / 200 lbs</span>
+                            </div>
+                        </div>
+                        <div class="photos-coming">
+                            <div class="photos-coming-text">Photos Coming Soon</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Juniors 2027 -->
+            <div class="year-group fade-in">
+                <h3 class="year-title"><i class="fas fa-user-graduate"></i> Juniors 2027</h3>
+                <div class="roster-grid">
+                    <div class="player-card" data-player="9">
+                        <div class="player-number">9</div>
+                        <div class="player-content">
+                            <h4 class="player-name">Eli Steckler</h4>
+                            <div class="player-details">
+                                <span><strong>Position:</strong> LF, RF</span>
+                                <span><strong>Height/Weight:</strong> 5'9" / 170 lbs</span>
+                            </div>
+                        </div>
+                        <div class="photos-coming">
+                            <div class="photos-coming-text">Photos Coming Soon</div>
+                        </div>
+                    </div>
+                    <div class="player-card" data-player="18">
+                        <div class="player-number">18</div>
+                        <div class="player-content">
+                            <h4 class="player-name">Aidan Donnellon</h4>
+                            <div class="player-details">
+                                <span><strong>Position:</strong> LF, P</span>
+                                <span><strong>Height/Weight:</strong> 5'7" / 150 lbs</span>
+                            </div>
+                        </div>
+                        <div class="photos-coming">
+                            <div class="photos-coming-text">Photos Coming Soon</div>
+                        </div>
+                    </div>
+                    <div class="player-card" data-player="20">
+                        <div class="player-number">20</div>
+                        <div class="player-content">
+                            <h4 class="player-name">Anthony Amaya</h4>
+                            <div class="player-details">
+                                <span><strong>Position:</strong> LHP</span>
+                                <span><strong>Height/Weight:</strong> 6'0" / 170 lbs</span>
+                            </div>
+                        </div>
+                        <div class="photos-coming">
+                            <div class="photos-coming-text">Photos Coming Soon</div>
+                        </div>
+                    </div>
+                    <div class="player-card" data-player="21">
+                        <div class="player-number">21</div>
+                        <div class="player-content">
+                            <h4 class="player-name">Aiden Pitti-Shortt</h4>
+                            <div class="player-details">
+                                <span><strong>Position:</strong> 2B, CF</span>
+                                <span><strong>Height/Weight:</strong> 5'4" / 160 lbs</span>
+                            </div>
+                        </div>
+                        <div class="photos-coming">
+                            <div class="photos-coming-text">Photos Coming Soon</div>
+                        </div>
+                    </div>
+                    <div class="player-card" data-player="32">
+                        <div class="player-number">32</div>
+                        <div class="player-content">
+                            <h4 class="player-name">Max Assouline</h4>
+                            <div class="player-details">
+                                <span><strong>Position:</strong> C</span>
+                                <span><strong>Height/Weight:</strong> 6'1" / 155 lbs</span>
+                            </div>
+                        </div>
+                        <div class="photos-coming">
+                            <div class="photos-coming-text">Photos Coming Soon</div>
+                        </div>
+                    </div>
+                    <div class="player-card" data-player="33">
+                        <div class="player-number">33</div>
+                        <div class="player-content">
+                            <h4 class="player-name">Jacob Griffiths</h4>
+                            <div class="player-details">
+                                <span><strong>Position:</strong> 1B</span>
+                                <span><strong>Height/Weight:</strong> 6'1" / 170 lbs</span>
+                            </div>
+                        </div>
+                        <div class="photos-coming">
+                            <div class="photos-coming-text">Photos Coming Soon</div>
+                        </div>
+                    </div>
+                    <div class="player-card" data-player="34">
+                        <div class="player-number">34</div>
+                        <div class="player-content">
+                            <h4 class="player-name">Reilly Redmond</h4>
+                            <div class="player-details">
+                                <span><strong>Position:</strong> P, 3B</span>
+                                <span><strong>Height/Weight:</strong> 6'1" / 208 lbs</span>
+                            </div>
+                        </div>
+                        <div class="photos-coming">
+                            <div class="photos-coming-text">Photos Coming Soon</div>
+                        </div>
+                    </div>
+                    <div class="player-card"
