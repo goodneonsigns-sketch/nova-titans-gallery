@@ -1,0 +1,5 @@
+samples/
+player-picks/
+*.py
+photo-scan-results.json
+rest.html
