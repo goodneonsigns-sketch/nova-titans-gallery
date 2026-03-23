@@ -75,6 +75,9 @@ tr.na .res{color:var(--tm)}
 .go{font-size:1.1rem;font-weight:600;margin:6px 0}
 .gr{font-weight:700;margin-bottom:10px}
 .gp{color:var(--tm);font-size:.85rem;padding:20px 0;text-align:center;border:1px dashed #333;border-radius:8px}
+.gp img{width:100%;border-radius:8px;margin-bottom:8px}
+.action-strip{display:flex;gap:12px;overflow-x:auto;padding:20px 0;scroll-snap-type:x mandatory}
+.action-strip img{height:300px;border-radius:10px;object-fit:cover;scroll-snap-align:start;flex-shrink:0}
 
 /* History */
 .tl{list-style:none;columns:2;gap:20px}
@@ -110,6 +113,7 @@ footer span{color:var(--gd)}
   nav ul{gap:10px;flex-wrap:wrap;justify-content:center}
   nav a{font-size:12px}
   .hero{padding:80px 0 50px}
+  .action-strip img{height:200px}
   .hero img{width:70px}
   .hero h1{font-size:2.2rem;letter-spacing:1px}
   .hero .sub{font-size:.9rem}
@@ -174,6 +178,14 @@ footer span{color:var(--gd)}
 
 <section>
 <div class="container">
+<div class="action-strip fi">
+<img src="action1.jpg" alt="Pitcher in windup">
+<img src="action6.jpg" alt="Team in the dugout">
+<img src="action4.jpg" alt="Scoring play at home">
+<img src="action2.jpg" alt="Batter at the plate">
+<img src="action5.jpg" alt="On the mound">
+<img src="action3.jpg" alt="Runner scoring">
+</div>
 <div class="stats fi">
 <div class="stat"><h4>Overall Record</h4><p>4-8</p></div>
 <div class="stat"><h4>District</h4><p>6A-15</p><span>District Record: 0-0</span></div>
@@ -262,14 +274,14 @@ footer span{color:var(--gd)}
 <h2 class="st">📸 Game Galleries</h2>
 <div class="gg fi">
 <div class="gc loss"><div class="gd">2/10/26</div><div class="go">vs Coral Glades Jaguars</div><div class="gr">3-10 (L)</div><div class="gp">📸 Photos Coming Soon</div></div>
-<div class="gc win"><div class="gd">2/12/26</div><div class="go">vs South Plantation Paladins</div><div class="gr">7-3 (W)</div><div class="gp">📸 Photos Coming Soon</div></div>
-<div class="gc win"><div class="gd">2/17/26</div><div class="go">vs Pompano Beach</div><div class="gr">11-1 (W)</div><div class="gp">📸 Photos Coming Soon</div></div>
-<div class="gc loss"><div class="gd">2/19/26</div><div class="go">vs Pine Crest Panthers</div><div class="gr">4-14 (L)</div><div class="gp">📸 Photos Coming Soon</div></div>
-<div class="gc win"><div class="gd">2/23/26</div><div class="go">vs Coral Springs Charter</div><div class="gr">8-7 (W)</div><div class="gp">📸 Photos Coming Soon</div></div>
-<div class="gc loss"><div class="gd">2/25/26</div><div class="go">vs Coral Springs Colts</div><div class="gr">4-12 (L)</div><div class="gp">📸 Photos Coming Soon</div></div>
-<div class="gc loss"><div class="gd">2/26/26</div><div class="go">vs Coral Glades Jaguars</div><div class="gr">4-6 (L)</div><div class="gp">📸 Photos Coming Soon</div></div>
-<div class="gc win"><div class="gd">3/03/26</div><div class="go">vs Monarch Knights</div><div class="gr">13-1 (W)</div><div class="gp">📸 Photos Coming Soon</div></div>
-<div class="gc loss"><div class="gd">3/05/26</div><div class="go">vs Cooper City Cowboys</div><div class="gr">3-12 (L)</div><div class="gp">📸 Photos Coming Soon</div></div>
+<div class="gc win"><div class="gd">2/12/26</div><div class="go">vs South Plantation Paladins</div><div class="gr">7-3 (W)</div><div class="gp"><img src="action4.jpg" alt="Scoring play vs South Plantation">157 photos · <a href="#">View Gallery →</a></div></div>
+<div class="gc win"><div class="gd">2/17/26</div><div class="go">vs Pompano Beach</div><div class="gr">11-1 (W)</div><div class="gp">111 photos · Gallery coming soon</div></div>
+<div class="gc loss"><div class="gd">2/19/26</div><div class="go">vs Pine Crest Panthers</div><div class="gr">4-14 (L)</div><div class="gp">44 photos · Gallery coming soon</div></div>
+<div class="gc win"><div class="gd">2/23/26</div><div class="go">vs Coral Springs Charter</div><div class="gr">8-7 (W)</div><div class="gp"><img src="action2.jpg" alt="Action vs CS Charter">244 photos · <a href="#">View Gallery →</a></div></div>
+<div class="gc loss"><div class="gd">2/25/26</div><div class="go">vs Coral Springs Colts</div><div class="gr">4-12 (L)</div><div class="gp"><img src="action5.jpg" alt="#20 on the mound vs CS Colts">213 photos · <a href="#">View Gallery →</a></div></div>
+<div class="gc loss"><div class="gd">2/26/26</div><div class="go">vs Coral Glades Jaguars</div><div class="gr">4-6 (L)</div><div class="gp">81 photos · Gallery coming soon</div></div>
+<div class="gc win"><div class="gd">3/03/26</div><div class="go">vs Monarch Knights</div><div class="gr">13-1 (W)</div><div class="gp"><img src="action3.jpg" alt="Scoring vs Monarch Knights">294 photos · <a href="#">View Gallery →</a></div></div>
+<div class="gc loss"><div class="gd">3/05/26</div><div class="go">vs Cooper City Cowboys</div><div class="gr">3-12 (L)</div><div class="gp">263 photos · Gallery coming soon</div></div>
 <div class="gc loss"><div class="gd">3/10/26</div><div class="go">vs Gulf Coast Sharks</div><div class="gr">0-11 (L)</div><div class="gp">📸 Photos Coming Soon</div></div>
 <div class="gc loss"><div class="gd">3/11/26</div><div class="go">vs Archbishop McCarthy</div><div class="gr">6-15 (L)</div><div class="gp">📸 Photos Coming Soon</div></div>
 <div class="gc loss"><div class="gd">3/17/26</div><div class="go">vs University Sharks</div><div class="gr">5-6 (L)</div><div class="gp">📸 Photos Coming Soon</div></div>
