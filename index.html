@@ -1,1079 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOVA TITANS Baseball - Spring 2026 Photo Gallery</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --green: #006633;
-            --gold: #FFD700;
-            --dark-bg: #0a0f0a;
-            --darker-bg: #080c08;
-            --light-bg: #111;
-            --text: #f0f0f0;
-            --text-muted: #aaa;
-            --border: #1a1a1a;
-            --card-bg: #151a15;
-            --win: #2ecc71;
-            --loss: #e74c3c;
-            --upcoming: #95a5a6;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Oswald', sans-serif;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: rgba(10, 15, 10, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            border-bottom: 2px solid var(--green);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            transition: all 0.3s ease;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-icon {
-            color: var(--gold);
-            font-size: 24px;
-        }
-
-        .logo-text {
-            font-family: 'Oswald', sans-serif;
-            font-size: 24px;
-            font-weight: 700;
-            background: linear-gradient(90deg, var(--green), var(--gold));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav a {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            position: relative;
-            padding: 5px 0;
-        }
-
-        nav a:hover {
-            color: var(--gold);
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--green), var(--gold));
-            transition: width 0.3s ease;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text);
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 180px 0 100px;
-            background: linear-gradient(135deg, rgba(10, 15, 10, 0.9), rgba(0, 102, 51, 0.2));
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="%23006633" opacity="0.1"/></svg>');
-            background-size: cover;
-            z-index: -1;
-        }
-
-        .hero-title {
-            font-size: 4.5rem;
-            margin-bottom: 10px;
-            background: linear-gradient(90deg, var(--green), var(--gold));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .hero-subtitle {
-            font-size: 1.8rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
-
-        .hero-record {
-            display: inline-block;
-            background: linear-gradient(90deg, var(--green), var(--gold));
-            color: white;
-            padding: 10px 25px;
-            border-radius: 50px;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 40px;
-            box-shadow: 0 5px 15px rgba(0, 102, 51, 0.3);
-        }
-
-        .hero-photo-placeholder {
-            width: 100%;
-            max-width: 800px;
-            height: 400px;
-            margin: 0 auto;
-            background: linear-gradient(135deg, rgba(0, 102, 51, 0.2), rgba(255, 215, 0, 0.1));
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px dashed var(--green);
-            color: var(--text-muted);
-            font-size: 1.2rem;
-        }
-
-        /* Team Info */
-        .team-info {
-            padding: 80px 0;
-            background-color: var(--darker-bg);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: var(--text);
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--green), var(--gold));
-            border-radius: 2px;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
-        .stat-card {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            padding: 30px;
-            text-align: center;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--green);
-            box-shadow: 0 10px 25px rgba(0, 102, 51, 0.2);
-        }
-
-        .stat-icon {
-            font-size: 2.5rem;
-            color: var(--gold);
-            margin-bottom: 15px;
-        }
-
-        .stat-value {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--gold);
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Roster */
-        .roster {
-            padding: 80px 0;
-            background-color: var(--dark-bg);
-        }
-
-        .year-group {
-            margin-bottom: 50px;
-        }
-
-        .year-title {
-            font-size: 2rem;
-            color: var(--gold);
-            margin-bottom: 25px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--green);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .year-title i {
-            color: var(--green);
-        }
-
-        .roster-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .player-card {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-            position: relative;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .player-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--gold);
-            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.1);
-        }
-
-        .player-number {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: linear-gradient(135deg, var(--green), var(--gold));
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: 700;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            z-index: 2;
-        }
-
-        .player-content {
-            padding: 80px 20px 20px;
-            position: relative;
-        }
-
-        .player-name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--text);
-        }
-
-        .player-details {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-
-        .player-details span {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .photos-coming {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 102, 51, 0.9);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1;
-        }
-
-        .player-card:hover .photos-coming {
-            opacity: 1;
-        }
-
-        .photos-coming-text {
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Schedule */
-        .schedule {
-            padding: 80px 0;
-            background-color: var(--darker-bg);
-        }
-
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .schedule-table th {
-            background: linear-gradient(90deg, var(--green), var(--gold));
-            color: white;
-            text-align: left;
-            padding: 20px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .schedule-table td {
-            padding: 18px 20px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .schedule-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .schedule-table tr:hover {
-            background-color: rgba(0, 102, 51, 0.05);
-        }
-
-        .result-win {
-            color: var(--win);
-            font-weight: 700;
-        }
-
-        .result-loss {
-            color: var(--loss);
-            font-weight: 700;
-        }
-
-        .result-upcoming {
-            color: var(--upcoming);
-            font-weight: 700;
-        }
-
-        .next-game {
-            background-color: rgba(255, 215, 0, 0.1);
-            border-left: 4px solid var(--gold);
-        }
-
-        .game-type {
-            display: inline-block;
-            padding: 5px 12px;
-            background-color: rgba(0, 102, 51, 0.2);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        /* Game Galleries */
-        .game-galleries {
-            padding: 80px 0;
-            background-color: var(--dark-bg);
-        }
-
-        .galleries-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .game-card {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .game-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--green);
-            box-shadow: 0 10px 25px rgba(0, 102, 51, 0.2);
-        }
-
-        .game-header {
-            padding: 20px;
-            background: linear-gradient(90deg, var(--green), rgba(0, 102, 51, 0.8));
-            color: white;
-        }
-
-        .game-date {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .game-opponent {
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-
-        .game-result {
-            padding: 15px 20px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-align: center;
-        }
-
-        .game-photos-placeholder {
-            height: 200px;
-            background: linear-gradient(135deg, rgba(0, 102, 51, 0.1), rgba(255, 215, 0, 0.05));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            border-top: 1px solid var(--border);
-        }
-
-        /* Team History */
-        .team-history {
-            padding: 80px 0;
-            background-color: var(--darker-bg);
-        }
-
-        .history-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .history-item {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            margin-bottom: 15px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .history-header {
-            padding: 20px;
-            background-color: rgba(0, 102, 51, 0.1);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background-color 0.3s ease;
-        }
-
-        .history-header:hover {
-            background-color: rgba(0, 102, 51, 0.2);
-        }
-
-        .history-year {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--text);
-        }
-
-        .history-title {
-            font-size: 1.1rem;
-            color: var(--text);
-        }
-
-        .history-toggle {
-            color: var(--gold);
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .history-content {
-            padding: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .history-content.active {
-            padding: 20px;
-            max-height: 500px;
-        }
-
-        .championship-highlight {
-            background: linear-gradient(135deg, var(--green), var(--gold));
-            color: white;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0, 102, 51, 0.3);
-        }
-
-        .championship-year {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .championship-text {
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
-
-        /* Print Pricing Banner */
-        .print-banner {
-            background: linear-gradient(90deg, var(--green), var(--gold));
-            color: white;
-            padding: 20px;
-            text-align: center;
-            border-radius: 10px;
-            margin: 40px 0;
-            font-size: 1.3rem;
-            font-weight: 600;
-            box-shadow: 0 5px 15px rgba(0, 102, 51, 0.3);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--darker-bg);
-            padding: 60px 0 30px;
-            border-top: 2px solid var(--green);
-        }
-
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .footer-logo {
-            font-family: 'Oswald', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            background: linear-gradient(90deg, var(--green), var(--gold));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 20px;
-        }
-
-        .footer-credits {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .footer-credits a {
-            color: var(--gold);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-credits a:hover {
-            color: var(--green);
-            text-decoration: underline;
-        }
-
-        .footer-built {
-            color: var(--text-muted);
-            font-size: 1rem;
-            margin-top: 20px;
-        }
-
-        .footer-built i {
-            color: var(--gold);
-            margin: 0 5px;
-        }
-
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .modal.active {
-            display: flex;
-        }
-
-        .modal-content {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            max-width: 900px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            border: 2px solid var(--green);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-header {
-            padding: 20px;
-            background: linear-gradient(90deg, var(--green), rgba(0, 102, 51, 0.8));
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-radius: 10px 10px 0 0;
-        }
-
-        .modal-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .modal-close {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .modal-close:hover {
-            color: var(--gold);
-        }
-
-        .modal-body {
-            padding: 30px;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .hero-title {
-                font-size: 3.5rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.5rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header-container {
-                padding: 15px;
-            }
-            
-            nav ul {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background-color: var(--darker-bg);
-                flex-direction: column;
-                padding: 20px;
-                gap: 15px;
-                border-top: 1px solid var(--border);
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-            }
-            
-            nav ul.active {
-                display: flex;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero-title {
-                font-size: 2.8rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.3rem;
-            }
-            
-            .hero-record {
-                font-size: 1.3rem;
-                padding: 8px 20px;
-            }
-            
-            .hero-photo-placeholder {
-                height: 250px;
-            }
-            
-            .schedule-table {
-                display: block;
-                overflow-x: auto;
-            }
-            
-            .schedule-table th,
-            .schedule-table td {
-                padding: 12px 15px;
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-title {
-                font-size: 2.2rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .roster-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .galleries-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .player-number {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
-            }
-            
-            .player-content {
-                padding: 70px 15px 15px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova Titans Baseball — Spring 2026 Photo Gallery</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--g:#006633;--gd:#FFD700;--bg:#0a0f0a;--cb:#131a13;--t:#f0f0f0;--tm:#999;--w:#2ecc71;--l:#e74c3c}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t);line-height:1.6}
+h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:700}
+a{color:var(--gd);text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* Nav */
+nav{position:sticky;top:0;background:rgba(10,15,10,.95);backdrop-filter:blur(10px);border-bottom:1px solid #1a1a1a;z-index:100;padding:12px 0}
+nav .container{display:flex;align-items:center;justify-content:space-between}
+nav img{height:40px}
+nav ul{list-style:none;display:flex;gap:20px}
+nav a{color:var(--tm);font-size:14px;font-weight:500;transition:.2s}
+nav a:hover{color:var(--gd)}
+
+/* Hero */
+.hero{padding:60px 0 40px;text-align:center;background:linear-gradient(180deg,rgba(0,102,51,.15),transparent)}
+.hero img{width:100px;margin-bottom:20px}
+.hero h1{font-size:clamp(2.5rem,6vw,4.5rem);letter-spacing:3px;background:linear-gradient(135deg,var(--gd),#fff,var(--gd));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero .sub{color:var(--tm);font-size:1.1rem;margin:8px 0}
+.hero .record{font-family:'Oswald';font-size:2rem;color:var(--gd)}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;padding:40px 0}
+.stat{background:var(--cb);border:1px solid #1e2e1e;border-radius:12px;padding:20px;text-align:center}
+.stat h4{color:var(--gd);font-size:.85rem;text-transform:uppercase;letter-spacing:1px}
+.stat p{font-size:1.4rem;font-weight:700;margin-top:4px}
+.stat span{color:var(--tm);font-size:.8rem}
+
+/* Section */
+section{padding:50px 0}
+.st{font-size:2rem;text-align:center;margin-bottom:30px;color:var(--gd)}
+
+/* Roster */
+.yg{margin-bottom:30px}
+.yg h3{font-size:1.3rem;color:var(--gd);border-bottom:2px solid #1e2e1e;padding-bottom:8px;margin-bottom:16px}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.pc{background:var(--cb);border:1px solid #1e2e1e;border-radius:10px;padding:16px;display:flex;gap:12px;position:relative;overflow:hidden;transition:.3s}
+.pc:hover{border-color:var(--gd);transform:translateY(-2px)}
+.pn{font-family:'Oswald';font-size:2.2rem;color:var(--gd);min-width:50px;text-align:center;line-height:1}
+.pi h4{font-size:1rem;margin-bottom:4px}
+.pos{color:var(--g);font-weight:600;font-size:.85rem;display:block}
+.hw{color:var(--tm);font-size:.8rem}
+.pho{position:absolute;bottom:0;left:0;right:0;background:rgba(0,102,51,.85);color:#fff;text-align:center;font-size:.75rem;padding:4px;opacity:0;transition:.3s}
+.pc:hover .pho{opacity:1}
+
+/* Schedule */
+table{width:100%;border-collapse:collapse}
+th{background:var(--g);color:#fff;padding:10px;text-align:left;font-family:'Oswald';font-size:.9rem}
+td{padding:10px;border-bottom:1px solid #1a1a1a;font-size:.9rem}
+tr:hover{background:rgba(255,215,0,.05)}
+tr.win .res{color:var(--w);font-weight:700}
+tr.loss .res{color:var(--l);font-weight:700}
+tr.upcoming{background:rgba(255,215,0,.05)}
+tr.upcoming .res{color:var(--gd)}
+tr.na .res{color:var(--tm)}
+
+/* Game Gallery */
+.gg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.gc{background:var(--cb);border:1px solid #1e2e1e;border-radius:10px;padding:20px;transition:.3s}
+.gc:hover{border-color:var(--gd)}
+.gc.win{border-left:3px solid var(--w)}
+.gc.loss{border-left:3px solid var(--l)}
+.gd{color:var(--gd);font-family:'Oswald';font-size:.9rem}
+.go{font-size:1.1rem;font-weight:600;margin:6px 0}
+.gr{font-weight:700;margin-bottom:10px}
+.gp{color:var(--tm);font-size:.85rem;padding:20px 0;text-align:center;border:1px dashed #333;border-radius:8px}
+
+/* History */
+.tl{list-style:none;columns:2;gap:20px}
+.tl li{padding:8px 12px;margin-bottom:8px;background:var(--cb);border-radius:6px;font-size:.9rem;break-inside:avoid}
+.tl .th{background:linear-gradient(135deg,rgba(0,102,51,.3),rgba(255,215,0,.15));border:1px solid var(--gd);font-weight:700;font-size:1rem}
+
+/* Print Banner */
+.pb{background:linear-gradient(135deg,var(--g),#004d26);text-align:center;padding:30px 20px;margin:40px 0}
+.pb h3{color:var(--gd);font-size:1.3rem}
+.pb p{color:var(--t);margin-top:4px}
+
+/* Footer */
+footer{text-align:center;padding:30px;border-top:1px solid #1a1a1a;color:var(--tm);font-size:.85rem}
+footer span{color:var(--gd)}
+
+/* Fade */
+.fi{opacity:0;transform:translateY(20px);transition:.6s}
+.fi.vis{opacity:1;transform:none}
+
+@media(max-width:600px){
+  nav ul{gap:12px}
+  .tl{columns:1}
+  .hero h1{font-size:2rem}
+}
+</style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <div class="logo-icon">⚾</div>
-                <div class="logo-text">NOVA TITANS</div>
-            </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav>
-                <ul id="navMenu">
-                    <li><a href="#roster">Roster</a></li>
-                    <li><a href="#schedule">Schedule</a></li>
-                    <li><a href="#galleries">Games</a></li>
-                    <li><a href="#history">History</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1 class="hero-title">NOVA TITANS</h1>
-            <div class="hero-subtitle">Spring 2026 Baseball</div>
-            <div class="hero-record">Record: 4-8</div>
-            <div class="hero-photo-placeholder">
-                <div>
-                    <i class="fas fa-baseball-ball" style="font-size: 3rem; margin-bottom: 15px; color: var(--gold);"></i>
-                    <div>Team Hero Photo Coming Soon</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<nav>
+<div class="container">
+<img src="logo.png" alt="Nova Titans">
+<ul>
+<li><a href="#roster">Roster</a></li>
+<li><a href="#schedule">Schedule</a></li>
+<li><a href="#games">Games</a></li>
+<li><a href="#history">History</a></li>
+</ul>
+</div>
+</nav>
 
-    <!-- Team Info -->
-    <section class="team-info">
-        <div class="container">
-            <h2 class="section-title">Team Information</h2>
-            <div class="stats-grid">
-                <div class="stat-card fade-in">
-                    <div class="stat-icon"><i class="fas fa-trophy"></i></div>
-                    <div class="stat-value">4-8</div>
-                    <div class="stat-label">Overall Record</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <div class="stat-value">6A District 15</div>
-                    <div class="stat-label">District</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-icon"><i class="fas fa-user-tie"></i></div>
-                    <div class="stat-value">Brian Luebkert</div>
-                    <div class="stat-label">Head Coach</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-icon"><i class="fas fa-user-friends"></i></div>
-                    <div class="stat-value">Kyle Tabora</div>
-                    <div class="stat-label">Assistant Coach</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+<div class="container">
+<img src="logo.png" alt="Nova Titans Logo">
+<h1>NOVA TITANS</h1>
+<p class="sub">Spring 2026 Baseball — Davie, FL</p>
+<div class="record">4 — 8</div>
+<p class="sub">6A District 15</p>
+</div>
+</section>
 
-    <!-- Roster -->
-    <section class="roster" id="roster">
-        <div class="container">
-            <h2 class="section-title">Team Roster</h2>
-            
-            <!-- Seniors 2026 -->
-            <div class="year-group fade-in">
-                <h3 class="year-title"><i class="fas fa-graduation-cap"></i> Seniors 2026</h3>
-                <div class="roster-grid">
-                    <div class="player-card" data-player="6">
-                        <div class="player-number">6</div>
-                        <div class="player-content">
-                            <h4 class="player-name">Musa Adeoye</h4>
-                            <div class="player-details">
-                                <span><strong>Position:</strong> SS, 3B</span>
-                                <span><strong>Height/Weight:</strong> 5'8" / 143 lbs</span>
-                            </div>
-                        </div>
-                        <div class="photos-coming">
-                            <div class="photos-coming-text">Photos Coming Soon</div>
-                        </div>
-                    </div>
-                    <div class="player-card" data-player="11">
-                        <div class="player-number">11</div>
-                        <div class="player-content">
-                            <h4 class="player-name">Joseph Cohen-Rodriquez</h4>
-                            <div class="player-details">
-                                <span><strong>Position:</strong> P, OF</span>
-                                <span><strong>Height/Weight:</strong> 6'0" / 174 lbs</span>
-                            </div>
-                        </div>
-                        <div class="photos-coming">
-                            <div class="photos-coming-text">Photos Coming Soon</div>
-                        </div>
-                    </div>
-                    <div class="player-card" data-player="15">
-                        <div class="player-number">15</div>
-                        <div class="player-content">
-                            <h4 class="player-name">Brock Burns</h4>
-                            <div class="player-details">
-                                <span><strong>Position:</strong> 1B, P</span>
-                                <span><strong>Height/Weight:</strong> 6'0" / 170 lbs</span>
-                            </div>
-                        </div>
-                        <div class="photos-coming">
-                            <div class="photos-coming-text">Photos Coming Soon</div>
-                        </div>
-                    </div>
-                    <div class="player-card" data-player="25">
-                        <div class="player-number">25</div>
-                        <div class="player-content">
-                            <h4 class="player-name">Ricky Relyea</h4>
-                            <div class="player-details">
-                                <span><strong>Position:</strong> C, 1B</span>
-                                <span><strong>Height/Weight:</strong> 6'1" / 200 lbs</span>
-                            </div>
-                        </div>
-                        <div class="photos-coming">
-                            <div class="photos-coming-text">Photos Coming Soon</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Juniors 2027 -->
-            <div class="year-group fade-in">
-                <h3 class="year-title"><i class="fas fa-user-graduate"></i> Juniors 2027</h3>
-                <div class="roster-grid">
-                    <div class="player-card" data-player="9">
-                        <div class="player-number">9</div>
-                        <div class="player-content">
-                            <h4 class="player-name">Eli Steckler</h4>
-                            <div class="player-details">
-                                <span><strong>Position:</strong> LF, RF</span>
-                                <span><strong>Height/Weight:</strong> 5'9" / 170 lbs</span>
-                            </div>
-                        </div>
-                        <div class="photos-coming">
-                            <div class="photos-coming-text">Photos Coming Soon</div>
-                        </div>
-                    </div>
-                    <div class="player-card" data-player="18">
-                        <div class="player-number">18</div>
-                        <div class="player-content">
-                            <h4 class="player-name">Aidan Donnellon</h4>
-                            <div class="player-details">
-                                <span><strong>Position:</strong> LF, P</span>
-                                <span><strong>Height/Weight:</strong> 5'7" / 150 lbs</span>
-                            </div>
-                        </div>
-                        <div class="photos-coming">
-                            <div class="photos-coming-text">Photos Coming Soon</div>
-                        </div>
-                    </div>
-                    <div class="player-card" data-player="20">
-                        <div class="player-number">20</div>
-                        <div class="player-content">
-                            <h4 class="player-name">Anthony Amaya</h4>
-                            <div class="player-details">
-                                <span><strong>Position:</strong> LHP</span>
-                                <span><strong>Height/Weight:</strong> 6'0" / 170 lbs</span>
-                            </div>
-                        </div>
-                        <div class="photos-coming">
-                            <div class="photos-coming-text">Photos Coming Soon</div>
-                        </div>
-                    </div>
-                    <div class="player-card" data-player="21">
-                        <div class="player-number">21</div>
-                        <div class="player-content">
-                            <h4 class="player-name">Aiden Pitti-Shortt</h4>
-                            <div class="player-details">
-                                <span><strong>Position:</strong> 2B, CF</span>
-                                <span><strong>Height/Weight:</strong> 5'4" / 160 lbs</span>
-                            </div>
-                        </div>
-                        <div class="photos-coming">
-                            <div class="photos-coming-text">Photos Coming Soon</div>
-                        </div>
-                    </div>
-                    <div class="player-card" data-player="32">
-                        <div class="player-number">32</div>
-                        <div class="player-content">
-                            <h4 class="player-name">Max Assouline</h4>
-                            <div class="player-details">
-                                <span><strong>Position:</strong> C</span>
-                                <span><strong>Height/Weight:</strong> 6'1" / 155 lbs</span>
-                            </div>
-                        </div>
-                        <div class="photos-coming">
-                            <div class="photos-coming-text">Photos Coming Soon</div>
-                        </div>
-                    </div>
-                    <div class="player-card" data-player="33">
-                        <div class="player-number">33</div>
-                        <div class="player-content">
-                            <h4 class="player-name">Jacob Griffiths</h4>
-                            <div class="player-details">
-                                <span><strong>Position:</strong> 1B</span>
-                                <span><strong>Height/Weight:</strong> 6'1" / 170 lbs</span>
-                            </div>
-                        </div>
-                        <div class="photos-coming">
-                            <div class="photos-coming-text">Photos Coming Soon</div>
-                        </div>
-                    </div>
-                    <div class="player-card" data-player="34">
-                        <div class="player-number">34</div>
-                        <div class="player-content">
-                            <h4 class="player-name">Reilly Redmond</h4>
-                            <div class="player-details">
-                                <span><strong>Position:</strong> P, 3B</span>
-                                <span><strong>Height/Weight:</strong> 6'1" / 208 lbs</span>
-                            </div>
-                        </div>
-                        <div class="photos-coming">
-                            <div class="photos-coming-text">Photos Coming Soon</div>
-                        </div>
-                    </div>
-                    <div class="player-card"
+<section>
+<div class="container">
+<div class="stats fi">
+<div class="stat"><h4>Overall Record</h4><p>4-8</p></div>
+<div class="stat"><h4>District</h4><p>6A-15</p><span>District Record: 0-0</span></div>
+<div class="stat"><h4>Head Coach</h4><p>Brian Luebkert</p><span>6 yrs with team · 27 yrs coaching</span></div>
+<div class="stat"><h4>Assistant Coach</h4><p>Kyle Tabora</p><span>15 yrs with team · 17 yrs coaching</span></div>
+</div>
+</div>
+</section>
+
+<section id="roster">
+<div class="container">
+<h2 class="st">⚾ Team Roster</h2>
+<div class="yg"><h3> Seniors — Class of 2026 🎓</h3><div class="pg"><div class="pc"><div class="pn">6</div><div class="pi"><h4>Musa Adeoye</h4><span class="pos">SS, 3B</span><span class="hw">5'8" / 143 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">11</div><div class="pi"><h4>Joseph Cohen-Rodriquez</h4><span class="pos">P, OF</span><span class="hw">6'0" / 174 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">15</div><div class="pi"><h4>Brock Burns</h4><span class="pos">1B, P</span><span class="hw">6'0" / 170 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">25</div><div class="pi"><h4>Ricky Relyea</h4><span class="pos">C, 1B</span><span class="hw">6'1" / 200 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div></div></div>
+<div class="yg"><h3> Juniors — Class of 2027</h3><div class="pg"><div class="pc"><div class="pn">9</div><div class="pi"><h4>Eli Steckler</h4><span class="pos">LF, RF</span><span class="hw">5'9" / 170 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">18</div><div class="pi"><h4>Aidan Donnellon</h4><span class="pos">LF, P</span><span class="hw">5'7" / 150 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">20</div><div class="pi"><h4>Anthony Amaya</h4><span class="pos">LHP</span><span class="hw">6'0" / 170 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">21</div><div class="pi"><h4>Aiden Pitti-Shortt</h4><span class="pos">2B, CF</span><span class="hw">5'4" / 160 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">32</div><div class="pi"><h4>Max Assouline</h4><span class="pos">C</span><span class="hw">6'1" / 155 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">33</div><div class="pi"><h4>Jacob Griffiths</h4><span class="pos">1B</span><span class="hw">6'1" / 170 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">34</div><div class="pi"><h4>Reilly Redmond</h4><span class="pos">P, 3B</span><span class="hw">6'1" / 208 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">45</div><div class="pi"><h4>Garrett Schnur</h4><span class="pos">—</span><span class="hw">—</span></div><div class="pho">📸 Photos Coming Soon</div></div></div></div>
+<div class="yg"><h3> Sophomores — Class of 2028</h3><div class="pg"><div class="pc"><div class="pn">1</div><div class="pi"><h4>Nico Gonzalez</h4><span class="pos">3B</span><span class="hw">5'10" / 165 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">2</div><div class="pi"><h4>Juan Zapata</h4><span class="pos">SS, 2B</span><span class="hw">5'5" / 125 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">4</div><div class="pi"><h4>Christian English</h4><span class="pos">RF, LF</span><span class="hw">6'0" / 129 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">8</div><div class="pi"><h4>Ryden Biscardi</h4><span class="pos">SS, 2B</span><span class="hw">5'11" / 165 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">12</div><div class="pi"><h4>Jeremy Arias</h4><span class="pos">OF, P</span><span class="hw">5'9" / 150 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">13</div><div class="pi"><h4>Liam McMahon</h4><span class="pos">LF, P</span><span class="hw">5'6" / 130 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">14</div><div class="pi"><h4>Colin Correll</h4><span class="pos">CF, RF</span><span class="hw">5'9" / 137 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">17</div><div class="pi"><h4>Josh Garcia</h4><span class="pos">LF, RF</span><span class="hw">5'10" / 125 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">19</div><div class="pi"><h4>Branden Estevez</h4><span class="pos">CF, 1B</span><span class="hw">5'10" / 130 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">27</div><div class="pi"><h4>Josh Bardales</h4><span class="pos">2B, OF</span><span class="hw">5'11" / 135 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">28</div><div class="pi"><h4>Alejandro Ruiz</h4><span class="pos">—</span><span class="hw">—</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">30</div><div class="pi"><h4>Matthew Richardson</h4><span class="pos">C</span><span class="hw">5'9" / 230 lbs</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">31</div><div class="pi"><h4>Mateo Gil</h4><span class="pos">—</span><span class="hw">—</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">36</div><div class="pi"><h4>Jaiden Silva</h4><span class="pos">—</span><span class="hw">—</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">43</div><div class="pi"><h4>Evert Pereira</h4><span class="pos">—</span><span class="hw">—</span></div><div class="pho">📸 Photos Coming Soon</div></div></div></div>
+<div class="yg"><h3> Freshmen — Class of 2029</h3><div class="pg"><div class="pc"><div class="pn">3</div><div class="pi"><h4>Yaikel Suarez</h4><span class="pos">—</span><span class="hw">—</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">5</div><div class="pi"><h4>Rafael Santiago</h4><span class="pos">—</span><span class="hw">—</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">10</div><div class="pi"><h4>Evan Diaz</h4><span class="pos">—</span><span class="hw">—</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">16</div><div class="pi"><h4>Braylen Austin</h4><span class="pos">—</span><span class="hw">—</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">24</div><div class="pi"><h4>Franklin DeSouza</h4><span class="pos">—</span><span class="hw">—</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">26</div><div class="pi"><h4>Joel Lara</h4><span class="pos">—</span><span class="hw">—</span></div><div class="pho">📸 Photos Coming Soon</div></div>
+<div class="pc"><div class="pn">29</div><div class="pi"><h4>Angelo Olmeda</h4><span class="pos">—</span><span class="hw">—</span></div><div class="pho">📸 Photos Coming Soon</div></div></div></div>
+</div>
+</section>
+
+<section id="schedule">
+<div class="container">
+<h2 class="st">📅 Schedule & Results</h2>
+<div class="fi" style="overflow-x:auto">
+<table>
+<thead><tr><th>Date</th><th>Time</th><th>Opponent</th><th>Type</th><th>Result</th></tr></thead>
+<tbody>
+<tr class="loss"><td>2/10/26</td><td>7:00 PM</td><td>Coral Glades Jaguars </td><td>Regular Season</td><td class="res">3-10 (L)</td></tr>
+<tr class="win"><td>2/12/26</td><td>7:00 PM</td><td>South Plantation Paladins </td><td>Regular Season</td><td class="res">7-3 (W)</td></tr>
+<tr class="win"><td>2/17/26</td><td>7:00 PM</td><td>Pompano Beach </td><td>Regular Season</td><td class="res">11-1 (W)</td></tr>
+<tr class="loss"><td>2/19/26</td><td>7:00 PM</td><td>Pine Crest Panthers </td><td>Regular Season</td><td class="res">4-14 (L)</td></tr>
+<tr class="win"><td>2/23/26</td><td>7:00 PM</td><td>Coral Springs Charter 🏆</td><td>Tournament</td><td class="res">8-7 (W)</td></tr>
+<tr class="loss"><td>2/25/26</td><td>6:30 PM</td><td>Coral Springs Colts 🏆</td><td>Tournament</td><td class="res">4-12 (L)</td></tr>
+<tr class="loss"><td>2/26/26</td><td>6:30 PM</td><td>Coral Glades Jaguars 🏆</td><td>Tournament</td><td class="res">4-6 (L)</td></tr>
+<tr class="win"><td>3/03/26</td><td>7:00 PM</td><td>Monarch Knights </td><td>Regular Season</td><td class="res">13-1 (W)</td></tr>
+<tr class="loss"><td>3/05/26</td><td>7:00 PM</td><td>Cooper City Cowboys </td><td>Regular Season</td><td class="res">3-12 (L)</td></tr>
+<tr class="loss"><td>3/10/26</td><td>7:00 PM</td><td>Gulf Coast Sharks </td><td>Regular Season</td><td class="res">0-11 (L)</td></tr>
+<tr class="loss"><td>3/11/26</td><td>7:00 PM</td><td>Archbishop McCarthy </td><td>Regular Season</td><td class="res">6-15 (L)</td></tr>
+<tr class="na"><td>3/12/26</td><td>6:30 PM</td><td>Fort Lauderdale Flying L's </td><td>Regular Season</td><td class="res">N/A</td></tr>
+<tr class="na"><td>3/17/26</td><td>1:00 PM</td><td>Dr. Joaquin Garcia Bulldogs </td><td>Regular Season</td><td class="res">N/A</td></tr>
+<tr class="loss"><td>3/17/26</td><td>3:45 PM</td><td>University Sharks </td><td>Regular Season</td><td class="res">5-6 (L)</td></tr>
+<tr class="upcoming"><td>3/24/26</td><td>6:30 PM</td><td>Pembroke Pines Charter </td><td>Regular Season</td><td class="res">🔜 Upcoming</td></tr>
+<tr class="upcoming"><td>3/26/26</td><td>7:00 PM</td><td>Everglades Gators </td><td>Regular Season</td><td class="res">🔜 Upcoming</td></tr>
+<tr class="upcoming"><td>3/31/26</td><td>4:00 PM</td><td>South Broward Bulldogs </td><td>Regular Season</td><td class="res">🔜 Upcoming</td></tr>
+<tr class="upcoming"><td>4/02/26</td><td>7:00 PM</td><td>McArthur Mustangs </td><td>Regular Season</td><td class="res">🔜 Upcoming</td></tr>
+<tr class="upcoming"><td>4/07/26</td><td>7:00 PM</td><td>Everglades Gators </td><td>Regular Season</td><td class="res">🔜 Upcoming</td></tr>
+<tr class="upcoming"><td>4/09/26</td><td>7:00 PM</td><td>South Broward Bulldogs </td><td>Regular Season</td><td class="res">🔜 Upcoming</td></tr>
+<tr class="upcoming"><td>4/14/26</td><td>7:00 PM</td><td>McArthur Mustangs </td><td>Regular Season</td><td class="res">🔜 Upcoming</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<section id="games">
+<div class="container">
+<h2 class="st">📸 Game Galleries</h2>
+<div class="gg fi">
+<div class="gc loss"><div class="gd">2/10/26</div><div class="go">vs Coral Glades Jaguars</div><div class="gr">3-10 (L)</div><div class="gp">📸 Photos Coming Soon</div></div>
+<div class="gc win"><div class="gd">2/12/26</div><div class="go">vs South Plantation Paladins</div><div class="gr">7-3 (W)</div><div class="gp">📸 Photos Coming Soon</div></div>
+<div class="gc win"><div class="gd">2/17/26</div><div class="go">vs Pompano Beach</div><div class="gr">11-1 (W)</div><div class="gp">📸 Photos Coming Soon</div></div>
+<div class="gc loss"><div class="gd">2/19/26</div><div class="go">vs Pine Crest Panthers</div><div class="gr">4-14 (L)</div><div class="gp">📸 Photos Coming Soon</div></div>
+<div class="gc win"><div class="gd">2/23/26</div><div class="go">vs Coral Springs Charter</div><div class="gr">8-7 (W)</div><div class="gp">📸 Photos Coming Soon</div></div>
+<div class="gc loss"><div class="gd">2/25/26</div><div class="go">vs Coral Springs Colts</div><div class="gr">4-12 (L)</div><div class="gp">📸 Photos Coming Soon</div></div>
+<div class="gc loss"><div class="gd">2/26/26</div><div class="go">vs Coral Glades Jaguars</div><div class="gr">4-6 (L)</div><div class="gp">📸 Photos Coming Soon</div></div>
+<div class="gc win"><div class="gd">3/03/26</div><div class="go">vs Monarch Knights</div><div class="gr">13-1 (W)</div><div class="gp">📸 Photos Coming Soon</div></div>
+<div class="gc loss"><div class="gd">3/05/26</div><div class="go">vs Cooper City Cowboys</div><div class="gr">3-12 (L)</div><div class="gp">📸 Photos Coming Soon</div></div>
+<div class="gc loss"><div class="gd">3/10/26</div><div class="go">vs Gulf Coast Sharks</div><div class="gr">0-11 (L)</div><div class="gp">📸 Photos Coming Soon</div></div>
+<div class="gc loss"><div class="gd">3/11/26</div><div class="go">vs Archbishop McCarthy</div><div class="gr">6-15 (L)</div><div class="gp">📸 Photos Coming Soon</div></div>
+<div class="gc loss"><div class="gd">3/17/26</div><div class="go">vs University Sharks</div><div class="gr">5-6 (L)</div><div class="gp">📸 Photos Coming Soon</div></div>
+</div>
+</div>
+</section>
+
+<div class="pb fi">
+<h3>🖨️ Print Pricing Coming Soon</h3>
+<p>High quality prints of your favorite game photos — stay tuned!</p>
+</div>
+
+<section id="history">
+<div class="container">
+<h2 class="st">🏆 Team History</h2>
+<ul class="tl fi">
+<li class="">2023 District Champion</li>
+<li class="">2018 District Champion</li>
+<li class="">2017 Regional Champion</li>
+<li class="">2017 District Champion</li>
+<li class="">2016 District Champion</li>
+<li class="">2012 District Champion</li>
+<li class="">2011 District Champion</li>
+<li class="">2009 District Champion</li>
+<li class="th">2005 5A State Champion</li>
+<li class="th">2005 National Champion</li>
+<li class="">2005 Regional Champion</li>
+<li class="">2005 District Champion</li>
+<li class="th">2004 5A State Champion</li>
+<li class="">2004 Regional Champion</li>
+<li class="">2004 District Champion</li>
+</ul>
+</div>
+</section>
+
+<footer>
+<p>📸 Photos by <span>Dana</span> · ⚡ Built by <span>Jackie</span></p>
+<p style="margin-top:8px"><a href="https://www.browardhighschoolbaseball.com/team/nova-titans/" target="_blank">Nova Titans on HSBN →</a></p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
+}, {threshold: 0.1});
+document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
