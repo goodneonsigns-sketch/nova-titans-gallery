@@ -1,5 +1,6 @@
 samples/
 player-picks/
-*.py
+download-*.py
+scan-*.py
 photo-scan-results.json
 rest.html
