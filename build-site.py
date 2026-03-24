@@ -58,11 +58,16 @@ game_folders = {
     "3/05/26": "3-5-26",   # vs Cooper City
 }
 
-# Photo counts per game folder
-game_photo_counts = {
-    "2-12": 157, "2-17-26": 111, "2-19-26": 44, "2-23-26": 244,
-    "2-25-26": 213, "2-26-26": 81, "3-3-26": 294, "3-5-26": 263,
-}
+# Load game photos data if available
+game_photos = {}
+if os.path.exists('game-photos.json'):
+    with open('game-photos.json') as f:
+        game_photos = json.load(f)
+
+# Photo counts per game folder (from game-photos.json or fallback)
+game_photo_counts = {}
+for folder, gdata in game_photos.items():
+    game_photo_counts[folder] = gdata.get('total_photos', 0)
 
 roster = data['roster']
 schedule = data['schedule']
@@ -167,6 +172,9 @@ section{{padding:50px 0}}
 .gp{{color:var(--tm);font-size:.85rem;padding:12px;text-align:center;border:1px dashed #333;border-radius:8px;margin-top:8px}}
 .gp-count{{color:var(--gd);font-weight:600}}
 .gp img{{width:100%;max-height:180px;object-fit:cover;border-radius:8px;margin-bottom:6px}}
+.gp-thumbs{{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;margin-bottom:8px}}
+.gp-thumbs img{{width:100%;height:80px;object-fit:cover;border-radius:6px;transition:.3s}}
+.gp-thumbs img:hover{{opacity:.8}}
 
 /* Schedule */
 table{{width:100%;border-collapse:collapse}}
@@ -306,14 +314,27 @@ for game in schedule:
     photo_count = game_photo_counts.get(folder, 0) if folder else 0
     
     photo_section = ''
-    if photo_count > 0:
+    game_folder_data = game_photos.get(folder, {}) if folder else {}
+    thumbs = game_folder_data.get('thumbnails', [])
+    
+    if thumbs:
+        thumb_grid = '<div class="gp-thumbs">'
+        for t in thumbs[:4]:  # Show 4 thumbnails on the card
+            thumb_grid += f'<img src="{t["thumb"]}" alt="Game photo" loading="lazy">'
+        thumb_grid += '</div>'
+        photo_section = f'{thumb_grid}<div class="gp"><span class="gp-count">📷 {photo_count} photos</span> — Click to view all</div>'
+    elif photo_count > 0:
         photo_section = f'<div class="gp"><span class="gp-count">📷 {photo_count} photos</span><br>Click to view & download</div>'
     elif result != 'upcoming':
         photo_section = '<div class="gp">No photos yet</div>'
     else:
         photo_section = '<div class="gp">Game not yet played</div>'
     
-    html += f'''<div class="gc {css_class}">
+    # Store folder name as data attribute for modal
+    folder_attr = f'data-folder="{folder}"' if folder and thumbs else ''
+    click_attr = f'onclick="openGameGallery(\'{folder}\')"' if folder and thumbs else ''
+    
+    html += f'''<div class="gc {css_class}" {folder_attr} {click_attr}>
 <div class="gd">{game["date"]} &bull; {game["time"]}</div>
 <div class="go">vs {game["opponent"]}</div>
 <div class="gr {result_class}">{result_text}</div>
@@ -430,8 +451,67 @@ function closePlayer() {
   document.body.style.overflow = '';
 }
 
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closePlayer(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closePlayer(); closeGameGallery(); }});
+
+// Game Gallery Modal
+const gamePhotos = ''' + json.dumps({k: {"info": v["info"], "total_photos": v["total_photos"], "thumbnails": v["thumbnails"]} for k, v in game_photos.items()}) + ''';
+
+function openGameGallery(folder) {
+  const data = gamePhotos[folder];
+  if (!data) return;
+  
+  const info = data.info;
+  const thumbs = data.thumbnails;
+  const resultClass = info.result.includes('W') ? 'win-text' : info.result.includes('L') ? 'loss-text' : '';
+  
+  let photosHtml = '<div class="game-gallery-grid">';
+  for (const t of thumbs) {
+    photosHtml += `<div class="game-gallery-item">
+      <img src="${t.thumb}" alt="${t.original_name}" loading="lazy" onclick="openFullImage(this.src)">
+      <div class="game-gallery-name">${t.original_name}</div>
+    </div>`;
+  }
+  photosHtml += '</div>';
+  
+  document.getElementById('gameModalHeader').innerHTML = `
+    <div>
+      <h2 style="font-family:Oswald;font-size:1.8rem;color:#fff">vs ${info.opponent}</h2>
+      <div style="color:rgba(255,255,255,.8)">${info.date} &bull; <span class="${resultClass}" style="font-weight:700">${info.result}</span></div>
+      <div style="color:var(--gd);margin-top:4px;font-weight:600">${data.total_photos} photos by Dana</div>
+    </div>
+  `;
+  
+  document.getElementById('gameModalBody').innerHTML = photosHtml;
+  document.getElementById('gameModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeGameGallery() {
+  document.getElementById('gameModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function openFullImage(src) {
+  window.open(src, '_blank');
+}
 </script>
+
+<!-- Game Gallery Modal -->
+<div class="modal-overlay" id="gameModal" onclick="if(event.target===this)closeGameGallery()">
+<div class="modal" style="max-width:900px">
+<button class="modal-close" onclick="closeGameGallery()">&times;</button>
+<div class="modal-header" id="gameModalHeader"></div>
+<div class="modal-body" id="gameModalBody"></div>
+</div>
+</div>
+
+<style>
+.game-gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.game-gallery-item{border-radius:8px;overflow:hidden;background:rgba(0,0,0,.3)}
+.game-gallery-item img{width:100%;height:160px;object-fit:cover;cursor:pointer;transition:.3s}
+.game-gallery-item img:hover{transform:scale(1.03);opacity:.9}
+.game-gallery-name{padding:6px 8px;font-size:.7rem;color:var(--tm);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+</style>
 
 </body>
 </html>
