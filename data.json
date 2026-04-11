@@ -12,10 +12,10 @@
     "mascot": "Titans",
     "district": "6A District 15",
     "record": {
-      "overall": "4-8",
+      "overall": "4-11",
       "district": "0-0",
-      "home": "4-8",
-      "away": "0-0"
+      "home": "4-10",
+      "away": "0-1"
     }
   },
   "coaches": [
@@ -1161,169 +1161,137 @@
       "date": "2/10/26",
       "time": "7:00 PM",
       "opponent": "Coral Glades Jaguars",
-      "type": "Regular Season",
       "result": "3-10 (L)",
-      "oppRecord": "12-5"
+      "location": "home",
+      "type": "Regular Season"
     },
     {
       "date": "2/12/26",
       "time": "7:00 PM",
       "opponent": "South Plantation Paladins",
-      "type": "Regular Season",
       "result": "7-3 (W)",
-      "oppRecord": "5-10"
+      "location": "home",
+      "type": "Regular Season"
     },
     {
       "date": "2/17/26",
       "time": "7:00 PM",
       "opponent": "Pompano Beach",
-      "type": "Regular Season",
       "result": "11-1 (W)",
-      "oppRecord": "5-7"
+      "location": "home",
+      "type": "Regular Season"
     },
     {
       "date": "2/19/26",
       "time": "7:00 PM",
       "opponent": "Pine Crest Panthers",
-      "type": "Regular Season",
       "result": "4-14 (L)",
-      "oppRecord": "6-5"
+      "location": "home",
+      "type": "Regular Season"
     },
     {
       "date": "2/23/26",
       "time": "7:00 PM",
       "opponent": "Coral Springs Charter",
-      "type": "Tournament",
       "result": "8-7 (W)",
-      "oppRecord": "5-8"
+      "location": "home",
+      "type": "Regular Season"
     },
     {
       "date": "2/25/26",
       "time": "6:30 PM",
       "opponent": "Coral Springs Colts",
-      "type": "Tournament",
       "result": "4-12 (L)",
-      "oppRecord": "11-4"
+      "location": "home",
+      "type": "Regular Season"
     },
     {
       "date": "2/26/26",
       "time": "6:30 PM",
       "opponent": "Coral Glades Jaguars",
-      "type": "Tournament",
       "result": "4-6 (L)",
-      "oppRecord": "12-5"
+      "location": "home",
+      "type": "Regular Season"
     },
     {
       "date": "3/03/26",
       "time": "7:00 PM",
       "opponent": "Monarch Knights",
-      "type": "Regular Season",
       "result": "13-1 (W)",
-      "oppRecord": "3-11-1"
+      "location": "home",
+      "type": "Regular Season"
     },
     {
       "date": "3/05/26",
       "time": "7:00 PM",
       "opponent": "Cooper City Cowboys",
-      "type": "Regular Season",
       "result": "3-12 (L)",
-      "oppRecord": "10-5"
+      "location": "home",
+      "type": "Regular Season"
     },
     {
       "date": "3/10/26",
       "time": "7:00 PM",
       "opponent": "Gulf Coast Sharks",
-      "type": "Regular Season",
       "result": "0-11 (L)",
-      "oppRecord": "9-6"
+      "location": "home",
+      "type": "Regular Season"
     },
     {
       "date": "3/11/26",
       "time": "7:00 PM",
       "opponent": "Archbishop McCarthy",
-      "type": "Regular Season",
       "result": "6-15 (L)",
-      "oppRecord": "7-7"
-    },
-    {
-      "date": "3/12/26",
-      "time": "6:30 PM",
-      "opponent": "Fort Lauderdale Flying L's",
-      "type": "Regular Season",
-      "result": "N/A",
-      "oppRecord": "8-5"
-    },
-    {
-      "date": "3/17/26",
-      "time": "1:00 PM",
-      "opponent": "Dr. Joaquin Garcia Bulldogs",
-      "type": "Regular Season",
-      "result": "N/A",
-      "oppRecord": "9-7"
+      "location": "home",
+      "type": "Regular Season"
     },
     {
       "date": "3/17/26",
       "time": "3:45 PM",
       "opponent": "University Sharks",
-      "type": "Regular Season",
       "result": "5-6 (L)",
-      "oppRecord": "7-4"
+      "location": "home",
+      "type": "Regular Season"
     },
     {
       "date": "3/24/26",
       "time": "6:30 PM",
       "opponent": "Pembroke Pines Charter",
-      "type": "Regular Season",
-      "result": "upcoming",
-      "oppRecord": "8-9"
+      "result": "2-5 (L)",
+      "location": "away",
+      "type": "Regular Season"
     },
     {
       "date": "3/26/26",
       "time": "7:00 PM",
-      "opponent": "Everglades Gators",
-      "type": "Regular Season",
-      "result": "upcoming",
-      "oppRecord": ""
+      "opponent": "South Broward Bulldogs",
+      "result": "4-6 (L)",
+      "location": "home",
+      "type": "Regular Season"
     },
     {
       "date": "3/31/26",
-      "time": "4:00 PM",
-      "opponent": "South Broward Bulldogs",
-      "type": "Regular Season",
-      "result": "upcoming",
-      "oppRecord": ""
-    },
-    {
-      "date": "4/02/26",
       "time": "7:00 PM",
-      "opponent": "McArthur Mustangs",
-      "type": "Regular Season",
-      "result": "upcoming",
-      "oppRecord": ""
+      "opponent": "Jupiter Warriors",
+      "result": "0-11 (L)",
+      "location": "home",
+      "type": "Regular Season"
     },
     {
       "date": "4/07/26",
       "time": "7:00 PM",
-      "opponent": "Everglades Gators",
-      "type": "Regular Season",
+      "opponent": "Piper Bengals",
       "result": "upcoming",
-      "oppRecord": ""
+      "location": "home",
+      "type": "Regular Season"
     },
     {
       "date": "4/09/26",
       "time": "7:00 PM",
-      "opponent": "South Broward Bulldogs",
-      "type": "Regular Season",
+      "opponent": "Everglades Gators",
       "result": "upcoming",
-      "oppRecord": ""
-    },
-    {
-      "date": "4/14/26",
-      "time": "7:00 PM",
-      "opponent": "McArthur Mustangs",
-      "type": "Regular Season",
-      "result": "upcoming",
-      "oppRecord": ""
+      "location": "home",
+      "type": "Regular Season"
     }
   ],
   "titles": [
