@@ -340,7 +340,7 @@ html += f'Asst: {data["coaches"][1]["name"]} ({data["coaches"][1]["totalYears"]}
 html += '<p style="margin-top:12px;font-size:.75rem;color:#555">Nova Titans Baseball &bull; Davie, FL &bull; Updated 2026-04-10</p>\n'
 html += '</footer></div></section>\n'
 
-# --- PLAYER MODAL ---
+# --- PLAYER MODAL + LIGHTBOX ---
 html += '''
 <!-- Player Modal -->
 <div class="modal-overlay" id="playerModal" onclick="if(event.target===this)closePlayer()">
@@ -351,7 +351,88 @@ html += '''
 </div>
 </div>
 
+<!-- Game Gallery Lightbox -->
+<div id="gameLightbox" class="lb-overlay" role="dialog" aria-modal="true" aria-label="Game photo gallery">
+  <!-- Grid view -->
+  <div id="lbGrid" class="lb-grid-view">
+    <div class="lb-grid-header">
+      <div class="lb-game-info">
+        <h2 id="lbGameTitle" class="lb-game-title"></h2>
+        <div id="lbGameMeta" class="lb-game-meta"></div>
+        <div id="lbPhotoCount" class="lb-photo-count"></div>
+      </div>
+      <button class="lb-close-btn" onclick="closeLightbox()" aria-label="Close">&times;</button>
+    </div>
+    <div id="lbThumbnailGrid" class="lb-thumbnail-grid"></div>
+  </div>
+
+  <!-- Single photo view -->
+  <div id="lbSingle" class="lb-single-view" style="display:none">
+    <div class="lb-single-header">
+      <button class="lb-back-btn" onclick="showGrid()" aria-label="Back to grid">&#8592; All Photos</button>
+      <span id="lbCounter" class="lb-counter"></span>
+      <button class="lb-close-btn" onclick="closeLightbox()" aria-label="Close">&times;</button>
+    </div>
+    <div class="lb-image-area" id="lbImageArea">
+      <button class="lb-nav lb-prev" id="lbPrev" onclick="navigatePhoto(-1)" aria-label="Previous photo">&#10094;</button>
+      <div class="lb-img-wrapper" id="lbImgWrapper">
+        <img id="lbMainImg" class="lb-main-img" src="" alt="Game photo">
+      </div>
+      <button class="lb-nav lb-next" id="lbNext" onclick="navigatePhoto(1)" aria-label="Next photo">&#10095;</button>
+    </div>
+  </div>
+</div>
+
+<style>
+/* ===== LIGHTBOX STYLES ===== */
+.lb-overlay{display:none;position:fixed;inset:0;background:#0a0f0a;z-index:500;flex-direction:column;overflow:hidden}
+.lb-overlay.lb-active{display:flex}
+
+/* Grid view */
+.lb-grid-view{display:flex;flex-direction:column;height:100%;overflow:hidden}
+.lb-grid-header{display:flex;align-items:flex-start;justify-content:space-between;padding:20px 24px 16px;border-bottom:1px solid #1e2e1e;flex-shrink:0;background:linear-gradient(180deg,rgba(0,102,51,.3),transparent)}
+.lb-game-title{font-family:'Oswald',sans-serif;font-size:1.8rem;color:#fff;margin-bottom:4px}
+.lb-game-meta{color:rgba(255,255,255,.75);font-size:.95rem;margin-bottom:6px}
+.lb-photo-count{color:#FFD700;font-size:.85rem;font-weight:600}
+.lb-close-btn{background:rgba(255,255,255,.12);border:none;color:#fff;font-size:1.8rem;width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.2s;line-height:1}
+.lb-close-btn:hover{background:rgba(231,76,60,.8)}
+
+.lb-thumbnail-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;padding:20px 24px;overflow-y:auto;flex:1}
+.lb-thumb-item{border-radius:10px;overflow:hidden;cursor:pointer;background:#131a13;border:2px solid transparent;transition:.25s;aspect-ratio:4/3}
+.lb-thumb-item:hover{border-color:#FFD700;transform:scale(1.02);box-shadow:0 4px 20px rgba(255,215,0,.2)}
+.lb-thumb-item img{width:100%;height:100%;object-fit:cover;display:block;transition:.2s}
+
+/* Single photo view */
+.lb-single-view{display:flex;flex-direction:column;height:100%}
+.lb-single-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid #1e2e1e;flex-shrink:0;background:rgba(0,0,0,.5)}
+.lb-back-btn{background:none;border:1px solid rgba(255,255,255,.25);color:#fff;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:.85rem;transition:.2s}
+.lb-back-btn:hover{border-color:#FFD700;color:#FFD700}
+.lb-counter{color:rgba(255,255,255,.75);font-family:'Oswald',sans-serif;font-size:1.1rem}
+
+.lb-image-area{flex:1;display:flex;align-items:center;position:relative;overflow:hidden}
+.lb-img-wrapper{flex:1;display:flex;align-items:center;justify-content:center;height:100%;padding:20px;position:relative}
+.lb-main-img{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px;transition:opacity .2s ease;display:block}
+.lb-main-img.lb-fading{opacity:0}
+
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:none;color:#fff;font-size:2rem;width:54px;height:54px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s;z-index:10;line-height:1}
+.lb-nav:hover{background:rgba(0,102,51,.85);color:#FFD700}
+.lb-prev{left:16px}
+.lb-next{right:16px}
+.lb-nav:disabled{opacity:.25;cursor:default}
+
+@media(max-width:600px){
+  .lb-thumbnail-grid{grid-template-columns:repeat(2,1fr);gap:8px;padding:14px}
+  .lb-grid-header{padding:14px 16px 12px}
+  .lb-game-title{font-size:1.3rem}
+  .lb-nav{width:40px;height:40px;font-size:1.4rem}
+  .lb-prev{left:8px}
+  .lb-next{right:8px}
+  .lb-img-wrapper{padding:10px 60px}
+}
+</style>
+
 <script>
+/* ===== PLAYER MODAL ===== */
 function openPlayer(num) {
   const card = document.querySelector(`.pc[data-num="${num}"]`);
   if (!card) return;
@@ -366,7 +447,6 @@ function openPlayer(num) {
   const batting = stats.batting || {};
   const pitching = stats.pitching || {};
   
-  // Header
   const photoHtml = headshot 
     ? `<img class="modal-photo" src="${headshot}" alt="${name}">`
     : `<div class="modal-placeholder">#${num}</div>`;
@@ -380,56 +460,44 @@ function openPlayer(num) {
     </div>
   `;
   
-  // Body - Stats
   let statsHtml = '';
-  
-  // Check if player has batting stats
   const hasBatting = batting.AB > 0;
   const hasPitching = pitching.IP && pitching.IP !== '.0' && pitching.IP !== '0' && parseFloat(pitching.IP) > 0;
   
   if (hasBatting || hasPitching) {
-    statsHtml = '<div style="display: flex; flex-direction: column; gap: 24px;">';
-    
+    statsHtml = '<div style="display:flex;flex-direction:column;gap:24px">';
     if (hasBatting) {
-      statsHtml += `
-        <div>
-          <h3 style="color:var(--gd);margin-bottom:12px;font-family:Oswald">BATTING STATS</h3>
-          <div class="stats-grid">
-            <div class="stat-box"><div class="val">${batting.BA || '0'}</div><div class="label">AVG</div></div>
-            <div class="stat-box"><div class="val">${batting.OBP || '0'}</div><div class="label">OBP</div></div>
-            <div class="stat-box"><div class="val">${batting.SLG || '0.00'}</div><div class="label">SLG</div></div>
-            <div class="stat-box"><div class="val">${batting.AB || 0}</div><div class="label">AB</div></div>
-            <div class="stat-box"><div class="val">${batting.R || 0}</div><div class="label">Runs</div></div>
-            <div class="stat-box"><div class="val">${batting.H || 0}</div><div class="label">Hits</div></div>
-            <div class="stat-box"><div class="val">${batting.RBI || 0}</div><div class="label">RBI</div></div>
-            <div class="stat-box"><div class="val">${batting["2B"] || 0}</div><div class="label">2B</div></div>
-            <div class="stat-box"><div class="val">${batting["3B"] || 0}</div><div class="label">3B</div></div>
-            <div class="stat-box"><div class="val">${batting.HR || 0}</div><div class="label">HR</div></div>
-            <div class="stat-box"><div class="val">${batting.BB || 0}</div><div class="label">BB</div></div>
-            <div class="stat-box"><div class="val">${batting.K || 0}</div><div class="label">K</div></div>
-          </div>
-        </div>
-      `;
+      statsHtml += `<div>
+        <h3 style="color:var(--gd);margin-bottom:12px;font-family:Oswald">BATTING STATS</h3>
+        <div class="stats-grid">
+          <div class="stat-box"><div class="val">${batting.BA||'0'}</div><div class="label">AVG</div></div>
+          <div class="stat-box"><div class="val">${batting.OBP||'0'}</div><div class="label">OBP</div></div>
+          <div class="stat-box"><div class="val">${batting.SLG||'0.00'}</div><div class="label">SLG</div></div>
+          <div class="stat-box"><div class="val">${batting.AB||0}</div><div class="label">AB</div></div>
+          <div class="stat-box"><div class="val">${batting.R||0}</div><div class="label">Runs</div></div>
+          <div class="stat-box"><div class="val">${batting.H||0}</div><div class="label">Hits</div></div>
+          <div class="stat-box"><div class="val">${batting.RBI||0}</div><div class="label">RBI</div></div>
+          <div class="stat-box"><div class="val">${batting["2B"]||0}</div><div class="label">2B</div></div>
+          <div class="stat-box"><div class="val">${batting["3B"]||0}</div><div class="label">3B</div></div>
+          <div class="stat-box"><div class="val">${batting.HR||0}</div><div class="label">HR</div></div>
+          <div class="stat-box"><div class="val">${batting.BB||0}</div><div class="label">BB</div></div>
+          <div class="stat-box"><div class="val">${batting.K||0}</div><div class="label">K</div></div>
+        </div></div>`;
     }
-    
     if (hasPitching) {
-      statsHtml += `
-        <div>
-          <h3 style="color:var(--gd);margin-bottom:12px;font-family:Oswald">PITCHING STATS</h3>
-          <div class="stats-grid">
-            <div class="stat-box"><div class="val">${pitching.W || 0}</div><div class="label">W</div></div>
-            <div class="stat-box"><div class="val">${pitching.L || 0}</div><div class="label">L</div></div>
-            <div class="stat-box"><div class="val">${pitching.SV || 0}</div><div class="label">SV</div></div>
-            <div class="stat-box"><div class="val">${pitching.IP || '0.0'}</div><div class="label">IP</div></div>
-            <div class="stat-box"><div class="val">${pitching.K || 0}</div><div class="label">K</div></div>
-            <div class="stat-box"><div class="val">${pitching.BB || 0}</div><div class="label">BB</div></div>
-            <div class="stat-box"><div class="val">${pitching.ERA || '—'}</div><div class="label">ERA</div></div>
-            <div class="stat-box"><div class="val">${pitching.WHIP || '—'}</div><div class="label">WHIP</div></div>
-          </div>
-        </div>
-      `;
+      statsHtml += `<div>
+        <h3 style="color:var(--gd);margin-bottom:12px;font-family:Oswald">PITCHING STATS</h3>
+        <div class="stats-grid">
+          <div class="stat-box"><div class="val">${pitching.W||0}</div><div class="label">W</div></div>
+          <div class="stat-box"><div class="val">${pitching.L||0}</div><div class="label">L</div></div>
+          <div class="stat-box"><div class="val">${pitching.SV||0}</div><div class="label">SV</div></div>
+          <div class="stat-box"><div class="val">${pitching.IP||'0.0'}</div><div class="label">IP</div></div>
+          <div class="stat-box"><div class="val">${pitching.K||0}</div><div class="label">K</div></div>
+          <div class="stat-box"><div class="val">${pitching.BB||0}</div><div class="label">BB</div></div>
+          <div class="stat-box"><div class="val">${pitching.ERA||'—'}</div><div class="label">ERA</div></div>
+          <div class="stat-box"><div class="val">${pitching.WHIP||'—'}</div><div class="label">WHIP</div></div>
+        </div></div>`;
     }
-    
     statsHtml += '</div>';
   } else {
     statsHtml = '<p style="color:var(--tm);text-align:center;padding:20px">No stats recorded yet this season</p>';
@@ -445,67 +513,134 @@ function closePlayer() {
   document.body.style.overflow = '';
 }
 
-document.addEventListener('keydown', e => { if (e.key === 'Escape') { closePlayer(); closeGameGallery(); }});
-
-// Game Gallery Modal
+/* ===== GAME LIGHTBOX ===== */
 const gamePhotos = ''' + json.dumps({k: {"info": v["info"], "total_photos": v["total_photos"], "thumbnails": v["thumbnails"]} for k, v in game_photos.items()}) + ''';
+
+let lbFolder = null;
+let lbThumbs = [];
+let lbCurrentIdx = 0;
+let lbSwipeStartX = 0;
 
 function openGameGallery(folder) {
   const data = gamePhotos[folder];
   if (!data) return;
-  
+
+  lbFolder = folder;
+  lbThumbs = data.thumbnails;
   const info = data.info;
-  const thumbs = data.thumbnails;
-  const resultClass = info.result.includes('W') ? 'win-text' : info.result.includes('L') ? 'loss-text' : '';
-  
-  let photosHtml = '<div class="game-gallery-grid">';
-  for (const t of thumbs) {
-    photosHtml += `<div class="game-gallery-item">
-      <img src="${t.thumb}" alt="${t.original_name}" loading="lazy" onclick="openFullImage(this.src)">
-      <div class="game-gallery-name">${t.original_name}</div>
-    </div>`;
-  }
-  photosHtml += '</div>';
-  
-  document.getElementById('gameModalHeader').innerHTML = `
-    <div>
-      <h2 style="font-family:Oswald;font-size:1.8rem;color:#fff">vs ${info.opponent}</h2>
-      <div style="color:rgba(255,255,255,.8)">${info.date} &bull; <span class="${resultClass}" style="font-weight:700">${info.result}</span></div>
-      <div style="color:var(--gd);margin-top:4px;font-weight:600">${data.total_photos} photos by Dana</div>
-    </div>
-  `;
-  
-  document.getElementById('gameModalBody').innerHTML = photosHtml;
-  document.getElementById('gameModal').classList.add('active');
+  const total = data.total_photos;
+  const shown = lbThumbs.length;
+  const resultClass = info.result.includes('W') ? 'color:#2ecc71' : info.result.includes('L') ? 'color:#e74c3c' : 'color:#FFD700';
+
+  // Populate header
+  document.getElementById('lbGameTitle').textContent = 'vs ' + info.opponent;
+  document.getElementById('lbGameMeta').innerHTML = info.date + ' &bull; <span style="' + resultClass + ';font-weight:700">' + info.result + '</span>';
+  document.getElementById('lbPhotoCount').textContent = 'Showing ' + shown + ' of ' + total + ' photos';
+
+  // Populate thumbnail grid
+  const grid = document.getElementById('lbThumbnailGrid');
+  grid.innerHTML = '';
+  lbThumbs.forEach((t, i) => {
+    const div = document.createElement('div');
+    div.className = 'lb-thumb-item';
+    div.setAttribute('aria-label', 'Photo ' + (i+1));
+    div.onclick = () => openSinglePhoto(i);
+    const img = document.createElement('img');
+    img.src = t.thumb;
+    img.alt = t.original_name || ('Photo ' + (i+1));
+    img.loading = 'lazy';
+    div.appendChild(img);
+    grid.appendChild(div);
+  });
+
+  // Show grid view
+  document.getElementById('lbGrid').style.display = 'flex';
+  document.getElementById('lbSingle').style.display = 'none';
+  document.getElementById('gameLightbox').classList.add('lb-active');
   document.body.style.overflow = 'hidden';
+
+  // Preload all thumbnails
+  lbThumbs.forEach(t => { const i = new Image(); i.src = t.thumb; });
 }
 
-function closeGameGallery() {
-  document.getElementById('gameModal').classList.remove('active');
+function showGrid() {
+  document.getElementById('lbGrid').style.display = 'flex';
+  document.getElementById('lbSingle').style.display = 'none';
+}
+
+function openSinglePhoto(idx) {
+  lbCurrentIdx = idx;
+  document.getElementById('lbGrid').style.display = 'none';
+  document.getElementById('lbSingle').style.display = 'flex';
+  renderPhoto(idx, false);
+}
+
+function renderPhoto(idx, animate) {
+  const img = document.getElementById('lbMainImg');
+  const src = lbThumbs[idx].thumb;
+
+  if (animate) {
+    img.classList.add('lb-fading');
+    setTimeout(() => {
+      img.src = src;
+      img.onload = () => img.classList.remove('lb-fading');
+      img.onerror = () => img.classList.remove('lb-fading');
+    }, 180);
+  } else {
+    img.src = src;
+  }
+
+  const total = lbThumbs.length;
+  document.getElementById('lbCounter').textContent = (idx + 1) + ' / ' + total;
+  document.getElementById('lbPrev').disabled = idx === 0;
+  document.getElementById('lbNext').disabled = idx === total - 1;
+
+  // Preload adjacent
+  if (idx + 1 < total) { const p = new Image(); p.src = lbThumbs[idx+1].thumb; }
+  if (idx - 1 >= 0)    { const p = new Image(); p.src = lbThumbs[idx-1].thumb; }
+}
+
+function navigatePhoto(dir) {
+  const next = lbCurrentIdx + dir;
+  if (next < 0 || next >= lbThumbs.length) return;
+  lbCurrentIdx = next;
+  renderPhoto(lbCurrentIdx, true);
+}
+
+function closeLightbox() {
+  document.getElementById('gameLightbox').classList.remove('lb-active');
   document.body.style.overflow = '';
+  lbFolder = null;
+  lbThumbs = [];
 }
 
-function openFullImage(src) {
-  window.open(src, '_blank');
-}
+/* ===== KEYBOARD NAVIGATION ===== */
+document.addEventListener('keydown', e => {
+  const lb = document.getElementById('gameLightbox');
+  const lbActive = lb.classList.contains('lb-active');
+  const singleVisible = lbActive && document.getElementById('lbSingle').style.display !== 'none';
+
+  if (e.key === 'Escape') {
+    if (singleVisible) { showGrid(); }
+    else if (lbActive) { closeLightbox(); }
+    else { closePlayer(); }
+    return;
+  }
+
+  if (singleVisible) {
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); navigatePhoto(-1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); navigatePhoto(1); }
+  }
+});
+
+/* ===== TOUCH / SWIPE ===== */
+const lbImageArea = document.getElementById('lbImageArea');
+lbImageArea.addEventListener('touchstart', e => { lbSwipeStartX = e.touches[0].clientX; }, {passive:true});
+lbImageArea.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - lbSwipeStartX;
+  if (Math.abs(dx) > 50) navigatePhoto(dx < 0 ? 1 : -1);
+}, {passive:true});
 </script>
-
-<!-- Game Gallery Modal -->
-<div class="modal-overlay" id="gameModal" onclick="if(event.target===this)closeGameGallery()">
-<div class="modal" style="max-width:900px">
-<button class="modal-close" onclick="closeGameGallery()">&times;</button>
-<div class="modal-header" id="gameModalHeader"></div>
-<div class="modal-body" id="gameModalBody"></div>
-</div>
-</div>
-
-<style>
-.game-gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
-.game-gallery-item{border-radius:8px;overflow:hidden;background:rgba(0,0,0,.3)}
-.game-gallery-item img{width:100%;height:160px;object-fit:cover;cursor:pointer;transition:.3s}
-.game-gallery-item img:hover{transform:scale(1.03);opacity:.9}
-.game-gallery-name{padding:6px 8px;font-size:.7rem;color:var(--tm);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-</style>
 
 </body>
 </html>
