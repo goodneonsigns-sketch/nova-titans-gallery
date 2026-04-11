@@ -9076,7 +9076,7 @@
     "info": {
       "date": "3/24/26",
       "opponent": "Pembroke Pines Charter",
-      "result": "TBD"
+      "result": "2-5 (L)"
     },
     "total_photos": 119,
     "thumbnails": [
@@ -9722,8 +9722,8 @@
   "3-26-26": {
     "info": {
       "date": "3/26/26",
-      "opponent": "Everglades Gators",
-      "result": "TBD"
+      "opponent": "South Broward Bulldogs",
+      "result": "4-6 (L)"
     },
     "total_photos": 171,
     "thumbnails": [
@@ -10623,6 +10623,2840 @@
         "name": "Photo Mar 26 2026, 8 00 08 PM.jpg",
         "path": "/nova baseball/nova titans/3-26-26/photo mar 26 2026, 8 00 08 pm.jpg",
         "size": 718761
+      }
+    ]
+  },
+  "3-31-26": {
+    "info": {
+      "date": "3/31/26",
+      "opponent": "Jupiter Warriors",
+      "result": "0-11 (L)"
+    },
+    "total_photos": 170,
+    "thumbnails": [
+      {
+        "thumb": "games/3-31-26/thumb_1.jpg",
+        "original_name": "DSC09019.JPG",
+        "dropbox_path": "/nova baseball/nova titans/3-31-26/dsc09019.jpg"
+      },
+      {
+        "thumb": "games/3-31-26/thumb_2.jpg",
+        "original_name": "DSC09046.JPG",
+        "dropbox_path": "/nova baseball/nova titans/3-31-26/dsc09046.jpg"
+      },
+      {
+        "thumb": "games/3-31-26/thumb_3.jpg",
+        "original_name": "DSC09068.JPG",
+        "dropbox_path": "/nova baseball/nova titans/3-31-26/dsc09068.jpg"
+      },
+      {
+        "thumb": "games/3-31-26/thumb_4.jpg",
+        "original_name": "DSC09090.JPG",
+        "dropbox_path": "/nova baseball/nova titans/3-31-26/dsc09090.jpg"
+      },
+      {
+        "thumb": "games/3-31-26/thumb_5.jpg",
+        "original_name": "DSC09115.JPG",
+        "dropbox_path": "/nova baseball/nova titans/3-31-26/dsc09115.jpg"
+      },
+      {
+        "thumb": "games/3-31-26/thumb_6.jpg",
+        "original_name": "DSC09148.JPG",
+        "dropbox_path": "/nova baseball/nova titans/3-31-26/dsc09148.jpg"
+      },
+      {
+        "thumb": "games/3-31-26/thumb_7.jpg",
+        "original_name": "DSC09175.JPG",
+        "dropbox_path": "/nova baseball/nova titans/3-31-26/dsc09175.jpg"
+      },
+      {
+        "thumb": "games/3-31-26/thumb_8.jpg",
+        "original_name": "DSC09205.JPG",
+        "dropbox_path": "/nova baseball/nova titans/3-31-26/dsc09205.jpg"
+      }
+    ],
+    "all_files": [
+      {
+        "name": "DSC09019.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09019.jpg",
+        "size": 644410
+      },
+      {
+        "name": "DSC09020.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09020.jpg",
+        "size": 635050
+      },
+      {
+        "name": "DSC09021.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09021.jpg",
+        "size": 636743
+      },
+      {
+        "name": "DSC09022.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09022.jpg",
+        "size": 638139
+      },
+      {
+        "name": "DSC09023.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09023.jpg",
+        "size": 637569
+      },
+      {
+        "name": "DSC09024.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09024.jpg",
+        "size": 491914
+      },
+      {
+        "name": "DSC09025.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09025.jpg",
+        "size": 491906
+      },
+      {
+        "name": "DSC09026.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09026.jpg",
+        "size": 473442
+      },
+      {
+        "name": "DSC09027.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09027.jpg",
+        "size": 474586
+      },
+      {
+        "name": "DSC09028.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09028.jpg",
+        "size": 481771
+      },
+      {
+        "name": "DSC09029.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09029.jpg",
+        "size": 487007
+      },
+      {
+        "name": "DSC09035.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09035.jpg",
+        "size": 549336
+      },
+      {
+        "name": "DSC09036.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09036.jpg",
+        "size": 557244
+      },
+      {
+        "name": "DSC09037.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09037.jpg",
+        "size": 556436
+      },
+      {
+        "name": "DSC09038.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09038.jpg",
+        "size": 561112
+      },
+      {
+        "name": "DSC09039.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09039.jpg",
+        "size": 543614
+      },
+      {
+        "name": "DSC09041.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09041.jpg",
+        "size": 554867
+      },
+      {
+        "name": "DSC09042.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09042.jpg",
+        "size": 538261
+      },
+      {
+        "name": "DSC09043.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09043.jpg",
+        "size": 641999
+      },
+      {
+        "name": "DSC09044.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09044.jpg",
+        "size": 657732
+      },
+      {
+        "name": "DSC09045.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09045.jpg",
+        "size": 655414
+      },
+      {
+        "name": "DSC09046.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09046.jpg",
+        "size": 672298
+      },
+      {
+        "name": "DSC09047.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09047.jpg",
+        "size": 667803
+      },
+      {
+        "name": "DSC09048.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09048.jpg",
+        "size": 669875
+      },
+      {
+        "name": "DSC09049.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09049.jpg",
+        "size": 675619
+      },
+      {
+        "name": "DSC09050.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09050.jpg",
+        "size": 674130
+      },
+      {
+        "name": "DSC09051.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09051.jpg",
+        "size": 670839
+      },
+      {
+        "name": "DSC09052.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09052.jpg",
+        "size": 692687
+      },
+      {
+        "name": "DSC09053.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09053.jpg",
+        "size": 693863
+      },
+      {
+        "name": "DSC09054.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09054.jpg",
+        "size": 690366
+      },
+      {
+        "name": "DSC09055.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09055.jpg",
+        "size": 688117
+      },
+      {
+        "name": "DSC09056.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09056.jpg",
+        "size": 688897
+      },
+      {
+        "name": "DSC09057.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09057.jpg",
+        "size": 691484
+      },
+      {
+        "name": "DSC09058.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09058.jpg",
+        "size": 689216
+      },
+      {
+        "name": "DSC09059.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09059.jpg",
+        "size": 688615
+      },
+      {
+        "name": "DSC09060.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09060.jpg",
+        "size": 691182
+      },
+      {
+        "name": "DSC09061.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09061.jpg",
+        "size": 681531
+      },
+      {
+        "name": "DSC09062.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09062.jpg",
+        "size": 694231
+      },
+      {
+        "name": "DSC09063.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09063.jpg",
+        "size": 693546
+      },
+      {
+        "name": "DSC09064.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09064.jpg",
+        "size": 693938
+      },
+      {
+        "name": "DSC09065.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09065.jpg",
+        "size": 573813
+      },
+      {
+        "name": "DSC09067.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09067.jpg",
+        "size": 532818
+      },
+      {
+        "name": "DSC09068.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09068.jpg",
+        "size": 529496
+      },
+      {
+        "name": "DSC09069.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09069.jpg",
+        "size": 527866
+      },
+      {
+        "name": "DSC09070.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09070.jpg",
+        "size": 532006
+      },
+      {
+        "name": "DSC09071.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09071.jpg",
+        "size": 535744
+      },
+      {
+        "name": "DSC09072.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09072.jpg",
+        "size": 522803
+      },
+      {
+        "name": "DSC09073.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09073.jpg",
+        "size": 521712
+      },
+      {
+        "name": "DSC09074.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09074.jpg",
+        "size": 635396
+      },
+      {
+        "name": "DSC09075.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09075.jpg",
+        "size": 626800
+      },
+      {
+        "name": "DSC09076.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09076.jpg",
+        "size": 629232
+      },
+      {
+        "name": "DSC09077.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09077.jpg",
+        "size": 633222
+      },
+      {
+        "name": "DSC09078.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09078.jpg",
+        "size": 601067
+      },
+      {
+        "name": "DSC09079.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09079.jpg",
+        "size": 622322
+      },
+      {
+        "name": "DSC09080.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09080.jpg",
+        "size": 602678
+      },
+      {
+        "name": "DSC09081.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09081.jpg",
+        "size": 626306
+      },
+      {
+        "name": "DSC09082.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09082.jpg",
+        "size": 662530
+      },
+      {
+        "name": "DSC09083.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09083.jpg",
+        "size": 663899
+      },
+      {
+        "name": "DSC09084.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09084.jpg",
+        "size": 666181
+      },
+      {
+        "name": "DSC09085.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09085.jpg",
+        "size": 675775
+      },
+      {
+        "name": "DSC09086.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09086.jpg",
+        "size": 672055
+      },
+      {
+        "name": "DSC09087.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09087.jpg",
+        "size": 663936
+      },
+      {
+        "name": "DSC09088.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09088.jpg",
+        "size": 679547
+      },
+      {
+        "name": "DSC09090.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09090.jpg",
+        "size": 625540
+      },
+      {
+        "name": "DSC09091.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09091.jpg",
+        "size": 615905
+      },
+      {
+        "name": "DSC09092.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09092.jpg",
+        "size": 612904
+      },
+      {
+        "name": "DSC09093.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09093.jpg",
+        "size": 611914
+      },
+      {
+        "name": "DSC09094.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09094.jpg",
+        "size": 496699
+      },
+      {
+        "name": "DSC09095.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09095.jpg",
+        "size": 495501
+      },
+      {
+        "name": "DSC09096.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09096.jpg",
+        "size": 560472
+      },
+      {
+        "name": "DSC09097.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09097.jpg",
+        "size": 554592
+      },
+      {
+        "name": "DSC09098.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09098.jpg",
+        "size": 553020
+      },
+      {
+        "name": "DSC09099.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09099.jpg",
+        "size": 548991
+      },
+      {
+        "name": "DSC09104.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09104.jpg",
+        "size": 615452
+      },
+      {
+        "name": "DSC09105.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09105.jpg",
+        "size": 608812
+      },
+      {
+        "name": "DSC09106.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09106.jpg",
+        "size": 601440
+      },
+      {
+        "name": "DSC09107.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09107.jpg",
+        "size": 546302
+      },
+      {
+        "name": "DSC09108.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09108.jpg",
+        "size": 535630
+      },
+      {
+        "name": "DSC09109.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09109.jpg",
+        "size": 642455
+      },
+      {
+        "name": "DSC09110.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09110.jpg",
+        "size": 643435
+      },
+      {
+        "name": "DSC09111.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09111.jpg",
+        "size": 636443
+      },
+      {
+        "name": "DSC09112.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09112.jpg",
+        "size": 691491
+      },
+      {
+        "name": "DSC09113.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09113.jpg",
+        "size": 664243
+      },
+      {
+        "name": "DSC09114.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09114.jpg",
+        "size": 637805
+      },
+      {
+        "name": "DSC09115.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09115.jpg",
+        "size": 637931
+      },
+      {
+        "name": "DSC09116.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09116.jpg",
+        "size": 650152
+      },
+      {
+        "name": "DSC09117.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09117.jpg",
+        "size": 660812
+      },
+      {
+        "name": "DSC09118.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09118.jpg",
+        "size": 640402
+      },
+      {
+        "name": "DSC09119.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09119.jpg",
+        "size": 635261
+      },
+      {
+        "name": "DSC09120.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09120.jpg",
+        "size": 708830
+      },
+      {
+        "name": "DSC09121.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09121.jpg",
+        "size": 697891
+      },
+      {
+        "name": "DSC09122.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09122.jpg",
+        "size": 701141
+      },
+      {
+        "name": "DSC09123.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09123.jpg",
+        "size": 703402
+      },
+      {
+        "name": "DSC09124.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09124.jpg",
+        "size": 710909
+      },
+      {
+        "name": "DSC09125.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09125.jpg",
+        "size": 715693
+      },
+      {
+        "name": "DSC09126.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09126.jpg",
+        "size": 713174
+      },
+      {
+        "name": "DSC09134.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09134.jpg",
+        "size": 684600
+      },
+      {
+        "name": "DSC09135.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09135.jpg",
+        "size": 690517
+      },
+      {
+        "name": "DSC09136.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09136.jpg",
+        "size": 641787
+      },
+      {
+        "name": "DSC09137.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09137.jpg",
+        "size": 631685
+      },
+      {
+        "name": "DSC09138.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09138.jpg",
+        "size": 665487
+      },
+      {
+        "name": "DSC09139.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09139.jpg",
+        "size": 647228
+      },
+      {
+        "name": "DSC09140.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09140.jpg",
+        "size": 663348
+      },
+      {
+        "name": "DSC09141.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09141.jpg",
+        "size": 649199
+      },
+      {
+        "name": "DSC09142.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09142.jpg",
+        "size": 611489
+      },
+      {
+        "name": "DSC09148.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09148.jpg",
+        "size": 603772
+      },
+      {
+        "name": "DSC09149.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09149.jpg",
+        "size": 607021
+      },
+      {
+        "name": "DSC09150.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09150.jpg",
+        "size": 632422
+      },
+      {
+        "name": "DSC09154.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09154.jpg",
+        "size": 617009
+      },
+      {
+        "name": "DSC09155.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09155.jpg",
+        "size": 608610
+      },
+      {
+        "name": "DSC09156.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09156.jpg",
+        "size": 609403
+      },
+      {
+        "name": "DSC09157.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09157.jpg",
+        "size": 608553
+      },
+      {
+        "name": "DSC09158.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09158.jpg",
+        "size": 615528
+      },
+      {
+        "name": "DSC09159.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09159.jpg",
+        "size": 610597
+      },
+      {
+        "name": "DSC09160.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09160.jpg",
+        "size": 613908
+      },
+      {
+        "name": "DSC09161.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09161.jpg",
+        "size": 620028
+      },
+      {
+        "name": "DSC09162.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09162.jpg",
+        "size": 618129
+      },
+      {
+        "name": "DSC09163.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09163.jpg",
+        "size": 643946
+      },
+      {
+        "name": "DSC09164.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09164.jpg",
+        "size": 639693
+      },
+      {
+        "name": "DSC09165.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09165.jpg",
+        "size": 607269
+      },
+      {
+        "name": "DSC09166.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09166.jpg",
+        "size": 620215
+      },
+      {
+        "name": "DSC09167.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09167.jpg",
+        "size": 620005
+      },
+      {
+        "name": "DSC09168.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09168.jpg",
+        "size": 621164
+      },
+      {
+        "name": "DSC09172.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09172.jpg",
+        "size": 685467
+      },
+      {
+        "name": "DSC09173.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09173.jpg",
+        "size": 682245
+      },
+      {
+        "name": "DSC09174.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09174.jpg",
+        "size": 686434
+      },
+      {
+        "name": "DSC09175.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09175.jpg",
+        "size": 685088
+      },
+      {
+        "name": "DSC09176.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09176.jpg",
+        "size": 674149
+      },
+      {
+        "name": "DSC09177.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09177.jpg",
+        "size": 666723
+      },
+      {
+        "name": "DSC09178.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09178.jpg",
+        "size": 675875
+      },
+      {
+        "name": "DSC09181.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09181.jpg",
+        "size": 677163
+      },
+      {
+        "name": "DSC09182.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09182.jpg",
+        "size": 660452
+      },
+      {
+        "name": "DSC09183.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09183.jpg",
+        "size": 658996
+      },
+      {
+        "name": "DSC09184.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09184.jpg",
+        "size": 657461
+      },
+      {
+        "name": "DSC09185.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09185.jpg",
+        "size": 723138
+      },
+      {
+        "name": "DSC09186.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09186.jpg",
+        "size": 719588
+      },
+      {
+        "name": "DSC09187.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09187.jpg",
+        "size": 725094
+      },
+      {
+        "name": "DSC09188.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09188.jpg",
+        "size": 717150
+      },
+      {
+        "name": "DSC09189.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09189.jpg",
+        "size": 710703
+      },
+      {
+        "name": "DSC09190.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09190.jpg",
+        "size": 713545
+      },
+      {
+        "name": "DSC09191.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09191.jpg",
+        "size": 711465
+      },
+      {
+        "name": "DSC09192.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09192.jpg",
+        "size": 585448
+      },
+      {
+        "name": "DSC09194.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09194.jpg",
+        "size": 733884
+      },
+      {
+        "name": "DSC09195.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09195.jpg",
+        "size": 731801
+      },
+      {
+        "name": "DSC09202.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09202.jpg",
+        "size": 641966
+      },
+      {
+        "name": "DSC09203.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09203.jpg",
+        "size": 638101
+      },
+      {
+        "name": "DSC09204.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09204.jpg",
+        "size": 643756
+      },
+      {
+        "name": "DSC09205.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09205.jpg",
+        "size": 624729
+      },
+      {
+        "name": "DSC09206.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09206.jpg",
+        "size": 625615
+      },
+      {
+        "name": "DSC09207.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09207.jpg",
+        "size": 631337
+      },
+      {
+        "name": "DSC09208.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09208.jpg",
+        "size": 627915
+      },
+      {
+        "name": "DSC09209.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09209.jpg",
+        "size": 626918
+      },
+      {
+        "name": "DSC09210.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09210.jpg",
+        "size": 627512
+      },
+      {
+        "name": "DSC09211.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09211.jpg",
+        "size": 726299
+      },
+      {
+        "name": "DSC09212.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09212.jpg",
+        "size": 721496
+      },
+      {
+        "name": "DSC09213.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09213.jpg",
+        "size": 736514
+      },
+      {
+        "name": "DSC09216.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09216.jpg",
+        "size": 735771
+      },
+      {
+        "name": "DSC09224.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09224.jpg",
+        "size": 605081
+      },
+      {
+        "name": "DSC09225.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09225.jpg",
+        "size": 603902
+      },
+      {
+        "name": "DSC09226.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09226.jpg",
+        "size": 612300
+      },
+      {
+        "name": "DSC09227.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09227.jpg",
+        "size": 621549
+      },
+      {
+        "name": "DSC09228.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09228.jpg",
+        "size": 615223
+      },
+      {
+        "name": "DSC09231.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09231.jpg",
+        "size": 727365
+      },
+      {
+        "name": "DSC09232.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09232.jpg",
+        "size": 703598
+      },
+      {
+        "name": "DSC09233.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09233.jpg",
+        "size": 746468
+      },
+      {
+        "name": "DSC09234.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09234.jpg",
+        "size": 742061
+      },
+      {
+        "name": "DSC09235.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09235.jpg",
+        "size": 737036
+      },
+      {
+        "name": "DSC09236.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09236.jpg",
+        "size": 760199
+      },
+      {
+        "name": "DSC09237.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09237.jpg",
+        "size": 758527
+      },
+      {
+        "name": "DSC09238.JPG",
+        "path": "/nova baseball/nova titans/3-31-26/dsc09238.jpg",
+        "size": 765355
+      }
+    ]
+  },
+  "4-10-26": {
+    "info": {
+      "date": "4/10/26",
+      "opponent": "TBD",
+      "result": "TBD"
+    },
+    "total_photos": 376,
+    "thumbnails": [
+      {
+        "thumb": "games/4-10-26/thumb_1.jpg",
+        "original_name": "DSC09254.JPG",
+        "dropbox_path": "/nova baseball/nova titans/4-10-26/dsc09254.jpg"
+      },
+      {
+        "thumb": "games/4-10-26/thumb_2.jpg",
+        "original_name": "DSC09331.JPG",
+        "dropbox_path": "/nova baseball/nova titans/4-10-26/dsc09331.jpg"
+      },
+      {
+        "thumb": "games/4-10-26/thumb_3.jpg",
+        "original_name": "DSC09380.JPG",
+        "dropbox_path": "/nova baseball/nova titans/4-10-26/dsc09380.jpg"
+      },
+      {
+        "thumb": "games/4-10-26/thumb_4.jpg",
+        "original_name": "DSC09439.JPG",
+        "dropbox_path": "/nova baseball/nova titans/4-10-26/dsc09439.jpg"
+      },
+      {
+        "thumb": "games/4-10-26/thumb_5.jpg",
+        "original_name": "DSC09512.JPG",
+        "dropbox_path": "/nova baseball/nova titans/4-10-26/dsc09512.jpg"
+      },
+      {
+        "thumb": "games/4-10-26/thumb_6.jpg",
+        "original_name": "DSC09571.JPG",
+        "dropbox_path": "/nova baseball/nova titans/4-10-26/dsc09571.jpg"
+      },
+      {
+        "thumb": "games/4-10-26/thumb_7.jpg",
+        "original_name": "DSC09622.JPG",
+        "dropbox_path": "/nova baseball/nova titans/4-10-26/dsc09622.jpg"
+      },
+      {
+        "thumb": "games/4-10-26/thumb_8.jpg",
+        "original_name": "DSC09677.JPG",
+        "dropbox_path": "/nova baseball/nova titans/4-10-26/dsc09677.jpg"
+      }
+    ],
+    "all_files": [
+      {
+        "name": "DSC09254.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09254.jpg",
+        "size": 525465
+      },
+      {
+        "name": "DSC09255.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09255.jpg",
+        "size": 524288
+      },
+      {
+        "name": "DSC09262.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09262.jpg",
+        "size": 648982
+      },
+      {
+        "name": "DSC09263.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09263.jpg",
+        "size": 649810
+      },
+      {
+        "name": "DSC09264.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09264.jpg",
+        "size": 651416
+      },
+      {
+        "name": "DSC09266.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09266.jpg",
+        "size": 654067
+      },
+      {
+        "name": "DSC09267.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09267.jpg",
+        "size": 626571
+      },
+      {
+        "name": "DSC09268.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09268.jpg",
+        "size": 646583
+      },
+      {
+        "name": "DSC09269.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09269.jpg",
+        "size": 644524
+      },
+      {
+        "name": "DSC09270.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09270.jpg",
+        "size": 650826
+      },
+      {
+        "name": "DSC09271.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09271.jpg",
+        "size": 653123
+      },
+      {
+        "name": "DSC09274.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09274.jpg",
+        "size": 622632
+      },
+      {
+        "name": "DSC09275.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09275.jpg",
+        "size": 632101
+      },
+      {
+        "name": "DSC09276.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09276.jpg",
+        "size": 626647
+      },
+      {
+        "name": "DSC09277.jpg",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09277.jpg",
+        "size": 254967
+      },
+      {
+        "name": "DSC09280.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09280.jpg",
+        "size": 629221
+      },
+      {
+        "name": "DSC09281.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09281.jpg",
+        "size": 636064
+      },
+      {
+        "name": "DSC09282.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09282.jpg",
+        "size": 633409
+      },
+      {
+        "name": "DSC09283.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09283.jpg",
+        "size": 613321
+      },
+      {
+        "name": "DSC09284.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09284.jpg",
+        "size": 623270
+      },
+      {
+        "name": "DSC09285.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09285.jpg",
+        "size": 629532
+      },
+      {
+        "name": "DSC09286.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09286.jpg",
+        "size": 584657
+      },
+      {
+        "name": "DSC09287.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09287.jpg",
+        "size": 581427
+      },
+      {
+        "name": "DSC09288.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09288.jpg",
+        "size": 597116
+      },
+      {
+        "name": "DSC09289.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09289.jpg",
+        "size": 599372
+      },
+      {
+        "name": "DSC09295.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09295.jpg",
+        "size": 578810
+      },
+      {
+        "name": "DSC09296.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09296.jpg",
+        "size": 580582
+      },
+      {
+        "name": "DSC09299.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09299.jpg",
+        "size": 484728
+      },
+      {
+        "name": "DSC09301.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09301.jpg",
+        "size": 482204
+      },
+      {
+        "name": "DSC09303.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09303.jpg",
+        "size": 625528
+      },
+      {
+        "name": "DSC09306.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09306.jpg",
+        "size": 592301
+      },
+      {
+        "name": "DSC09308.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09308.jpg",
+        "size": 624349
+      },
+      {
+        "name": "DSC09309.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09309.jpg",
+        "size": 628648
+      },
+      {
+        "name": "DSC09312.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09312.jpg",
+        "size": 586224
+      },
+      {
+        "name": "DSC09313.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09313.jpg",
+        "size": 599333
+      },
+      {
+        "name": "DSC09315.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09315.jpg",
+        "size": 617244
+      },
+      {
+        "name": "DSC09316.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09316.jpg",
+        "size": 619904
+      },
+      {
+        "name": "DSC09317.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09317.jpg",
+        "size": 577898
+      },
+      {
+        "name": "DSC09318.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09318.jpg",
+        "size": 571749
+      },
+      {
+        "name": "DSC09319.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09319.jpg",
+        "size": 574386
+      },
+      {
+        "name": "DSC09321.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09321.jpg",
+        "size": 616863
+      },
+      {
+        "name": "DSC09322.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09322.jpg",
+        "size": 604252
+      },
+      {
+        "name": "DSC09325.jpg",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09325.jpg",
+        "size": 235791
+      },
+      {
+        "name": "DSC09326.jpg",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09326.jpg",
+        "size": 178846
+      },
+      {
+        "name": "DSC09328.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09328.jpg",
+        "size": 544428
+      },
+      {
+        "name": "DSC09329.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09329.jpg",
+        "size": 540501
+      },
+      {
+        "name": "DSC09330.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09330.jpg",
+        "size": 603014
+      },
+      {
+        "name": "DSC09331.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09331.jpg",
+        "size": 603659
+      },
+      {
+        "name": "DSC09332.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09332.jpg",
+        "size": 610339
+      },
+      {
+        "name": "DSC09333.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09333.jpg",
+        "size": 606357
+      },
+      {
+        "name": "DSC09334.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09334.jpg",
+        "size": 608979
+      },
+      {
+        "name": "DSC09335.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09335.jpg",
+        "size": 617297
+      },
+      {
+        "name": "DSC09336.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09336.jpg",
+        "size": 624886
+      },
+      {
+        "name": "DSC09337.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09337.jpg",
+        "size": 629253
+      },
+      {
+        "name": "DSC09338.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09338.jpg",
+        "size": 587616
+      },
+      {
+        "name": "DSC09339.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09339.jpg",
+        "size": 586254
+      },
+      {
+        "name": "DSC09340.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09340.jpg",
+        "size": 557059
+      },
+      {
+        "name": "DSC09341.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09341.jpg",
+        "size": 557544
+      },
+      {
+        "name": "DSC09342.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09342.jpg",
+        "size": 556454
+      },
+      {
+        "name": "DSC09343.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09343.jpg",
+        "size": 591220
+      },
+      {
+        "name": "DSC09344.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09344.jpg",
+        "size": 591544
+      },
+      {
+        "name": "DSC09345.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09345.jpg",
+        "size": 589639
+      },
+      {
+        "name": "DSC09346.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09346.jpg",
+        "size": 584013
+      },
+      {
+        "name": "DSC09347.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09347.jpg",
+        "size": 580348
+      },
+      {
+        "name": "DSC09348.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09348.jpg",
+        "size": 577408
+      },
+      {
+        "name": "DSC09349.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09349.jpg",
+        "size": 572508
+      },
+      {
+        "name": "DSC09350.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09350.jpg",
+        "size": 570313
+      },
+      {
+        "name": "DSC09351.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09351.jpg",
+        "size": 588078
+      },
+      {
+        "name": "DSC09353.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09353.jpg",
+        "size": 579384
+      },
+      {
+        "name": "DSC09354.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09354.jpg",
+        "size": 565106
+      },
+      {
+        "name": "DSC09355.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09355.jpg",
+        "size": 621753
+      },
+      {
+        "name": "DSC09356.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09356.jpg",
+        "size": 619627
+      },
+      {
+        "name": "DSC09357.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09357.jpg",
+        "size": 620581
+      },
+      {
+        "name": "DSC09358.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09358.jpg",
+        "size": 613524
+      },
+      {
+        "name": "DSC09359.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09359.jpg",
+        "size": 610723
+      },
+      {
+        "name": "DSC09360.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09360.jpg",
+        "size": 615970
+      },
+      {
+        "name": "DSC09361.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09361.jpg",
+        "size": 602693
+      },
+      {
+        "name": "DSC09362.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09362.jpg",
+        "size": 598665
+      },
+      {
+        "name": "DSC09363.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09363.jpg",
+        "size": 602954
+      },
+      {
+        "name": "DSC09364.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09364.jpg",
+        "size": 594370
+      },
+      {
+        "name": "DSC09365.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09365.jpg",
+        "size": 618554
+      },
+      {
+        "name": "DSC09366.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09366.jpg",
+        "size": 613521
+      },
+      {
+        "name": "DSC09367.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09367.jpg",
+        "size": 594436
+      },
+      {
+        "name": "DSC09368.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09368.jpg",
+        "size": 590259
+      },
+      {
+        "name": "DSC09369.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09369.jpg",
+        "size": 597463
+      },
+      {
+        "name": "DSC09370.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09370.jpg",
+        "size": 593573
+      },
+      {
+        "name": "DSC09372.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09372.jpg",
+        "size": 572016
+      },
+      {
+        "name": "DSC09373.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09373.jpg",
+        "size": 583894
+      },
+      {
+        "name": "DSC09374.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09374.jpg",
+        "size": 597296
+      },
+      {
+        "name": "DSC09375.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09375.jpg",
+        "size": 587474
+      },
+      {
+        "name": "DSC09376.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09376.jpg",
+        "size": 589697
+      },
+      {
+        "name": "DSC09377.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09377.jpg",
+        "size": 582279
+      },
+      {
+        "name": "DSC09378.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09378.jpg",
+        "size": 584989
+      },
+      {
+        "name": "DSC09379.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09379.jpg",
+        "size": 556131
+      },
+      {
+        "name": "DSC09380.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09380.jpg",
+        "size": 551007
+      },
+      {
+        "name": "DSC09388.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09388.jpg",
+        "size": 603536
+      },
+      {
+        "name": "DSC09389.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09389.jpg",
+        "size": 608582
+      },
+      {
+        "name": "DSC09390.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09390.jpg",
+        "size": 603079
+      },
+      {
+        "name": "DSC09391.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09391.jpg",
+        "size": 579871
+      },
+      {
+        "name": "DSC09392.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09392.jpg",
+        "size": 592372
+      },
+      {
+        "name": "DSC09393.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09393.jpg",
+        "size": 593096
+      },
+      {
+        "name": "DSC09394.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09394.jpg",
+        "size": 592155
+      },
+      {
+        "name": "DSC09395.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09395.jpg",
+        "size": 610845
+      },
+      {
+        "name": "DSC09396.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09396.jpg",
+        "size": 600742
+      },
+      {
+        "name": "DSC09397.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09397.jpg",
+        "size": 600271
+      },
+      {
+        "name": "DSC09398.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09398.jpg",
+        "size": 581346
+      },
+      {
+        "name": "DSC09399.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09399.jpg",
+        "size": 580773
+      },
+      {
+        "name": "DSC09400.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09400.jpg",
+        "size": 581096
+      },
+      {
+        "name": "DSC09401.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09401.jpg",
+        "size": 590408
+      },
+      {
+        "name": "DSC09402.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09402.jpg",
+        "size": 591610
+      },
+      {
+        "name": "DSC09403.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09403.jpg",
+        "size": 778829
+      },
+      {
+        "name": "DSC09404.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09404.jpg",
+        "size": 774291
+      },
+      {
+        "name": "DSC09405.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09405.jpg",
+        "size": 775414
+      },
+      {
+        "name": "DSC09406.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09406.jpg",
+        "size": 775800
+      },
+      {
+        "name": "DSC09409.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09409.jpg",
+        "size": 772048
+      },
+      {
+        "name": "DSC09410.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09410.jpg",
+        "size": 771038
+      },
+      {
+        "name": "DSC09411.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09411.jpg",
+        "size": 764755
+      },
+      {
+        "name": "DSC09412.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09412.jpg",
+        "size": 759712
+      },
+      {
+        "name": "DSC09413.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09413.jpg",
+        "size": 785201
+      },
+      {
+        "name": "DSC09416.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09416.jpg",
+        "size": 670770
+      },
+      {
+        "name": "DSC09417.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09417.jpg",
+        "size": 652947
+      },
+      {
+        "name": "DSC09418.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09418.jpg",
+        "size": 735150
+      },
+      {
+        "name": "DSC09419.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09419.jpg",
+        "size": 755805
+      },
+      {
+        "name": "DSC09420.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09420.jpg",
+        "size": 749921
+      },
+      {
+        "name": "DSC09421.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09421.jpg",
+        "size": 753170
+      },
+      {
+        "name": "DSC09422.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09422.jpg",
+        "size": 751780
+      },
+      {
+        "name": "DSC09423.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09423.jpg",
+        "size": 746447
+      },
+      {
+        "name": "DSC09424.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09424.jpg",
+        "size": 739830
+      },
+      {
+        "name": "DSC09425.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09425.jpg",
+        "size": 739338
+      },
+      {
+        "name": "DSC09426.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09426.jpg",
+        "size": 743869
+      },
+      {
+        "name": "DSC09428.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09428.jpg",
+        "size": 654197
+      },
+      {
+        "name": "DSC09429.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09429.jpg",
+        "size": 652549
+      },
+      {
+        "name": "DSC09430.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09430.jpg",
+        "size": 751285
+      },
+      {
+        "name": "DSC09431.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09431.jpg",
+        "size": 730332
+      },
+      {
+        "name": "DSC09432.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09432.jpg",
+        "size": 711442
+      },
+      {
+        "name": "DSC09433.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09433.jpg",
+        "size": 725607
+      },
+      {
+        "name": "DSC09434.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09434.jpg",
+        "size": 689247
+      },
+      {
+        "name": "DSC09435.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09435.jpg",
+        "size": 734705
+      },
+      {
+        "name": "DSC09436.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09436.jpg",
+        "size": 718789
+      },
+      {
+        "name": "DSC09437.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09437.jpg",
+        "size": 732385
+      },
+      {
+        "name": "DSC09438.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09438.jpg",
+        "size": 743550
+      },
+      {
+        "name": "DSC09439.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09439.jpg",
+        "size": 758380
+      },
+      {
+        "name": "DSC09440.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09440.jpg",
+        "size": 765048
+      },
+      {
+        "name": "DSC09441.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09441.jpg",
+        "size": 569569
+      },
+      {
+        "name": "DSC09442.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09442.jpg",
+        "size": 603363
+      },
+      {
+        "name": "DSC09443.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09443.jpg",
+        "size": 592761
+      },
+      {
+        "name": "DSC09444.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09444.jpg",
+        "size": 741244
+      },
+      {
+        "name": "DSC09445.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09445.jpg",
+        "size": 732112
+      },
+      {
+        "name": "DSC09450.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09450.jpg",
+        "size": 680821
+      },
+      {
+        "name": "DSC09452.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09452.jpg",
+        "size": 700077
+      },
+      {
+        "name": "DSC09453.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09453.jpg",
+        "size": 691426
+      },
+      {
+        "name": "DSC09454.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09454.jpg",
+        "size": 711463
+      },
+      {
+        "name": "DSC09456.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09456.jpg",
+        "size": 733399
+      },
+      {
+        "name": "DSC09457.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09457.jpg",
+        "size": 733540
+      },
+      {
+        "name": "DSC09460.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09460.jpg",
+        "size": 722987
+      },
+      {
+        "name": "DSC09461.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09461.jpg",
+        "size": 712351
+      },
+      {
+        "name": "DSC09462.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09462.jpg",
+        "size": 714465
+      },
+      {
+        "name": "DSC09463.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09463.jpg",
+        "size": 731956
+      },
+      {
+        "name": "DSC09464.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09464.jpg",
+        "size": 732481
+      },
+      {
+        "name": "DSC09465.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09465.jpg",
+        "size": 735156
+      },
+      {
+        "name": "DSC09466.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09466.jpg",
+        "size": 730100
+      },
+      {
+        "name": "DSC09467.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09467.jpg",
+        "size": 726344
+      },
+      {
+        "name": "DSC09476.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09476.jpg",
+        "size": 746694
+      },
+      {
+        "name": "DSC09478.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09478.jpg",
+        "size": 703705
+      },
+      {
+        "name": "DSC09479.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09479.jpg",
+        "size": 723074
+      },
+      {
+        "name": "DSC09480.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09480.jpg",
+        "size": 714452
+      },
+      {
+        "name": "DSC09481.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09481.jpg",
+        "size": 717340
+      },
+      {
+        "name": "DSC09482.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09482.jpg",
+        "size": 718005
+      },
+      {
+        "name": "DSC09484.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09484.jpg",
+        "size": 650215
+      },
+      {
+        "name": "DSC09485.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09485.jpg",
+        "size": 643947
+      },
+      {
+        "name": "DSC09486.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09486.jpg",
+        "size": 642608
+      },
+      {
+        "name": "DSC09487.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09487.jpg",
+        "size": 636033
+      },
+      {
+        "name": "DSC09488.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09488.jpg",
+        "size": 641727
+      },
+      {
+        "name": "DSC09489.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09489.jpg",
+        "size": 711865
+      },
+      {
+        "name": "DSC09490.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09490.jpg",
+        "size": 706019
+      },
+      {
+        "name": "DSC09499.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09499.jpg",
+        "size": 703375
+      },
+      {
+        "name": "DSC09500.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09500.jpg",
+        "size": 734860
+      },
+      {
+        "name": "DSC09501.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09501.jpg",
+        "size": 724478
+      },
+      {
+        "name": "DSC09502.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09502.jpg",
+        "size": 720894
+      },
+      {
+        "name": "DSC09503.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09503.jpg",
+        "size": 647943
+      },
+      {
+        "name": "DSC09504.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09504.jpg",
+        "size": 625283
+      },
+      {
+        "name": "DSC09505.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09505.jpg",
+        "size": 629148
+      },
+      {
+        "name": "DSC09506.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09506.jpg",
+        "size": 601089
+      },
+      {
+        "name": "DSC09507.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09507.jpg",
+        "size": 586935
+      },
+      {
+        "name": "DSC09508.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09508.jpg",
+        "size": 699784
+      },
+      {
+        "name": "DSC09509.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09509.jpg",
+        "size": 691140
+      },
+      {
+        "name": "DSC09510.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09510.jpg",
+        "size": 671080
+      },
+      {
+        "name": "DSC09511.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09511.jpg",
+        "size": 678524
+      },
+      {
+        "name": "DSC09512.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09512.jpg",
+        "size": 711623
+      },
+      {
+        "name": "DSC09513.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09513.jpg",
+        "size": 711457
+      },
+      {
+        "name": "DSC09514.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09514.jpg",
+        "size": 735951
+      },
+      {
+        "name": "DSC09515.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09515.jpg",
+        "size": 728004
+      },
+      {
+        "name": "DSC09519.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09519.jpg",
+        "size": 693033
+      },
+      {
+        "name": "DSC09521.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09521.jpg",
+        "size": 755327
+      },
+      {
+        "name": "DSC09522.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09522.jpg",
+        "size": 746748
+      },
+      {
+        "name": "DSC09523.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09523.jpg",
+        "size": 699366
+      },
+      {
+        "name": "DSC09524.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09524.jpg",
+        "size": 791333
+      },
+      {
+        "name": "DSC09525.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09525.jpg",
+        "size": 743240
+      },
+      {
+        "name": "DSC09526.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09526.jpg",
+        "size": 735724
+      },
+      {
+        "name": "DSC09527.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09527.jpg",
+        "size": 732622
+      },
+      {
+        "name": "DSC09528.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09528.jpg",
+        "size": 732188
+      },
+      {
+        "name": "DSC09529.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09529.jpg",
+        "size": 716333
+      },
+      {
+        "name": "DSC09530.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09530.jpg",
+        "size": 710645
+      },
+      {
+        "name": "DSC09531.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09531.jpg",
+        "size": 829282
+      },
+      {
+        "name": "DSC09532.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09532.jpg",
+        "size": 827955
+      },
+      {
+        "name": "DSC09533.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09533.jpg",
+        "size": 699982
+      },
+      {
+        "name": "DSC09534.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09534.jpg",
+        "size": 703994
+      },
+      {
+        "name": "DSC09535.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09535.jpg",
+        "size": 703384
+      },
+      {
+        "name": "DSC09537.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09537.jpg",
+        "size": 748074
+      },
+      {
+        "name": "DSC09538.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09538.jpg",
+        "size": 765049
+      },
+      {
+        "name": "DSC09539.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09539.jpg",
+        "size": 766714
+      },
+      {
+        "name": "DSC09540.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09540.jpg",
+        "size": 727604
+      },
+      {
+        "name": "DSC09541.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09541.jpg",
+        "size": 741843
+      },
+      {
+        "name": "DSC09542.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09542.jpg",
+        "size": 725561
+      },
+      {
+        "name": "DSC09543.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09543.jpg",
+        "size": 723380
+      },
+      {
+        "name": "DSC09544.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09544.jpg",
+        "size": 705105
+      },
+      {
+        "name": "DSC09545.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09545.jpg",
+        "size": 696409
+      },
+      {
+        "name": "DSC09546.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09546.jpg",
+        "size": 701551
+      },
+      {
+        "name": "DSC09547.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09547.jpg",
+        "size": 718604
+      },
+      {
+        "name": "DSC09548.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09548.jpg",
+        "size": 710888
+      },
+      {
+        "name": "DSC09550.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09550.jpg",
+        "size": 677962
+      },
+      {
+        "name": "DSC09551.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09551.jpg",
+        "size": 671001
+      },
+      {
+        "name": "DSC09552.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09552.jpg",
+        "size": 670775
+      },
+      {
+        "name": "DSC09553.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09553.jpg",
+        "size": 672733
+      },
+      {
+        "name": "DSC09554.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09554.jpg",
+        "size": 759795
+      },
+      {
+        "name": "DSC09555.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09555.jpg",
+        "size": 758093
+      },
+      {
+        "name": "DSC09559.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09559.jpg",
+        "size": 654472
+      },
+      {
+        "name": "DSC09560.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09560.jpg",
+        "size": 664413
+      },
+      {
+        "name": "DSC09561.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09561.jpg",
+        "size": 662805
+      },
+      {
+        "name": "DSC09565.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09565.jpg",
+        "size": 649813
+      },
+      {
+        "name": "DSC09566.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09566.jpg",
+        "size": 640511
+      },
+      {
+        "name": "DSC09567.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09567.jpg",
+        "size": 636037
+      },
+      {
+        "name": "DSC09568.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09568.jpg",
+        "size": 628967
+      },
+      {
+        "name": "DSC09569.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09569.jpg",
+        "size": 665598
+      },
+      {
+        "name": "DSC09570.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09570.jpg",
+        "size": 657631
+      },
+      {
+        "name": "DSC09571.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09571.jpg",
+        "size": 660108
+      },
+      {
+        "name": "DSC09572.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09572.jpg",
+        "size": 675520
+      },
+      {
+        "name": "DSC09573.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09573.jpg",
+        "size": 674938
+      },
+      {
+        "name": "DSC09574.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09574.jpg",
+        "size": 677473
+      },
+      {
+        "name": "DSC09575.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09575.jpg",
+        "size": 680001
+      },
+      {
+        "name": "DSC09577.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09577.jpg",
+        "size": 669525
+      },
+      {
+        "name": "DSC09578.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09578.jpg",
+        "size": 666391
+      },
+      {
+        "name": "DSC09579.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09579.jpg",
+        "size": 664042
+      },
+      {
+        "name": "DSC09580.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09580.jpg",
+        "size": 661943
+      },
+      {
+        "name": "DSC09581.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09581.jpg",
+        "size": 669493
+      },
+      {
+        "name": "DSC09582.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09582.jpg",
+        "size": 667168
+      },
+      {
+        "name": "DSC09583.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09583.jpg",
+        "size": 666983
+      },
+      {
+        "name": "DSC09584.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09584.jpg",
+        "size": 722210
+      },
+      {
+        "name": "DSC09585.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09585.jpg",
+        "size": 687792
+      },
+      {
+        "name": "DSC09586.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09586.jpg",
+        "size": 688416
+      },
+      {
+        "name": "DSC09587.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09587.jpg",
+        "size": 686004
+      },
+      {
+        "name": "DSC09588.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09588.jpg",
+        "size": 765772
+      },
+      {
+        "name": "DSC09589.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09589.jpg",
+        "size": 767189
+      },
+      {
+        "name": "DSC09590.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09590.jpg",
+        "size": 755173
+      },
+      {
+        "name": "DSC09591.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09591.jpg",
+        "size": 768252
+      },
+      {
+        "name": "DSC09592.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09592.jpg",
+        "size": 767734
+      },
+      {
+        "name": "DSC09593.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09593.jpg",
+        "size": 774679
+      },
+      {
+        "name": "DSC09594.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09594.jpg",
+        "size": 784990
+      },
+      {
+        "name": "DSC09595.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09595.jpg",
+        "size": 773992
+      },
+      {
+        "name": "DSC09596.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09596.jpg",
+        "size": 759825
+      },
+      {
+        "name": "DSC09597.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09597.jpg",
+        "size": 721790
+      },
+      {
+        "name": "DSC09598.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09598.jpg",
+        "size": 709911
+      },
+      {
+        "name": "DSC09599.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09599.jpg",
+        "size": 701388
+      },
+      {
+        "name": "DSC09600.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09600.jpg",
+        "size": 686856
+      },
+      {
+        "name": "DSC09601.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09601.jpg",
+        "size": 667503
+      },
+      {
+        "name": "DSC09602.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09602.jpg",
+        "size": 635655
+      },
+      {
+        "name": "DSC09603.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09603.jpg",
+        "size": 605489
+      },
+      {
+        "name": "DSC09604.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09604.jpg",
+        "size": 628216
+      },
+      {
+        "name": "DSC09605.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09605.jpg",
+        "size": 580552
+      },
+      {
+        "name": "DSC09606.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09606.jpg",
+        "size": 584088
+      },
+      {
+        "name": "DSC09607.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09607.jpg",
+        "size": 586409
+      },
+      {
+        "name": "DSC09608.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09608.jpg",
+        "size": 604019
+      },
+      {
+        "name": "DSC09609.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09609.jpg",
+        "size": 605597
+      },
+      {
+        "name": "DSC09610.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09610.jpg",
+        "size": 607923
+      },
+      {
+        "name": "DSC09611.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09611.jpg",
+        "size": 612886
+      },
+      {
+        "name": "DSC09612.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09612.jpg",
+        "size": 614594
+      },
+      {
+        "name": "DSC09613.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09613.jpg",
+        "size": 616119
+      },
+      {
+        "name": "DSC09614.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09614.jpg",
+        "size": 570275
+      },
+      {
+        "name": "DSC09615.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09615.jpg",
+        "size": 542946
+      },
+      {
+        "name": "DSC09619.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09619.jpg",
+        "size": 707203
+      },
+      {
+        "name": "DSC09620.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09620.jpg",
+        "size": 710251
+      },
+      {
+        "name": "DSC09621.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09621.jpg",
+        "size": 735555
+      },
+      {
+        "name": "DSC09622.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09622.jpg",
+        "size": 730943
+      },
+      {
+        "name": "DSC09623.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09623.jpg",
+        "size": 737053
+      },
+      {
+        "name": "DSC09624.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09624.jpg",
+        "size": 721806
+      },
+      {
+        "name": "DSC09625.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09625.jpg",
+        "size": 720509
+      },
+      {
+        "name": "DSC09628.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09628.jpg",
+        "size": 716806
+      },
+      {
+        "name": "DSC09629.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09629.jpg",
+        "size": 717077
+      },
+      {
+        "name": "DSC09630.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09630.jpg",
+        "size": 721494
+      },
+      {
+        "name": "DSC09634.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09634.jpg",
+        "size": 732677
+      },
+      {
+        "name": "DSC09635.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09635.jpg",
+        "size": 702792
+      },
+      {
+        "name": "DSC09636.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09636.jpg",
+        "size": 705348
+      },
+      {
+        "name": "DSC09637.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09637.jpg",
+        "size": 713824
+      },
+      {
+        "name": "DSC09638.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09638.jpg",
+        "size": 705193
+      },
+      {
+        "name": "DSC09639.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09639.jpg",
+        "size": 708847
+      },
+      {
+        "name": "DSC09640.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09640.jpg",
+        "size": 715367
+      },
+      {
+        "name": "DSC09641.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09641.jpg",
+        "size": 708059
+      },
+      {
+        "name": "DSC09642.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09642.jpg",
+        "size": 711621
+      },
+      {
+        "name": "DSC09643.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09643.jpg",
+        "size": 708358
+      },
+      {
+        "name": "DSC09644.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09644.jpg",
+        "size": 657953
+      },
+      {
+        "name": "DSC09645.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09645.jpg",
+        "size": 581888
+      },
+      {
+        "name": "DSC09646.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09646.jpg",
+        "size": 580087
+      },
+      {
+        "name": "DSC09647.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09647.jpg",
+        "size": 581010
+      },
+      {
+        "name": "DSC09648.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09648.jpg",
+        "size": 578390
+      },
+      {
+        "name": "DSC09649.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09649.jpg",
+        "size": 555169
+      },
+      {
+        "name": "DSC09651.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09651.jpg",
+        "size": 553951
+      },
+      {
+        "name": "DSC09652.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09652.jpg",
+        "size": 552333
+      },
+      {
+        "name": "DSC09653.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09653.jpg",
+        "size": 562951
+      },
+      {
+        "name": "DSC09654.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09654.jpg",
+        "size": 563780
+      },
+      {
+        "name": "DSC09655.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09655.jpg",
+        "size": 541882
+      },
+      {
+        "name": "DSC09656.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09656.jpg",
+        "size": 567705
+      },
+      {
+        "name": "DSC09658.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09658.jpg",
+        "size": 536303
+      },
+      {
+        "name": "DSC09659.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09659.jpg",
+        "size": 535279
+      },
+      {
+        "name": "DSC09660.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09660.jpg",
+        "size": 572544
+      },
+      {
+        "name": "DSC09661.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09661.jpg",
+        "size": 552830
+      },
+      {
+        "name": "DSC09662.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09662.jpg",
+        "size": 567487
+      },
+      {
+        "name": "DSC09663.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09663.jpg",
+        "size": 593043
+      },
+      {
+        "name": "DSC09665.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09665.jpg",
+        "size": 579838
+      },
+      {
+        "name": "DSC09666.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09666.jpg",
+        "size": 587888
+      },
+      {
+        "name": "DSC09667.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09667.jpg",
+        "size": 584786
+      },
+      {
+        "name": "DSC09668.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09668.jpg",
+        "size": 596159
+      },
+      {
+        "name": "DSC09669.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09669.jpg",
+        "size": 580152
+      },
+      {
+        "name": "DSC09670.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09670.jpg",
+        "size": 573313
+      },
+      {
+        "name": "DSC09671.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09671.jpg",
+        "size": 576880
+      },
+      {
+        "name": "DSC09672.jpg",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09672.jpg",
+        "size": 130017
+      },
+      {
+        "name": "DSC09673.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09673.jpg",
+        "size": 570697
+      },
+      {
+        "name": "DSC09674.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09674.jpg",
+        "size": 569409
+      },
+      {
+        "name": "DSC09675.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09675.jpg",
+        "size": 573651
+      },
+      {
+        "name": "DSC09676.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09676.jpg",
+        "size": 570610
+      },
+      {
+        "name": "DSC09677.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09677.jpg",
+        "size": 637197
+      },
+      {
+        "name": "DSC09678.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09678.jpg",
+        "size": 639900
+      },
+      {
+        "name": "DSC09679.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09679.jpg",
+        "size": 621943
+      },
+      {
+        "name": "DSC09680.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09680.jpg",
+        "size": 613755
+      },
+      {
+        "name": "DSC09681.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09681.jpg",
+        "size": 610170
+      },
+      {
+        "name": "DSC09682.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09682.jpg",
+        "size": 611140
+      },
+      {
+        "name": "DSC09683.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09683.jpg",
+        "size": 607320
+      },
+      {
+        "name": "DSC09684.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09684.jpg",
+        "size": 629086
+      },
+      {
+        "name": "DSC09685.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09685.jpg",
+        "size": 616140
+      },
+      {
+        "name": "DSC09686.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09686.jpg",
+        "size": 623304
+      },
+      {
+        "name": "DSC09687.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09687.jpg",
+        "size": 619188
+      },
+      {
+        "name": "DSC09688.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09688.jpg",
+        "size": 623534
+      },
+      {
+        "name": "DSC09689.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09689.jpg",
+        "size": 562098
+      },
+      {
+        "name": "DSC09690.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09690.jpg",
+        "size": 586148
+      },
+      {
+        "name": "DSC09691.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09691.jpg",
+        "size": 578966
+      },
+      {
+        "name": "DSC09692.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09692.jpg",
+        "size": 578836
+      },
+      {
+        "name": "DSC09693.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09693.jpg",
+        "size": 577487
+      },
+      {
+        "name": "DSC09694.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09694.jpg",
+        "size": 585414
+      },
+      {
+        "name": "DSC09695.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09695.jpg",
+        "size": 573668
+      },
+      {
+        "name": "DSC09696.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09696.jpg",
+        "size": 569630
+      },
+      {
+        "name": "DSC09697.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09697.jpg",
+        "size": 574047
+      },
+      {
+        "name": "DSC09698.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09698.jpg",
+        "size": 569165
+      },
+      {
+        "name": "DSC09699.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09699.jpg",
+        "size": 582553
+      },
+      {
+        "name": "DSC09700.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09700.jpg",
+        "size": 571629
+      },
+      {
+        "name": "DSC09701.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09701.jpg",
+        "size": 575978
+      },
+      {
+        "name": "DSC09702.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09702.jpg",
+        "size": 577292
+      },
+      {
+        "name": "DSC09703.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09703.jpg",
+        "size": 611535
+      },
+      {
+        "name": "DSC09704.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09704.jpg",
+        "size": 603558
+      },
+      {
+        "name": "DSC09705.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09705.jpg",
+        "size": 656128
+      },
+      {
+        "name": "DSC09706.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09706.jpg",
+        "size": 649417
+      },
+      {
+        "name": "DSC09707.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09707.jpg",
+        "size": 648249
+      },
+      {
+        "name": "DSC09708.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09708.jpg",
+        "size": 645046
+      },
+      {
+        "name": "DSC09709.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09709.jpg",
+        "size": 646992
+      },
+      {
+        "name": "DSC09710.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09710.jpg",
+        "size": 637092
+      },
+      {
+        "name": "DSC09711.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09711.jpg",
+        "size": 639443
+      },
+      {
+        "name": "DSC09712.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09712.jpg",
+        "size": 651136
+      },
+      {
+        "name": "DSC09713.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09713.jpg",
+        "size": 654920
+      },
+      {
+        "name": "DSC09714.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09714.jpg",
+        "size": 660407
+      },
+      {
+        "name": "DSC09715.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09715.jpg",
+        "size": 659140
+      },
+      {
+        "name": "DSC09716.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09716.jpg",
+        "size": 642199
+      },
+      {
+        "name": "DSC09717.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09717.jpg",
+        "size": 635960
+      },
+      {
+        "name": "DSC09718.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09718.jpg",
+        "size": 637611
+      },
+      {
+        "name": "DSC09719.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09719.jpg",
+        "size": 621690
+      },
+      {
+        "name": "DSC09720.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09720.jpg",
+        "size": 617068
+      },
+      {
+        "name": "DSC09721.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09721.jpg",
+        "size": 617669
+      },
+      {
+        "name": "DSC09722.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09722.jpg",
+        "size": 613531
+      },
+      {
+        "name": "DSC09723.JPG",
+        "path": "/nova baseball/nova titans/4-10-26/dsc09723.jpg",
+        "size": 610526
       }
     ]
   },
