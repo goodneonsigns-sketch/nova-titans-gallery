@@ -7,6 +7,57 @@ import os
 with open('data.json') as f:
     data = json.load(f)
 
+# Batting stats from browardhighschoolbaseball.com (scraped 2026-03-24)
+batting_stats = {
+    "Nico Gonzalez": {"AB":10,"R":3,"H":2,"RBI":1,"2B":0,"3B":0,"HR":0,"BB":3,"K":2,"BA":".200","OBP":".385","SLG":".200"},
+    "Juan Zapata": {"AB":8,"R":3,"H":2,"RBI":2,"2B":1,"3B":0,"HR":0,"BB":3,"K":1,"BA":".250","OBP":".455","SLG":".375"},
+    "Musa Adeoye": {"AB":11,"R":6,"H":6,"RBI":1,"2B":4,"3B":0,"HR":0,"BB":3,"K":1,"BA":".545","OBP":".667","SLG":".909"},
+    "Eli Steckler": {"AB":13,"R":4,"H":6,"RBI":6,"2B":3,"3B":0,"HR":0,"BB":2,"K":1,"BA":".462","OBP":".563","SLG":".692"},
+    "Colin Correll": {"AB":5,"R":0,"H":1,"RBI":1,"2B":0,"3B":0,"HR":0,"BB":1,"K":2,"BA":".200","OBP":".333","SLG":".200"},
+    "Branden Estevez": {"AB":8,"R":0,"H":1,"RBI":1,"2B":0,"3B":0,"HR":0,"BB":2,"K":2,"BA":".125","OBP":".300","SLG":".125"},
+    "Anthony Amaya": {"AB":11,"R":2,"H":5,"RBI":3,"2B":1,"3B":0,"HR":0,"BB":3,"K":3,"BA":".455","OBP":".571","SLG":".545"},
+    "Aiden Pitti-Shortt": {"AB":13,"R":3,"H":4,"RBI":4,"2B":0,"3B":0,"HR":0,"BB":4,"K":3,"BA":".308","OBP":".471","SLG":".308"},
+    "Ricky Relyea": {"AB":11,"R":0,"H":2,"RBI":0,"2B":0,"3B":0,"HR":0,"BB":1,"K":6,"BA":".182","OBP":".250","SLG":".182"},
+    "Franklin DeSouza": {"AB":14,"R":7,"H":7,"RBI":4,"2B":0,"3B":0,"HR":0,"BB":2,"K":2,"BA":".500","OBP":".611","SLG":".500"},
+    "Josh Bardales": {"AB":3,"R":3,"H":1,"RBI":1,"2B":0,"3B":0,"HR":0,"BB":0,"K":1,"BA":".333","OBP":".333","SLG":".333"},
+    "Garrett Schnur": {"AB":6,"R":0,"H":0,"RBI":1,"2B":0,"3B":0,"HR":0,"BB":0,"K":2,"BA":".000","OBP":".000","SLG":".000"},
+    "Ryden Biscardi": {"AB":3,"R":0,"H":0,"RBI":0,"2B":0,"3B":0,"HR":0,"BB":0,"K":1,"BA":".000","OBP":".000","SLG":".000"},
+    "Aidan Donnellon": {"AB":1,"R":1,"H":0,"RBI":0,"2B":0,"3B":0,"HR":0,"BB":0,"K":1,"BA":".000","OBP":".000","SLG":".000"},
+    "Christian English": {"AB":0,"R":1,"H":0,"RBI":0,"2B":0,"3B":0,"HR":0,"BB":0,"K":0,"BA":".000","OBP":".000","SLG":".000"},
+}
+
+# Player headshot mapping (jersey# -> best available photo)
+player_photos = {
+    1: "action2.jpg",    # Nico - batter at plate
+    6: None,             # Musa - no good headshot
+    9: None,             # Eli
+    11: None,            # Joseph
+    12: None,            # Jeremy
+    14: None,            # Colin
+    15: None,            # Brock
+    18: None,            # Aidan
+    19: None,            # Branden
+    20: "action5.jpg",   # Anthony - on the mound
+    21: None,            # Aiden PS
+    24: None,            # Franklin
+    25: None,            # Ricky
+    29: None,            # Angelo
+    45: None,            # Garrett
+}
+
+# Game-to-Dropbox folder mapping
+game_folders = {
+    "2/10/26": None,       # vs Coral Glades - no folder match
+    "2/12/26": "2-12",     # vs South Plantation
+    "2/17/26": "2-17-26",  # vs Pompano Beach
+    "2/19/26": "2-19-26",  # vs Pine Crest
+    "2/23/26": "2-23-26",  # vs CS Charter
+    "2/25/26": "2-25-26",  # vs CS Colts
+    "2/26/26": "2-26-26",  # vs Coral Glades
+    "3/03/26": "3-3-26",   # vs Monarch Knights
+    "3/05/26": "3-5-26",   # vs Cooper City
+}
+
 # Load game photos data if available
 game_photos = {}
 if os.path.exists('game-photos.json'):
@@ -75,8 +126,8 @@ section{{padding:50px 0}}
 .pg{{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}}
 .pc{{background:var(--cb);border:1px solid #1e2e1e;border-radius:10px;padding:14px;display:flex;gap:12px;align-items:center;cursor:pointer;transition:.3s;position:relative;overflow:hidden}}
 .pc:hover{{border-color:var(--gd);transform:translateY(-2px);box-shadow:0 4px 20px rgba(255,215,0,.15)}}
-.pc-photo{{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--g);flex-shrink:0}}
-.pc-placeholder{{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--g),#004d26);border:3px solid #1e2e1e;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Oswald';font-size:2.5rem;color:var(--gd)}}
+.pc-photo{{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid var(--g);flex-shrink:0}}
+.pc-placeholder{{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--g),#004d26);border:2px solid #1e2e1e;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Oswald';font-size:1.4rem;color:var(--gd)}}
 .pn{{font-family:'Oswald';font-size:1.1rem;color:var(--gd);min-width:30px}}
 .pi h4{{font-size:.95rem;margin-bottom:2px}}
 .pi .pos{{color:var(--g);font-weight:600;font-size:.8rem}}
@@ -90,8 +141,8 @@ section{{padding:50px 0}}
 .modal-close{{position:absolute;top:16px;right:16px;background:rgba(0,0,0,.6);border:none;color:#fff;font-size:1.5rem;width:36px;height:36px;border-radius:50%;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center}}
 .modal-close:hover{{background:var(--l)}}
 .modal-header{{background:linear-gradient(135deg,var(--g),#004d26);padding:30px;display:flex;gap:20px;align-items:center}}
-.modal-photo{{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--gd)}}
-.modal-placeholder{{width:120px;height:120px;border-radius:50%;background:rgba(0,0,0,.3);border:3px solid var(--gd);display:flex;align-items:center;justify-content:center;font-family:'Oswald';font-size:3rem;color:var(--gd)}}
+.modal-photo{{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid var(--gd)}}
+.modal-placeholder{{width:100px;height:100px;border-radius:50%;background:rgba(0,0,0,.3);border:3px solid var(--gd);display:flex;align-items:center;justify-content:center;font-family:'Oswald';font-size:3rem;color:var(--gd)}}
 .modal-info h2{{font-family:'Oswald';font-size:1.8rem;color:#fff}}
 .modal-info .num{{color:var(--gd);font-size:2.5rem;font-family:'Oswald'}}
 .modal-info .details{{color:rgba(255,255,255,.8);font-size:.9rem}}
@@ -209,30 +260,23 @@ for year in sorted(years.keys()):
         pos = p['positions'] or '—'
         ht = p['height'] or '—'
         wt = p['weight'] or '—'
-        headshot = p.get('headshot')
-        batting = p.get('batting', {})
-        pitching = p.get('pitching', {})
         
         # Check for headshot
-        if headshot:
-            photo_html = f'<img class="pc-photo" src="{headshot}" alt="{name}">'
+        photo_file = player_photos.get(num)
+        if photo_file:
+            photo_html = f'<img class="pc-photo" src="{photo_file}" alt="{name}">'
         else:
             photo_html = f'<div class="pc-placeholder">#{num}</div>'
         
         # Check for batting stats
-        ba_display = batting.get('BA', '')
-        if ba_display and ba_display != '0' and ba_display != '.000' and ba_display != '0.00':
-            ba_html = f'<div class="ba">BA: {ba_display}</div>'
-        else:
-            ba_html = ''
+        stats = batting_stats.get(name, {})
+        ba_display = stats.get('BA', '')
+        ba_html = f'<div class="ba">BA: {ba_display}</div>' if ba_display and ba_display != '.000' else ''
         
         # Build stats data attribute for modal
-        stats_json = json.dumps({
-            'batting': batting,
-            'pitching': pitching
-        }).replace('"', '&quot;')
+        stats_json = json.dumps(stats).replace('"', '&quot;') if stats else '{}'
         
-        html += f'''<div class="pc" onclick="openPlayer({num})" data-num="{num}" data-name="{name}" data-pos="{pos}" data-ht="{ht}" data-wt="{wt}" data-grad="{year}" data-headshot="{headshot or ''}" data-stats="{stats_json}">
+        html += f'''<div class="pc" onclick="openPlayer({num})" data-num="{num}" data-name="{name}" data-pos="{pos}" data-ht="{ht}" data-wt="{wt}" data-grad="{year}" data-photo="{photo_file or ''}" data-stats="{stats_json}">
 {photo_html}
 <div class="pi">
 <h4><span class="pn">#{num}</span> {name}</h4>
@@ -251,12 +295,6 @@ html += '<section id="games"><div class="container">\n'
 html += '<h2 class="st">📸 GAME GALLERY</h2>\n'
 html += '<div class="gg">\n'
 
-# Create a mapping from date string to folder name
-date_to_folder = {}
-for folder, gdata in game_photos.items():
-    date_str = gdata['info']['date']
-    date_to_folder[date_str] = folder
-
 for game in schedule:
     result = game['result']
     if result == 'upcoming' or result == 'N/A':
@@ -272,7 +310,7 @@ for game in schedule:
         result_class = 'loss-text'
         result_text = result
     
-    folder = date_to_folder.get(game['date'])
+    folder = game_folders.get(game['date'])
     photo_count = game_photo_counts.get(folder, 0) if folder else 0
     
     photo_section = ''
@@ -337,7 +375,7 @@ for title in data['titles']:
 html += '</div>\n'
 html += f'<p>Head Coach: {data["coaches"][0]["name"]} ({data["coaches"][0]["totalYears"]} years) &bull; '
 html += f'Asst: {data["coaches"][1]["name"]} ({data["coaches"][1]["totalYears"]} years)</p>\n'
-html += '<p style="margin-top:12px;font-size:.75rem;color:#555">Nova Titans Baseball &bull; Davie, FL &bull; Updated 2026-04-10</p>\n'
+html += '<p style="margin-top:12px;font-size:.75rem;color:#555">Nova Titans Baseball &bull; Davie, FL &bull; Updated 2026-03-24</p>\n'
 html += '</footer></div></section>\n'
 
 # --- PLAYER MODAL ---
@@ -352,6 +390,8 @@ html += '''
 </div>
 
 <script>
+const battingStats = ''' + json.dumps(batting_stats) + ''';
+
 function openPlayer(num) {
   const card = document.querySelector(`.pc[data-num="${num}"]`);
   if (!card) return;
@@ -361,14 +401,13 @@ function openPlayer(num) {
   const ht = card.dataset.ht;
   const wt = card.dataset.wt;
   const grad = card.dataset.grad;
-  const headshot = card.dataset.headshot;
-  const stats = JSON.parse(card.dataset.stats || '{}');
-  const batting = stats.batting || {};
-  const pitching = stats.pitching || {};
+  const photo = card.dataset.photo;
+  
+  const stats = battingStats[name] || {};
   
   // Header
-  const photoHtml = headshot 
-    ? `<img class="modal-photo" src="${headshot}" alt="${name}">`
+  const photoHtml = photo 
+    ? `<img class="modal-photo" src="${photo}" alt="${name}">`
     : `<div class="modal-placeholder">#${num}</div>`;
   
   document.getElementById('modalHeader').innerHTML = `
@@ -382,57 +421,24 @@ function openPlayer(num) {
   
   // Body - Stats
   let statsHtml = '';
-  
-  // Check if player has batting stats
-  const hasBatting = batting.AB > 0;
-  const hasPitching = pitching.IP && pitching.IP !== '.0' && pitching.IP !== '0' && parseFloat(pitching.IP) > 0;
-  
-  if (hasBatting || hasPitching) {
-    statsHtml = '<div style="display: flex; flex-direction: column; gap: 24px;">';
-    
-    if (hasBatting) {
-      statsHtml += `
-        <div>
-          <h3 style="color:var(--gd);margin-bottom:12px;font-family:Oswald">BATTING STATS</h3>
-          <div class="stats-grid">
-            <div class="stat-box"><div class="val">${batting.BA || '0'}</div><div class="label">AVG</div></div>
-            <div class="stat-box"><div class="val">${batting.OBP || '0'}</div><div class="label">OBP</div></div>
-            <div class="stat-box"><div class="val">${batting.SLG || '0.00'}</div><div class="label">SLG</div></div>
-            <div class="stat-box"><div class="val">${batting.AB || 0}</div><div class="label">AB</div></div>
-            <div class="stat-box"><div class="val">${batting.R || 0}</div><div class="label">Runs</div></div>
-            <div class="stat-box"><div class="val">${batting.H || 0}</div><div class="label">Hits</div></div>
-            <div class="stat-box"><div class="val">${batting.RBI || 0}</div><div class="label">RBI</div></div>
-            <div class="stat-box"><div class="val">${batting["2B"] || 0}</div><div class="label">2B</div></div>
-            <div class="stat-box"><div class="val">${batting["3B"] || 0}</div><div class="label">3B</div></div>
-            <div class="stat-box"><div class="val">${batting.HR || 0}</div><div class="label">HR</div></div>
-            <div class="stat-box"><div class="val">${batting.BB || 0}</div><div class="label">BB</div></div>
-            <div class="stat-box"><div class="val">${batting.K || 0}</div><div class="label">K</div></div>
-          </div>
-        </div>
-      `;
-    }
-    
-    if (hasPitching) {
-      statsHtml += `
-        <div>
-          <h3 style="color:var(--gd);margin-bottom:12px;font-family:Oswald">PITCHING STATS</h3>
-          <div class="stats-grid">
-            <div class="stat-box"><div class="val">${pitching.W || 0}</div><div class="label">W</div></div>
-            <div class="stat-box"><div class="val">${pitching.L || 0}</div><div class="label">L</div></div>
-            <div class="stat-box"><div class="val">${pitching.SV || 0}</div><div class="label">SV</div></div>
-            <div class="stat-box"><div class="val">${pitching.IP || '0.0'}</div><div class="label">IP</div></div>
-            <div class="stat-box"><div class="val">${pitching.K || 0}</div><div class="label">K</div></div>
-            <div class="stat-box"><div class="val">${pitching.BB || 0}</div><div class="label">BB</div></div>
-            <div class="stat-box"><div class="val">${pitching.ERA || '—'}</div><div class="label">ERA</div></div>
-            <div class="stat-box"><div class="val">${pitching.WHIP || '—'}</div><div class="label">WHIP</div></div>
-          </div>
-        </div>
-      `;
-    }
-    
-    statsHtml += '</div>';
+  if (stats.AB > 0) {
+    statsHtml = `
+      <h3 style="color:var(--gd);margin-bottom:12px;font-family:Oswald">BATTING STATS</h3>
+      <div class="stats-grid">
+        <div class="stat-box"><div class="val">${stats.BA}</div><div class="label">AVG</div></div>
+        <div class="stat-box"><div class="val">${stats.OBP}</div><div class="label">OBP</div></div>
+        <div class="stat-box"><div class="val">${stats.SLG}</div><div class="label">SLG</div></div>
+        <div class="stat-box"><div class="val">${stats.AB}</div><div class="label">AB</div></div>
+        <div class="stat-box"><div class="val">${stats.R}</div><div class="label">Runs</div></div>
+        <div class="stat-box"><div class="val">${stats.H}</div><div class="label">Hits</div></div>
+        <div class="stat-box"><div class="val">${stats.RBI}</div><div class="label">RBI</div></div>
+        <div class="stat-box"><div class="val">${stats["2B"]}</div><div class="label">2B</div></div>
+        <div class="stat-box"><div class="val">${stats.BB}</div><div class="label">BB</div></div>
+        <div class="stat-box"><div class="val">${stats.K}</div><div class="label">K</div></div>
+      </div>
+    `;
   } else {
-    statsHtml = '<p style="color:var(--tm);text-align:center;padding:20px">No stats recorded yet this season</p>';
+    statsHtml = '<p style="color:var(--tm);text-align:center;padding:20px">No batting stats recorded yet this season</p>';
   }
   
   document.getElementById('modalBody').innerHTML = statsHtml;
@@ -515,24 +521,7 @@ function openFullImage(src) {
 with open('index.html', 'w') as f:
     f.write(html)
 
-# Calculate some stats for reporting
-players_with_batting = sum(1 for p in roster if p.get('batting', {}).get('AB', 0) > 0)
-players_with_pitching = 0
-for p in roster:
-    pitching = p.get('pitching', {})
-    ip = pitching.get('IP', '0')
-    try:
-        if ip and ip != '.0' and ip != '0' and float(ip) > 0:
-            players_with_pitching += 1
-    except:
-        pass
-
-players_with_headshots = sum(1 for p in roster if p.get('headshot'))
-
 print(f"Built index.html: {len(html)} chars, {html.count(chr(10))} lines")
-print(f"Total players: {len(roster)}")
-print(f"Players with batting stats (AB>0): {players_with_batting}")
-print(f"Players with pitching stats (IP>0): {players_with_pitching}")
-print(f"Players with headshots: {players_with_headshots}")
+print(f"Players with stats: {len(batting_stats)}")
+print(f"Players with photos: {sum(1 for v in player_photos.values() if v)}")
 print(f"Games with photos: {sum(1 for v in game_photo_counts.values() if v > 0)}")
-print(f"Team record: {team['record']['overall']}")

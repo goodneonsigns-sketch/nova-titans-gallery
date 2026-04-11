@@ -50,8 +50,8 @@ section{padding:50px 0}
 .pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
 .pc{background:var(--cb);border:1px solid #1e2e1e;border-radius:10px;padding:14px;display:flex;gap:12px;align-items:center;cursor:pointer;transition:.3s;position:relative;overflow:hidden}
 .pc:hover{border-color:var(--gd);transform:translateY(-2px);box-shadow:0 4px 20px rgba(255,215,0,.15)}
-.pc-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid var(--g);flex-shrink:0}
-.pc-placeholder{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--g),#004d26);border:2px solid #1e2e1e;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Oswald';font-size:1.4rem;color:var(--gd)}
+.pc-photo{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--g);flex-shrink:0}
+.pc-placeholder{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--g),#004d26);border:3px solid #1e2e1e;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Oswald';font-size:2.5rem;color:var(--gd)}
 .pn{font-family:'Oswald';font-size:1.1rem;color:var(--gd);min-width:30px}
 .pi h4{font-size:.95rem;margin-bottom:2px}
 .pi .pos{color:var(--g);font-weight:600;font-size:.8rem}
@@ -65,8 +65,8 @@ section{padding:50px 0}
 .modal-close{position:absolute;top:16px;right:16px;background:rgba(0,0,0,.6);border:none;color:#fff;font-size:1.5rem;width:36px;height:36px;border-radius:50%;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center}
 .modal-close:hover{background:var(--l)}
 .modal-header{background:linear-gradient(135deg,var(--g),#004d26);padding:30px;display:flex;gap:20px;align-items:center}
-.modal-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid var(--gd)}
-.modal-placeholder{width:100px;height:100px;border-radius:50%;background:rgba(0,0,0,.3);border:3px solid var(--gd);display:flex;align-items:center;justify-content:center;font-family:'Oswald';font-size:3rem;color:var(--gd)}
+.modal-photo{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--gd)}
+.modal-placeholder{width:120px;height:120px;border-radius:50%;background:rgba(0,0,0,.3);border:3px solid var(--gd);display:flex;align-items:center;justify-content:center;font-family:'Oswald';font-size:3rem;color:var(--gd)}
 .modal-info h2{font-family:'Oswald';font-size:1.8rem;color:#fff}
 .modal-info .num{color:var(--gd);font-size:2.5rem;font-family:'Oswald'}
 .modal-info .details{color:rgba(255,255,255,.8);font-size:.9rem}
@@ -162,17 +162,17 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 <section id="roster"><div class="container">
 <h2 class="st">⚾ ROSTER</h2>
 <div class="yg"><h3>Seniors (Class of 2026)</h3><div class="pg">
-<div class="pc" onclick="openPlayer(6)" data-num="6" data-name="Musa Adeoye" data-pos="SS, 3B" data-ht="5'8"" data-wt="143" data-grad="2026" data-photo="" data-stats="{&quot;AB&quot;: 11, &quot;R&quot;: 6, &quot;H&quot;: 6, &quot;RBI&quot;: 1, &quot;2B&quot;: 4, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 3, &quot;K&quot;: 1, &quot;BA&quot;: &quot;.545&quot;, &quot;OBP&quot;: &quot;.667&quot;, &quot;SLG&quot;: &quot;.909&quot;}">
-<div class="pc-placeholder">#6</div>
+<div class="pc" onclick="openPlayer(6)" data-num="6" data-name="Musa Adeoye" data-pos="SS, 3B" data-ht="5'8"" data-wt="143" data-grad="2026" data-headshot="player-picks/musa-adeoye.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/musa-adeoye.png" alt="Musa Adeoye">
 <div class="pi">
 <h4><span class="pn">#6</span> Musa Adeoye</h4>
 <span class="pos">SS, 3B</span>
 <span class="hw">5'8" &bull; 143 lbs &bull; Class of 2026</span>
-<div class="ba">BA: .545</div>
+
 </div>
 </div>
-<div class="pc" onclick="openPlayer(11)" data-num="11" data-name="Joseph Cohen-Rodriquez" data-pos="P, OF" data-ht="6'0"" data-wt="174" data-grad="2026" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#11</div>
+<div class="pc" onclick="openPlayer(11)" data-num="11" data-name="Joseph Cohen-Rodriquez" data-pos="P, OF" data-ht="6'0"" data-wt="174" data-grad="2026" data-headshot="player-picks/joseph-cohen-rodriquez.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 3, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 7, &quot;K&quot;: 1, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;2&quot;, &quot;SLG&quot;: &quot;3.32&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;6.1&quot;, &quot;K&quot;: 3, &quot;BB&quot;: 7, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/joseph-cohen-rodriquez.png" alt="Joseph Cohen-Rodriquez">
 <div class="pi">
 <h4><span class="pn">#11</span> Joseph Cohen-Rodriquez</h4>
 <span class="pos">P, OF</span>
@@ -180,8 +180,8 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(15)" data-num="15" data-name="Brock Burns" data-pos="1B, P" data-ht="6'0"" data-wt="170" data-grad="2026" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#15</div>
+<div class="pc" onclick="openPlayer(15)" data-num="15" data-name="Brock Burns" data-pos="1B, P" data-ht="6'0"" data-wt="170" data-grad="2026" data-headshot="player-picks/brock-burns.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 1, &quot;R&quot;: 0, &quot;H&quot;: 1, &quot;RBI&quot;: 0, &quot;2B&quot;: 4, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 4, &quot;K&quot;: 1, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;1&quot;, &quot;SLG&quot;: &quot;8.40&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 1, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;5.0&quot;, &quot;K&quot;: 4, &quot;BB&quot;: 4, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/brock-burns.png" alt="Brock Burns">
 <div class="pi">
 <h4><span class="pn">#15</span> Brock Burns</h4>
 <span class="pos">1B, P</span>
@@ -189,28 +189,28 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(25)" data-num="25" data-name="Ricky Relyea" data-pos="C, 1B" data-ht="6'1"" data-wt="200" data-grad="2026" data-photo="" data-stats="{&quot;AB&quot;: 11, &quot;R&quot;: 0, &quot;H&quot;: 2, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 1, &quot;K&quot;: 6, &quot;BA&quot;: &quot;.182&quot;, &quot;OBP&quot;: &quot;.250&quot;, &quot;SLG&quot;: &quot;.182&quot;}">
-<div class="pc-placeholder">#25</div>
+<div class="pc" onclick="openPlayer(25)" data-num="25" data-name="Ricky Relyea" data-pos="C, 1B" data-ht="6'1"" data-wt="200" data-grad="2026" data-headshot="player-picks/ricky-relyea.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/ricky-relyea.png" alt="Ricky Relyea">
 <div class="pi">
 <h4><span class="pn">#25</span> Ricky Relyea</h4>
 <span class="pos">C, 1B</span>
 <span class="hw">6'1" &bull; 200 lbs &bull; Class of 2026</span>
-<div class="ba">BA: .182</div>
+
 </div>
 </div>
 </div></div>
 <div class="yg"><h3>Juniors (Class of 2027)</h3><div class="pg">
-<div class="pc" onclick="openPlayer(9)" data-num="9" data-name="Eli Steckler" data-pos="LF, RF" data-ht="5'9"" data-wt="170" data-grad="2027" data-photo="" data-stats="{&quot;AB&quot;: 13, &quot;R&quot;: 4, &quot;H&quot;: 6, &quot;RBI&quot;: 6, &quot;2B&quot;: 3, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 2, &quot;K&quot;: 1, &quot;BA&quot;: &quot;.462&quot;, &quot;OBP&quot;: &quot;.563&quot;, &quot;SLG&quot;: &quot;.692&quot;}">
-<div class="pc-placeholder">#9</div>
+<div class="pc" onclick="openPlayer(9)" data-num="9" data-name="Eli Steckler" data-pos="LF, RF" data-ht="5'9"" data-wt="170" data-grad="2027" data-headshot="player-picks/eli-steckler.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/eli-steckler.png" alt="Eli Steckler">
 <div class="pi">
 <h4><span class="pn">#9</span> Eli Steckler</h4>
 <span class="pos">LF, RF</span>
 <span class="hw">5'9" &bull; 170 lbs &bull; Class of 2027</span>
-<div class="ba">BA: .462</div>
+
 </div>
 </div>
-<div class="pc" onclick="openPlayer(18)" data-num="18" data-name="Aidan Donnellon" data-pos="LF, P" data-ht="5'7"" data-wt="150" data-grad="2027" data-photo="" data-stats="{&quot;AB&quot;: 1, &quot;R&quot;: 1, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 1, &quot;BA&quot;: &quot;.000&quot;, &quot;OBP&quot;: &quot;.000&quot;, &quot;SLG&quot;: &quot;.000&quot;}">
-<div class="pc-placeholder">#18</div>
+<div class="pc" onclick="openPlayer(18)" data-num="18" data-name="Aidan Donnellon" data-pos="LF, P" data-ht="5'7"" data-wt="150" data-grad="2027" data-headshot="player-picks/aidan-donnellon.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/aidan-donnellon.png" alt="Aidan Donnellon">
 <div class="pi">
 <h4><span class="pn">#18</span> Aidan Donnellon</h4>
 <span class="pos">LF, P</span>
@@ -218,26 +218,26 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(20)" data-num="20" data-name="Anthony Amaya" data-pos="LHP" data-ht="6'0"" data-wt="170" data-grad="2027" data-photo="action5.jpg" data-stats="{&quot;AB&quot;: 11, &quot;R&quot;: 2, &quot;H&quot;: 5, &quot;RBI&quot;: 3, &quot;2B&quot;: 1, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 3, &quot;K&quot;: 3, &quot;BA&quot;: &quot;.455&quot;, &quot;OBP&quot;: &quot;.571&quot;, &quot;SLG&quot;: &quot;.545&quot;}">
-<img class="pc-photo" src="action5.jpg" alt="Anthony Amaya">
+<div class="pc" onclick="openPlayer(20)" data-num="20" data-name="Anthony Amaya" data-pos="LHP" data-ht="6'0"" data-wt="170" data-grad="2027" data-headshot="player-picks/anthony-amaya.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 8, &quot;R&quot;: 3, &quot;H&quot;: 4, &quot;RBI&quot;: 0, &quot;2B&quot;: 8, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 14, &quot;K&quot;: 6, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;2&quot;, &quot;SLG&quot;: &quot;6.79&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 3, &quot;L&quot;: 4, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;33.0&quot;, &quot;K&quot;: 22, &quot;BB&quot;: 14, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/anthony-amaya.png" alt="Anthony Amaya">
 <div class="pi">
 <h4><span class="pn">#20</span> Anthony Amaya</h4>
 <span class="pos">LHP</span>
 <span class="hw">6'0" &bull; 170 lbs &bull; Class of 2027</span>
-<div class="ba">BA: .455</div>
+
 </div>
 </div>
-<div class="pc" onclick="openPlayer(21)" data-num="21" data-name="Aiden Pitti-Shortt" data-pos="2B, CF" data-ht="5'4"" data-wt="160" data-grad="2027" data-photo="" data-stats="{&quot;AB&quot;: 13, &quot;R&quot;: 3, &quot;H&quot;: 4, &quot;RBI&quot;: 4, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 4, &quot;K&quot;: 3, &quot;BA&quot;: &quot;.308&quot;, &quot;OBP&quot;: &quot;.471&quot;, &quot;SLG&quot;: &quot;.308&quot;}">
-<div class="pc-placeholder">#21</div>
+<div class="pc" onclick="openPlayer(21)" data-num="21" data-name="Aiden Pitti-Shortt" data-pos="2B, CF" data-ht="5'4"" data-wt="160" data-grad="2027" data-headshot="player-picks/aiden-pitti-shortt.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/aiden-pitti-shortt.png" alt="Aiden Pitti-Shortt">
 <div class="pi">
 <h4><span class="pn">#21</span> Aiden Pitti-Shortt</h4>
 <span class="pos">2B, CF</span>
 <span class="hw">5'4" &bull; 160 lbs &bull; Class of 2027</span>
-<div class="ba">BA: .308</div>
+
 </div>
 </div>
-<div class="pc" onclick="openPlayer(32)" data-num="32" data-name="Max Assouline" data-pos="C" data-ht="6'1"" data-wt="155" data-grad="2027" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#32</div>
+<div class="pc" onclick="openPlayer(32)" data-num="32" data-name="Max Assouline" data-pos="C" data-ht="6'1"" data-wt="155" data-grad="2027" data-headshot="player-picks/max-assouline.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/max-assouline.png" alt="Max Assouline">
 <div class="pi">
 <h4><span class="pn">#32</span> Max Assouline</h4>
 <span class="pos">C</span>
@@ -245,8 +245,8 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(33)" data-num="33" data-name="Jacob Griffiths" data-pos="1B" data-ht="6'1"" data-wt="170" data-grad="2027" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#33</div>
+<div class="pc" onclick="openPlayer(33)" data-num="33" data-name="Jacob Griffiths" data-pos="1B" data-ht="6'1"" data-wt="170" data-grad="2027" data-headshot="player-picks/jacob-griffiths.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/jacob-griffiths.png" alt="Jacob Griffiths">
 <div class="pi">
 <h4><span class="pn">#33</span> Jacob Griffiths</h4>
 <span class="pos">1B</span>
@@ -254,8 +254,8 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(34)" data-num="34" data-name="Reilly Redmond" data-pos="P, 3B" data-ht="6'1"" data-wt="208" data-grad="2027" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#34</div>
+<div class="pc" onclick="openPlayer(34)" data-num="34" data-name="Reilly Redmond" data-pos="P, 3B" data-ht="6'1"" data-wt="208" data-grad="2027" data-headshot="player-picks/reilly-redmond.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 5, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 5, &quot;K&quot;: 3, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;2.86&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;7.1&quot;, &quot;K&quot;: 4, &quot;BB&quot;: 5, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/reilly-redmond.png" alt="Reilly Redmond">
 <div class="pi">
 <h4><span class="pn">#34</span> Reilly Redmond</h4>
 <span class="pos">P, 3B</span>
@@ -263,8 +263,8 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(45)" data-num="45" data-name="Garrett Schnur" data-pos="—" data-ht="—" data-wt="—" data-grad="2027" data-photo="" data-stats="{&quot;AB&quot;: 6, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 1, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 2, &quot;BA&quot;: &quot;.000&quot;, &quot;OBP&quot;: &quot;.000&quot;, &quot;SLG&quot;: &quot;.000&quot;}">
-<div class="pc-placeholder">#45</div>
+<div class="pc" onclick="openPlayer(45)" data-num="45" data-name="Garrett Schnur" data-pos="—" data-ht="—" data-wt="—" data-grad="2027" data-headshot="player-picks/garrett-schnur.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 3, &quot;R&quot;: 1, &quot;H&quot;: 2, &quot;RBI&quot;: 0, &quot;2B&quot;: 6, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 9, &quot;K&quot;: 3, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;1&quot;, &quot;SLG&quot;: &quot;10.26&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 1, &quot;L&quot;: 2, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;14.1&quot;, &quot;K&quot;: 10, &quot;BB&quot;: 9, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/garrett-schnur.png" alt="Garrett Schnur">
 <div class="pi">
 <h4><span class="pn">#45</span> Garrett Schnur</h4>
 <span class="pos">—</span>
@@ -274,26 +274,26 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 </div>
 </div></div>
 <div class="yg"><h3>Sophomores (Class of 2028)</h3><div class="pg">
-<div class="pc" onclick="openPlayer(1)" data-num="1" data-name="Nico Gonzalez" data-pos="3B" data-ht="5'10"" data-wt="165" data-grad="2028" data-photo="action2.jpg" data-stats="{&quot;AB&quot;: 10, &quot;R&quot;: 3, &quot;H&quot;: 2, &quot;RBI&quot;: 1, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 3, &quot;K&quot;: 2, &quot;BA&quot;: &quot;.200&quot;, &quot;OBP&quot;: &quot;.385&quot;, &quot;SLG&quot;: &quot;.200&quot;}">
-<img class="pc-photo" src="action2.jpg" alt="Nico Gonzalez">
+<div class="pc" onclick="openPlayer(1)" data-num="1" data-name="Nico Gonzalez" data-pos="3B" data-ht="5'10"" data-wt="165" data-grad="2028" data-headshot="player-picks/nico-gonzalez.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/nico-gonzalez.png" alt="Nico Gonzalez">
 <div class="pi">
 <h4><span class="pn">#1</span> Nico Gonzalez</h4>
 <span class="pos">3B</span>
 <span class="hw">5'10" &bull; 165 lbs &bull; Class of 2028</span>
-<div class="ba">BA: .200</div>
+
 </div>
 </div>
-<div class="pc" onclick="openPlayer(2)" data-num="2" data-name="Juan Zapata" data-pos="SS, 2B" data-ht="5'5"" data-wt="125" data-grad="2028" data-photo="" data-stats="{&quot;AB&quot;: 8, &quot;R&quot;: 3, &quot;H&quot;: 2, &quot;RBI&quot;: 2, &quot;2B&quot;: 1, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 3, &quot;K&quot;: 1, &quot;BA&quot;: &quot;.250&quot;, &quot;OBP&quot;: &quot;.455&quot;, &quot;SLG&quot;: &quot;.375&quot;}">
-<div class="pc-placeholder">#2</div>
+<div class="pc" onclick="openPlayer(2)" data-num="2" data-name="Juan Zapata" data-pos="SS, 2B" data-ht="5'5"" data-wt="125" data-grad="2028" data-headshot="player-picks/juan-zapata.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/juan-zapata.png" alt="Juan Zapata">
 <div class="pi">
 <h4><span class="pn">#2</span> Juan Zapata</h4>
 <span class="pos">SS, 2B</span>
 <span class="hw">5'5" &bull; 125 lbs &bull; Class of 2028</span>
-<div class="ba">BA: .250</div>
+
 </div>
 </div>
-<div class="pc" onclick="openPlayer(4)" data-num="4" data-name="Christian English" data-pos="RF, LF" data-ht="6'0"" data-wt="129" data-grad="2028" data-photo="" data-stats="{&quot;AB&quot;: 0, &quot;R&quot;: 1, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;.000&quot;, &quot;OBP&quot;: &quot;.000&quot;, &quot;SLG&quot;: &quot;.000&quot;}">
-<div class="pc-placeholder">#4</div>
+<div class="pc" onclick="openPlayer(4)" data-num="4" data-name="Christian English" data-pos="RF, LF" data-ht="6'0"" data-wt="129" data-grad="2028" data-headshot="player-picks/christian-english.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/christian-english.png" alt="Christian English">
 <div class="pi">
 <h4><span class="pn">#4</span> Christian English</h4>
 <span class="pos">RF, LF</span>
@@ -301,8 +301,8 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(8)" data-num="8" data-name="Ryden Biscardi" data-pos="SS, 2B" data-ht="5'11"" data-wt="165" data-grad="2028" data-photo="" data-stats="{&quot;AB&quot;: 3, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 1, &quot;BA&quot;: &quot;.000&quot;, &quot;OBP&quot;: &quot;.000&quot;, &quot;SLG&quot;: &quot;.000&quot;}">
-<div class="pc-placeholder">#8</div>
+<div class="pc" onclick="openPlayer(8)" data-num="8" data-name="Ryden Biscardi" data-pos="SS, 2B" data-ht="5'11"" data-wt="165" data-grad="2028" data-headshot="player-picks/ryden-biscardi.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/ryden-biscardi.png" alt="Ryden Biscardi">
 <div class="pi">
 <h4><span class="pn">#8</span> Ryden Biscardi</h4>
 <span class="pos">SS, 2B</span>
@@ -310,8 +310,8 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(12)" data-num="12" data-name="Jeremy Arias" data-pos="OF, P" data-ht="5'9"" data-wt="150" data-grad="2028" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#12</div>
+<div class="pc" onclick="openPlayer(12)" data-num="12" data-name="Jeremy Arias" data-pos="OF, P" data-ht="5'9"" data-wt="150" data-grad="2028" data-headshot="player-picks/jeremy-arias.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/jeremy-arias.png" alt="Jeremy Arias">
 <div class="pi">
 <h4><span class="pn">#12</span> Jeremy Arias</h4>
 <span class="pos">OF, P</span>
@@ -319,8 +319,8 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(13)" data-num="13" data-name="Liam McMahon" data-pos="LF, P" data-ht="5'6"" data-wt="130" data-grad="2028" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#13</div>
+<div class="pc" onclick="openPlayer(13)" data-num="13" data-name="Liam McMahon" data-pos="LF, P" data-ht="5'6"" data-wt="130" data-grad="2028" data-headshot="player-picks/liam-mcmahon.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/liam-mcmahon.png" alt="Liam McMahon">
 <div class="pi">
 <h4><span class="pn">#13</span> Liam McMahon</h4>
 <span class="pos">LF, P</span>
@@ -328,17 +328,17 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(14)" data-num="14" data-name="Colin Correll" data-pos="CF, RF" data-ht="5'9"" data-wt="137" data-grad="2028" data-photo="" data-stats="{&quot;AB&quot;: 5, &quot;R&quot;: 0, &quot;H&quot;: 1, &quot;RBI&quot;: 1, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 1, &quot;K&quot;: 2, &quot;BA&quot;: &quot;.200&quot;, &quot;OBP&quot;: &quot;.333&quot;, &quot;SLG&quot;: &quot;.200&quot;}">
-<div class="pc-placeholder">#14</div>
+<div class="pc" onclick="openPlayer(14)" data-num="14" data-name="Colin Correll" data-pos="CF, RF" data-ht="5'9"" data-wt="137" data-grad="2028" data-headshot="player-picks/colin-correll.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/colin-correll.png" alt="Colin Correll">
 <div class="pi">
 <h4><span class="pn">#14</span> Colin Correll</h4>
 <span class="pos">CF, RF</span>
 <span class="hw">5'9" &bull; 137 lbs &bull; Class of 2028</span>
-<div class="ba">BA: .200</div>
+
 </div>
 </div>
-<div class="pc" onclick="openPlayer(17)" data-num="17" data-name="Josh Garcia" data-pos="LF, RF" data-ht="5'10"" data-wt="125" data-grad="2028" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#17</div>
+<div class="pc" onclick="openPlayer(17)" data-num="17" data-name="Josh Garcia" data-pos="LF, RF" data-ht="5'10"" data-wt="125" data-grad="2028" data-headshot="player-picks/josh-garcia.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/josh-garcia.png" alt="Josh Garcia">
 <div class="pi">
 <h4><span class="pn">#17</span> Josh Garcia</h4>
 <span class="pos">LF, RF</span>
@@ -346,26 +346,26 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(19)" data-num="19" data-name="Branden Estevez" data-pos="CF, 1B" data-ht="5'10"" data-wt="130" data-grad="2028" data-photo="" data-stats="{&quot;AB&quot;: 8, &quot;R&quot;: 0, &quot;H&quot;: 1, &quot;RBI&quot;: 1, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 2, &quot;K&quot;: 2, &quot;BA&quot;: &quot;.125&quot;, &quot;OBP&quot;: &quot;.300&quot;, &quot;SLG&quot;: &quot;.125&quot;}">
-<div class="pc-placeholder">#19</div>
+<div class="pc" onclick="openPlayer(19)" data-num="19" data-name="Branden Estevez" data-pos="CF, 1B" data-ht="5'10"" data-wt="130" data-grad="2028" data-headshot="player-picks/branden-estevez.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/branden-estevez.png" alt="Branden Estevez">
 <div class="pi">
 <h4><span class="pn">#19</span> Branden Estevez</h4>
 <span class="pos">CF, 1B</span>
 <span class="hw">5'10" &bull; 130 lbs &bull; Class of 2028</span>
-<div class="ba">BA: .125</div>
+
 </div>
 </div>
-<div class="pc" onclick="openPlayer(27)" data-num="27" data-name="Josh Bardales" data-pos="2B, OF" data-ht="5'11"" data-wt="135" data-grad="2028" data-photo="" data-stats="{&quot;AB&quot;: 3, &quot;R&quot;: 3, &quot;H&quot;: 1, &quot;RBI&quot;: 1, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 1, &quot;BA&quot;: &quot;.333&quot;, &quot;OBP&quot;: &quot;.333&quot;, &quot;SLG&quot;: &quot;.333&quot;}">
-<div class="pc-placeholder">#27</div>
+<div class="pc" onclick="openPlayer(27)" data-num="27" data-name="Josh Bardales" data-pos="2B, OF" data-ht="5'11"" data-wt="135" data-grad="2028" data-headshot="player-picks/josh-bardales.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/josh-bardales.png" alt="Josh Bardales">
 <div class="pi">
 <h4><span class="pn">#27</span> Josh Bardales</h4>
 <span class="pos">2B, OF</span>
 <span class="hw">5'11" &bull; 135 lbs &bull; Class of 2028</span>
-<div class="ba">BA: .333</div>
+
 </div>
 </div>
-<div class="pc" onclick="openPlayer(28)" data-num="28" data-name="Alejandro Ruiz" data-pos="—" data-ht="—" data-wt="—" data-grad="2028" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#28</div>
+<div class="pc" onclick="openPlayer(28)" data-num="28" data-name="Alejandro Ruiz" data-pos="—" data-ht="—" data-wt="—" data-grad="2028" data-headshot="player-picks/alejandro-ruiz.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/alejandro-ruiz.png" alt="Alejandro Ruiz">
 <div class="pi">
 <h4><span class="pn">#28</span> Alejandro Ruiz</h4>
 <span class="pos">—</span>
@@ -373,8 +373,8 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(30)" data-num="30" data-name="Matthew Richardson" data-pos="C" data-ht="5'9"" data-wt="230" data-grad="2028" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#30</div>
+<div class="pc" onclick="openPlayer(30)" data-num="30" data-name="Matthew Richardson" data-pos="C" data-ht="5'9"" data-wt="230" data-grad="2028" data-headshot="player-picks/matthew-richardson.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/matthew-richardson.png" alt="Matthew Richardson">
 <div class="pi">
 <h4><span class="pn">#30</span> Matthew Richardson</h4>
 <span class="pos">C</span>
@@ -382,8 +382,8 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(31)" data-num="31" data-name="Mateo Gil" data-pos="—" data-ht="—" data-wt="—" data-grad="2028" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#31</div>
+<div class="pc" onclick="openPlayer(31)" data-num="31" data-name="Mateo Gil" data-pos="—" data-ht="—" data-wt="—" data-grad="2028" data-headshot="player-picks/mateo-gil.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/mateo-gil.png" alt="Mateo Gil">
 <div class="pi">
 <h4><span class="pn">#31</span> Mateo Gil</h4>
 <span class="pos">—</span>
@@ -391,8 +391,8 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(36)" data-num="36" data-name="Jaiden Silva" data-pos="—" data-ht="—" data-wt="—" data-grad="2028" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#36</div>
+<div class="pc" onclick="openPlayer(36)" data-num="36" data-name="Jaiden Silva" data-pos="—" data-ht="—" data-wt="—" data-grad="2028" data-headshot="player-picks/jaiden-silva.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/jaiden-silva.png" alt="Jaiden Silva">
 <div class="pi">
 <h4><span class="pn">#36</span> Jaiden Silva</h4>
 <span class="pos">—</span>
@@ -400,8 +400,8 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(43)" data-num="43" data-name="Evert Pereira" data-pos="—" data-ht="—" data-wt="—" data-grad="2028" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#43</div>
+<div class="pc" onclick="openPlayer(43)" data-num="43" data-name="Evert Pereira" data-pos="—" data-ht="—" data-wt="—" data-grad="2028" data-headshot="player-picks/evert-pereira.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/evert-pereira.png" alt="Evert Pereira">
 <div class="pi">
 <h4><span class="pn">#43</span> Evert Pereira</h4>
 <span class="pos">—</span>
@@ -411,8 +411,8 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 </div>
 </div></div>
 <div class="yg"><h3>Freshmen (Class of 2029)</h3><div class="pg">
-<div class="pc" onclick="openPlayer(3)" data-num="3" data-name="Yaikel Suarez" data-pos="—" data-ht="—" data-wt="—" data-grad="2029" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#3</div>
+<div class="pc" onclick="openPlayer(3)" data-num="3" data-name="Yaikel Suarez" data-pos="—" data-ht="—" data-wt="—" data-grad="2029" data-headshot="player-picks/yaikel-suarez.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 4, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 3, &quot;K&quot;: 1, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;5.60&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;5.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 3, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/yaikel-suarez.png" alt="Yaikel Suarez">
 <div class="pi">
 <h4><span class="pn">#3</span> Yaikel Suarez</h4>
 <span class="pos">—</span>
@@ -420,8 +420,8 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(5)" data-num="5" data-name="Rafael Santiago" data-pos="—" data-ht="—" data-wt="—" data-grad="2029" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#5</div>
+<div class="pc" onclick="openPlayer(5)" data-num="5" data-name="Rafael Santiago" data-pos="—" data-ht="—" data-wt="—" data-grad="2029" data-headshot="player-picks/rafael-santiago.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/rafael-santiago.png" alt="Rafael Santiago">
 <div class="pi">
 <h4><span class="pn">#5</span> Rafael Santiago</h4>
 <span class="pos">—</span>
@@ -429,8 +429,8 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(10)" data-num="10" data-name="Evan Diaz" data-pos="—" data-ht="—" data-wt="—" data-grad="2029" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#10</div>
+<div class="pc" onclick="openPlayer(10)" data-num="10" data-name="Evan Diaz" data-pos="—" data-ht="—" data-wt="—" data-grad="2029" data-headshot="player-picks/evan-diaz.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 3, &quot;R&quot;: 0, &quot;H&quot;: 3, &quot;RBI&quot;: 0, &quot;2B&quot;: 6, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 17, &quot;K&quot;: 2, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;7&quot;, &quot;SLG&quot;: &quot;7.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 3, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;18.0&quot;, &quot;K&quot;: 13, &quot;BB&quot;: 17, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/evan-diaz.png" alt="Evan Diaz">
 <div class="pi">
 <h4><span class="pn">#10</span> Evan Diaz</h4>
 <span class="pos">—</span>
@@ -438,7 +438,7 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(16)" data-num="16" data-name="Braylen Austin" data-pos="—" data-ht="—" data-wt="—" data-grad="2029" data-photo="" data-stats="{}">
+<div class="pc" onclick="openPlayer(16)" data-num="16" data-name="Braylen Austin" data-pos="—" data-ht="—" data-wt="—" data-grad="2029" data-headshot="" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
 <div class="pc-placeholder">#16</div>
 <div class="pi">
 <h4><span class="pn">#16</span> Braylen Austin</h4>
@@ -447,17 +447,17 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(24)" data-num="24" data-name="Franklin DeSouza" data-pos="—" data-ht="—" data-wt="—" data-grad="2029" data-photo="" data-stats="{&quot;AB&quot;: 14, &quot;R&quot;: 7, &quot;H&quot;: 7, &quot;RBI&quot;: 4, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 2, &quot;K&quot;: 2, &quot;BA&quot;: &quot;.500&quot;, &quot;OBP&quot;: &quot;.611&quot;, &quot;SLG&quot;: &quot;.500&quot;}">
-<div class="pc-placeholder">#24</div>
+<div class="pc" onclick="openPlayer(24)" data-num="24" data-name="Franklin DeSouza" data-pos="—" data-ht="—" data-wt="—" data-grad="2029" data-headshot="player-picks/franklin-desouza.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 1, &quot;RBI&quot;: 1, &quot;2B&quot;: 2, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 1, &quot;K&quot;: 1, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;6.30&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 1, &quot;SV&quot;: 1, &quot;IP&quot;: &quot;3.1&quot;, &quot;K&quot;: 4, &quot;BB&quot;: 1, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/franklin-desouza.png" alt="Franklin DeSouza">
 <div class="pi">
 <h4><span class="pn">#24</span> Franklin DeSouza</h4>
 <span class="pos">—</span>
 <span class="hw">— &bull; — lbs &bull; Class of 2029</span>
-<div class="ba">BA: .500</div>
+
 </div>
 </div>
-<div class="pc" onclick="openPlayer(26)" data-num="26" data-name="Joel Lara" data-pos="—" data-ht="—" data-wt="—" data-grad="2029" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#26</div>
+<div class="pc" onclick="openPlayer(26)" data-num="26" data-name="Joel Lara" data-pos="—" data-ht="—" data-wt="—" data-grad="2029" data-headshot="player-picks/joel-lara.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 0, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 0, &quot;K&quot;: 0, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;.0&quot;, &quot;K&quot;: 0, &quot;BB&quot;: 0, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/joel-lara.png" alt="Joel Lara">
 <div class="pi">
 <h4><span class="pn">#26</span> Joel Lara</h4>
 <span class="pos">—</span>
@@ -465,8 +465,8 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 
 </div>
 </div>
-<div class="pc" onclick="openPlayer(29)" data-num="29" data-name="Angelo Olmeda" data-pos="—" data-ht="—" data-wt="—" data-grad="2029" data-photo="" data-stats="{}">
-<div class="pc-placeholder">#29</div>
+<div class="pc" onclick="openPlayer(29)" data-num="29" data-name="Angelo Olmeda" data-pos="—" data-ht="—" data-wt="—" data-grad="2029" data-headshot="player-picks/angelo-olmeda.png" data-stats="{&quot;batting&quot;: {&quot;AB&quot;: 0, &quot;R&quot;: 0, &quot;H&quot;: 0, &quot;RBI&quot;: 0, &quot;2B&quot;: 1, &quot;3B&quot;: 0, &quot;HR&quot;: 0, &quot;BB&quot;: 1, &quot;K&quot;: 1, &quot;BA&quot;: &quot;0&quot;, &quot;OBP&quot;: &quot;0&quot;, &quot;SLG&quot;: &quot;0.00&quot;}, &quot;pitching&quot;: {&quot;W&quot;: 0, &quot;L&quot;: 0, &quot;SV&quot;: 0, &quot;IP&quot;: &quot;3.0&quot;, &quot;K&quot;: 4, &quot;BB&quot;: 1, &quot;ERA&quot;: &quot;&quot;, &quot;WHIP&quot;: &quot;&quot;}}">
+<img class="pc-photo" src="player-picks/angelo-olmeda.png" alt="Angelo Olmeda">
 <div class="pi">
 <h4><span class="pn">#29</span> Angelo Olmeda</h4>
 <span class="pos">—</span>
@@ -551,29 +551,29 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 <div class="gr upcoming-r">TBD</div>
 <div class="gp">No photos yet</div>
 </div>
-<div class="gc "  >
+<div class="gc " data-folder="3-17-26" onclick="openGameGallery('3-17-26')">
 <div class="gd">3/17/26 &bull; 1:00 PM</div>
 <div class="go">vs Dr. Joaquin Garcia Bulldogs</div>
 <div class="gr upcoming-r">TBD</div>
-<div class="gp">No photos yet</div>
+<div class="gp-thumbs"><img src="games/3-17-26/thumb_1.jpg" alt="Game photo" loading="lazy"><img src="games/3-17-26/thumb_2.jpg" alt="Game photo" loading="lazy"><img src="games/3-17-26/thumb_3.jpg" alt="Game photo" loading="lazy"><img src="games/3-17-26/thumb_4.jpg" alt="Game photo" loading="lazy"></div><div class="gp"><span class="gp-count">📷 314 photos</span> — Click to view all</div>
 </div>
-<div class="gc loss"  >
+<div class="gc loss" data-folder="3-17-26" onclick="openGameGallery('3-17-26')">
 <div class="gd">3/17/26 &bull; 3:45 PM</div>
 <div class="go">vs University Sharks</div>
 <div class="gr loss-text">5-6 (L)</div>
-<div class="gp">No photos yet</div>
+<div class="gp-thumbs"><img src="games/3-17-26/thumb_1.jpg" alt="Game photo" loading="lazy"><img src="games/3-17-26/thumb_2.jpg" alt="Game photo" loading="lazy"><img src="games/3-17-26/thumb_3.jpg" alt="Game photo" loading="lazy"><img src="games/3-17-26/thumb_4.jpg" alt="Game photo" loading="lazy"></div><div class="gp"><span class="gp-count">📷 314 photos</span> — Click to view all</div>
 </div>
-<div class="gc upcoming"  >
+<div class="gc upcoming" data-folder="3-24-26" onclick="openGameGallery('3-24-26')">
 <div class="gd">3/24/26 &bull; 6:30 PM</div>
 <div class="go">vs Pembroke Pines Charter</div>
 <div class="gr upcoming-r">Upcoming</div>
-<div class="gp">Game not yet played</div>
+<div class="gp-thumbs"><img src="games/3-24-26/thumb_1.jpg" alt="Game photo" loading="lazy"><img src="games/3-24-26/thumb_2.jpg" alt="Game photo" loading="lazy"><img src="games/3-24-26/thumb_3.jpg" alt="Game photo" loading="lazy"><img src="games/3-24-26/thumb_4.jpg" alt="Game photo" loading="lazy"></div><div class="gp"><span class="gp-count">📷 119 photos</span> — Click to view all</div>
 </div>
-<div class="gc upcoming"  >
+<div class="gc upcoming" data-folder="3-26-26" onclick="openGameGallery('3-26-26')">
 <div class="gd">3/26/26 &bull; 7:00 PM</div>
 <div class="go">vs Everglades Gators</div>
 <div class="gr upcoming-r">Upcoming</div>
-<div class="gp">Game not yet played</div>
+<div class="gp-thumbs"><img src="games/3-26-26/thumb_1.jpg" alt="Game photo" loading="lazy"><img src="games/3-26-26/thumb_2.jpg" alt="Game photo" loading="lazy"><img src="games/3-26-26/thumb_3.jpg" alt="Game photo" loading="lazy"><img src="games/3-26-26/thumb_4.jpg" alt="Game photo" loading="lazy"></div><div class="gp"><span class="gp-count">📷 171 photos</span> — Click to view all</div>
 </div>
 <div class="gc upcoming"  >
 <div class="gd">3/31/26 &bull; 4:00 PM</div>
@@ -651,7 +651,7 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 <span class="title-badge">2004 District Champion</span>
 </div>
 <p>Head Coach: Brian Luebkert (27 years) &bull; Asst: Kyle Tabora (17 years)</p>
-<p style="margin-top:12px;font-size:.75rem;color:#555">Nova Titans Baseball &bull; Davie, FL &bull; Updated 2026-03-24</p>
+<p style="margin-top:12px;font-size:.75rem;color:#555">Nova Titans Baseball &bull; Davie, FL &bull; Updated 2026-04-10</p>
 </footer></div></section>
 
 <!-- Player Modal -->
@@ -664,8 +664,6 @@ footer .title-badge{background:var(--cb);border:1px solid #1e2e1e;border-radius:
 </div>
 
 <script>
-const battingStats = {"Nico Gonzalez": {"AB": 10, "R": 3, "H": 2, "RBI": 1, "2B": 0, "3B": 0, "HR": 0, "BB": 3, "K": 2, "BA": ".200", "OBP": ".385", "SLG": ".200"}, "Juan Zapata": {"AB": 8, "R": 3, "H": 2, "RBI": 2, "2B": 1, "3B": 0, "HR": 0, "BB": 3, "K": 1, "BA": ".250", "OBP": ".455", "SLG": ".375"}, "Musa Adeoye": {"AB": 11, "R": 6, "H": 6, "RBI": 1, "2B": 4, "3B": 0, "HR": 0, "BB": 3, "K": 1, "BA": ".545", "OBP": ".667", "SLG": ".909"}, "Eli Steckler": {"AB": 13, "R": 4, "H": 6, "RBI": 6, "2B": 3, "3B": 0, "HR": 0, "BB": 2, "K": 1, "BA": ".462", "OBP": ".563", "SLG": ".692"}, "Colin Correll": {"AB": 5, "R": 0, "H": 1, "RBI": 1, "2B": 0, "3B": 0, "HR": 0, "BB": 1, "K": 2, "BA": ".200", "OBP": ".333", "SLG": ".200"}, "Branden Estevez": {"AB": 8, "R": 0, "H": 1, "RBI": 1, "2B": 0, "3B": 0, "HR": 0, "BB": 2, "K": 2, "BA": ".125", "OBP": ".300", "SLG": ".125"}, "Anthony Amaya": {"AB": 11, "R": 2, "H": 5, "RBI": 3, "2B": 1, "3B": 0, "HR": 0, "BB": 3, "K": 3, "BA": ".455", "OBP": ".571", "SLG": ".545"}, "Aiden Pitti-Shortt": {"AB": 13, "R": 3, "H": 4, "RBI": 4, "2B": 0, "3B": 0, "HR": 0, "BB": 4, "K": 3, "BA": ".308", "OBP": ".471", "SLG": ".308"}, "Ricky Relyea": {"AB": 11, "R": 0, "H": 2, "RBI": 0, "2B": 0, "3B": 0, "HR": 0, "BB": 1, "K": 6, "BA": ".182", "OBP": ".250", "SLG": ".182"}, "Franklin DeSouza": {"AB": 14, "R": 7, "H": 7, "RBI": 4, "2B": 0, "3B": 0, "HR": 0, "BB": 2, "K": 2, "BA": ".500", "OBP": ".611", "SLG": ".500"}, "Josh Bardales": {"AB": 3, "R": 3, "H": 1, "RBI": 1, "2B": 0, "3B": 0, "HR": 0, "BB": 0, "K": 1, "BA": ".333", "OBP": ".333", "SLG": ".333"}, "Garrett Schnur": {"AB": 6, "R": 0, "H": 0, "RBI": 1, "2B": 0, "3B": 0, "HR": 0, "BB": 0, "K": 2, "BA": ".000", "OBP": ".000", "SLG": ".000"}, "Ryden Biscardi": {"AB": 3, "R": 0, "H": 0, "RBI": 0, "2B": 0, "3B": 0, "HR": 0, "BB": 0, "K": 1, "BA": ".000", "OBP": ".000", "SLG": ".000"}, "Aidan Donnellon": {"AB": 1, "R": 1, "H": 0, "RBI": 0, "2B": 0, "3B": 0, "HR": 0, "BB": 0, "K": 1, "BA": ".000", "OBP": ".000", "SLG": ".000"}, "Christian English": {"AB": 0, "R": 1, "H": 0, "RBI": 0, "2B": 0, "3B": 0, "HR": 0, "BB": 0, "K": 0, "BA": ".000", "OBP": ".000", "SLG": ".000"}};
-
 function openPlayer(num) {
   const card = document.querySelector(`.pc[data-num="${num}"]`);
   if (!card) return;
@@ -675,13 +673,14 @@ function openPlayer(num) {
   const ht = card.dataset.ht;
   const wt = card.dataset.wt;
   const grad = card.dataset.grad;
-  const photo = card.dataset.photo;
-  
-  const stats = battingStats[name] || {};
+  const headshot = card.dataset.headshot;
+  const stats = JSON.parse(card.dataset.stats || '{}');
+  const batting = stats.batting || {};
+  const pitching = stats.pitching || {};
   
   // Header
-  const photoHtml = photo 
-    ? `<img class="modal-photo" src="${photo}" alt="${name}">`
+  const photoHtml = headshot 
+    ? `<img class="modal-photo" src="${headshot}" alt="${name}">`
     : `<div class="modal-placeholder">#${num}</div>`;
   
   document.getElementById('modalHeader').innerHTML = `
@@ -695,24 +694,57 @@ function openPlayer(num) {
   
   // Body - Stats
   let statsHtml = '';
-  if (stats.AB > 0) {
-    statsHtml = `
-      <h3 style="color:var(--gd);margin-bottom:12px;font-family:Oswald">BATTING STATS</h3>
-      <div class="stats-grid">
-        <div class="stat-box"><div class="val">${stats.BA}</div><div class="label">AVG</div></div>
-        <div class="stat-box"><div class="val">${stats.OBP}</div><div class="label">OBP</div></div>
-        <div class="stat-box"><div class="val">${stats.SLG}</div><div class="label">SLG</div></div>
-        <div class="stat-box"><div class="val">${stats.AB}</div><div class="label">AB</div></div>
-        <div class="stat-box"><div class="val">${stats.R}</div><div class="label">Runs</div></div>
-        <div class="stat-box"><div class="val">${stats.H}</div><div class="label">Hits</div></div>
-        <div class="stat-box"><div class="val">${stats.RBI}</div><div class="label">RBI</div></div>
-        <div class="stat-box"><div class="val">${stats["2B"]}</div><div class="label">2B</div></div>
-        <div class="stat-box"><div class="val">${stats.BB}</div><div class="label">BB</div></div>
-        <div class="stat-box"><div class="val">${stats.K}</div><div class="label">K</div></div>
-      </div>
-    `;
+  
+  // Check if player has batting stats
+  const hasBatting = batting.AB > 0;
+  const hasPitching = pitching.IP && pitching.IP !== '.0' && pitching.IP !== '0' && parseFloat(pitching.IP) > 0;
+  
+  if (hasBatting || hasPitching) {
+    statsHtml = '<div style="display: flex; flex-direction: column; gap: 24px;">';
+    
+    if (hasBatting) {
+      statsHtml += `
+        <div>
+          <h3 style="color:var(--gd);margin-bottom:12px;font-family:Oswald">BATTING STATS</h3>
+          <div class="stats-grid">
+            <div class="stat-box"><div class="val">${batting.BA || '0'}</div><div class="label">AVG</div></div>
+            <div class="stat-box"><div class="val">${batting.OBP || '0'}</div><div class="label">OBP</div></div>
+            <div class="stat-box"><div class="val">${batting.SLG || '0.00'}</div><div class="label">SLG</div></div>
+            <div class="stat-box"><div class="val">${batting.AB || 0}</div><div class="label">AB</div></div>
+            <div class="stat-box"><div class="val">${batting.R || 0}</div><div class="label">Runs</div></div>
+            <div class="stat-box"><div class="val">${batting.H || 0}</div><div class="label">Hits</div></div>
+            <div class="stat-box"><div class="val">${batting.RBI || 0}</div><div class="label">RBI</div></div>
+            <div class="stat-box"><div class="val">${batting["2B"] || 0}</div><div class="label">2B</div></div>
+            <div class="stat-box"><div class="val">${batting["3B"] || 0}</div><div class="label">3B</div></div>
+            <div class="stat-box"><div class="val">${batting.HR || 0}</div><div class="label">HR</div></div>
+            <div class="stat-box"><div class="val">${batting.BB || 0}</div><div class="label">BB</div></div>
+            <div class="stat-box"><div class="val">${batting.K || 0}</div><div class="label">K</div></div>
+          </div>
+        </div>
+      `;
+    }
+    
+    if (hasPitching) {
+      statsHtml += `
+        <div>
+          <h3 style="color:var(--gd);margin-bottom:12px;font-family:Oswald">PITCHING STATS</h3>
+          <div class="stats-grid">
+            <div class="stat-box"><div class="val">${pitching.W || 0}</div><div class="label">W</div></div>
+            <div class="stat-box"><div class="val">${pitching.L || 0}</div><div class="label">L</div></div>
+            <div class="stat-box"><div class="val">${pitching.SV || 0}</div><div class="label">SV</div></div>
+            <div class="stat-box"><div class="val">${pitching.IP || '0.0'}</div><div class="label">IP</div></div>
+            <div class="stat-box"><div class="val">${pitching.K || 0}</div><div class="label">K</div></div>
+            <div class="stat-box"><div class="val">${pitching.BB || 0}</div><div class="label">BB</div></div>
+            <div class="stat-box"><div class="val">${pitching.ERA || '—'}</div><div class="label">ERA</div></div>
+            <div class="stat-box"><div class="val">${pitching.WHIP || '—'}</div><div class="label">WHIP</div></div>
+          </div>
+        </div>
+      `;
+    }
+    
+    statsHtml += '</div>';
   } else {
-    statsHtml = '<p style="color:var(--tm);text-align:center;padding:20px">No batting stats recorded yet this season</p>';
+    statsHtml = '<p style="color:var(--tm);text-align:center;padding:20px">No stats recorded yet this season</p>';
   }
   
   document.getElementById('modalBody').innerHTML = statsHtml;
