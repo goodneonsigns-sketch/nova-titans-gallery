@@ -1,5 +1,4 @@
 samples/
-player-picks/
 download-*.py
 scan-*.py
 photo-scan-results.json
