@@ -13,6 +13,31 @@ if os.path.exists('game-photos.json'):
     with open('game-photos.json') as f:
         game_photos = json.load(f)
 
+# Load Dropbox temporary links for ALL photos
+dropbox_links = {}
+if os.path.exists('dropbox-links.json'):
+    with open('dropbox-links.json') as f:
+        dropbox_links = json.load(f)
+    print(f"Loaded dropbox-links.json: {sum(len(v) for v in dropbox_links.values())} total links across {len(dropbox_links)} folders")
+else:
+    print("WARNING: dropbox-links.json not found. Run generate-dropbox-links.py first.")
+
+# Build per-folder ordered photo URL lists using all_files ordering from game-photos.json
+# This preserves chronological photo order within each game
+game_all_photo_urls = {}
+for folder, gdata in game_photos.items():
+    folder_links = dropbox_links.get(folder, {})
+    if folder_links:
+        all_files = gdata.get('all_files', [])
+        # Build ordered list matching all_files order, skip any missing links
+        urls = []
+        for fi in all_files:
+            url = folder_links.get(fi['path'])
+            if url:
+                urls.append({"url": url, "name": fi['name']})
+        game_all_photo_urls[folder] = urls
+        print(f"  {folder}: {len(urls)}/{len(all_files)} photos linked")
+
 # Photo counts per game folder (from game-photos.json or fallback)
 game_photo_counts = {}
 for folder, gdata in game_photos.items():
@@ -274,28 +299,32 @@ for game in schedule:
     
     folder = date_to_folder.get(game['date'])
     photo_count = game_photo_counts.get(folder, 0) if folder else 0
-    
+    all_photos   = game_all_photo_urls.get(folder, []) if folder else []
+    has_photos   = len(all_photos) > 0
+
     photo_section = ''
-    game_folder_data = game_photos.get(folder, {}) if folder else {}
-    thumbs = game_folder_data.get('thumbnails', [])
-    
-    if thumbs:
+    if has_photos:
+        # Show first 4 Dropbox URLs as preview thumbnails on the card
         thumb_grid = '<div class="gp-thumbs">'
-        for t in thumbs[:4]:  # Show 4 thumbnails on the card
-            thumb_grid += f'<img src="{t["thumb"]}" alt="Game photo" loading="lazy">'
+        for ph in all_photos[:4]:
+            thumb_grid += f'<img src="{ph["url"]}" alt="Game photo" loading="lazy">'
         thumb_grid += '</div>'
-        photo_section = f'{thumb_grid}<div class="gp"><span class="gp-count">📷 {photo_count} photos</span> — Click to view all</div>'
+        photo_section = (
+            f'{thumb_grid}'
+            f'<div class="gp"><span class="gp-count">📷 {len(all_photos)} photos</span>'
+            f' — Click to view all</div>'
+        )
     elif photo_count > 0:
-        photo_section = f'<div class="gp"><span class="gp-count">📷 {photo_count} photos</span><br>Click to view & download</div>'
+        photo_section = f'<div class="gp"><span class="gp-count">📷 {photo_count} photos</span><br>Generating links…</div>'
     elif result != 'upcoming':
         photo_section = '<div class="gp">No photos yet</div>'
     else:
         photo_section = '<div class="gp">Game not yet played</div>'
-    
-    # Store folder name as data attribute for modal
-    folder_attr = f'data-folder="{folder}"' if folder and thumbs else ''
-    click_attr = f'onclick="openGameGallery(\'{folder}\')"' if folder and thumbs else ''
-    
+
+    # Make card clickable only when we have Dropbox photo URLs
+    folder_attr = f'data-folder="{folder}"' if folder and has_photos else ''
+    click_attr  = f'onclick="openGameGallery(\'{folder}\')"' if folder and has_photos else ''
+
     html += f'''<div class="gc {css_class}" {folder_attr} {click_attr}>
 <div class="gd">{game["date"]} &bull; {game["time"]}</div>
 <div class="go">vs {game["opponent"]}</div>
@@ -514,10 +543,17 @@ function closePlayer() {
 }
 
 /* ===== GAME LIGHTBOX ===== */
-const gamePhotos = ''' + json.dumps({k: {"info": v["info"], "total_photos": v["total_photos"], "thumbnails": v["thumbnails"]} for k, v in game_photos.items()}) + ''';
+const gamePhotos = ''' + json.dumps({
+    k: {
+        "info": v["info"],
+        "total_photos": len(game_all_photo_urls.get(k, [])) or v["total_photos"],
+        "photos": game_all_photo_urls.get(k, [])
+    }
+    for k, v in game_photos.items()
+}) + ''';
 
 let lbFolder = null;
-let lbThumbs = [];
+let lbPhotos = [];
 let lbCurrentIdx = 0;
 let lbSwipeStartX = 0;
 
@@ -526,28 +562,27 @@ function openGameGallery(folder) {
   if (!data) return;
 
   lbFolder = folder;
-  lbThumbs = data.thumbnails;
+  lbPhotos = data.photos;
   const info = data.info;
-  const total = data.total_photos;
-  const shown = lbThumbs.length;
+  const total = lbPhotos.length;
   const resultClass = info.result.includes('W') ? 'color:#2ecc71' : info.result.includes('L') ? 'color:#e74c3c' : 'color:#FFD700';
 
   // Populate header
   document.getElementById('lbGameTitle').textContent = 'vs ' + info.opponent;
   document.getElementById('lbGameMeta').innerHTML = info.date + ' &bull; <span style="' + resultClass + ';font-weight:700">' + info.result + '</span>';
-  document.getElementById('lbPhotoCount').textContent = 'Showing ' + shown + ' of ' + total + ' photos';
+  document.getElementById('lbPhotoCount').textContent = total + ' photos';
 
-  // Populate thumbnail grid
+  // Populate thumbnail grid (all photos, lazy-loaded)
   const grid = document.getElementById('lbThumbnailGrid');
   grid.innerHTML = '';
-  lbThumbs.forEach((t, i) => {
+  lbPhotos.forEach((ph, i) => {
     const div = document.createElement('div');
     div.className = 'lb-thumb-item';
     div.setAttribute('aria-label', 'Photo ' + (i+1));
     div.onclick = () => openSinglePhoto(i);
     const img = document.createElement('img');
-    img.src = t.thumb;
-    img.alt = t.original_name || ('Photo ' + (i+1));
+    img.src = ph.url;
+    img.alt = ph.name || ('Photo ' + (i+1));
     img.loading = 'lazy';
     div.appendChild(img);
     grid.appendChild(div);
@@ -558,9 +593,6 @@ function openGameGallery(folder) {
   document.getElementById('lbSingle').style.display = 'none';
   document.getElementById('gameLightbox').classList.add('lb-active');
   document.body.style.overflow = 'hidden';
-
-  // Preload all thumbnails
-  lbThumbs.forEach(t => { const i = new Image(); i.src = t.thumb; });
 }
 
 function showGrid() {
@@ -577,7 +609,7 @@ function openSinglePhoto(idx) {
 
 function renderPhoto(idx, animate) {
   const img = document.getElementById('lbMainImg');
-  const src = lbThumbs[idx].thumb;
+  const src = lbPhotos[idx].url;
 
   if (animate) {
     img.classList.add('lb-fading');
@@ -590,19 +622,19 @@ function renderPhoto(idx, animate) {
     img.src = src;
   }
 
-  const total = lbThumbs.length;
+  const total = lbPhotos.length;
   document.getElementById('lbCounter').textContent = (idx + 1) + ' / ' + total;
   document.getElementById('lbPrev').disabled = idx === 0;
   document.getElementById('lbNext').disabled = idx === total - 1;
 
   // Preload adjacent
-  if (idx + 1 < total) { const p = new Image(); p.src = lbThumbs[idx+1].thumb; }
-  if (idx - 1 >= 0)    { const p = new Image(); p.src = lbThumbs[idx-1].thumb; }
+  if (idx + 1 < total) { const p = new Image(); p.src = lbPhotos[idx+1].url; }
+  if (idx - 1 >= 0)    { const p = new Image(); p.src = lbPhotos[idx-1].url; }
 }
 
 function navigatePhoto(dir) {
   const next = lbCurrentIdx + dir;
-  if (next < 0 || next >= lbThumbs.length) return;
+  if (next < 0 || next >= lbPhotos.length) return;
   lbCurrentIdx = next;
   renderPhoto(lbCurrentIdx, true);
 }
@@ -611,7 +643,7 @@ function closeLightbox() {
   document.getElementById('gameLightbox').classList.remove('lb-active');
   document.body.style.overflow = '';
   lbFolder = null;
-  lbThumbs = [];
+  lbPhotos = [];
 }
 
 /* ===== KEYBOARD NAVIGATION ===== */
